@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Theory and Examples &mdash; DrLayer 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="How to Build" href="how_to_build.html" />
+    <link rel="prev" title="Quick start" href="quickstart.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            DrLayer
+              <img src="_static/DrLLogo2.gif" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quick start</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Theory and Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#one-dimensional-ground-response-analysis">One-dimensional ground response analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#transfer-function">Transfer function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#evaluation-of-transfer-function">Evaluation of Transfer function</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#unifom-undamped-soil-on-rigid-rock">Unifom, undamped soil on rigid rock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#uniform-damped-soil-on-rigid-rock">Uniform, damped soil on rigid rock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#unifom-damped-soil-on-elastic-rock">Unifom, damped soil on elastic rock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#layered-damped-soil-on-elastic-rock">Layered, damped soil on elastic rock</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#rigid-bedrock-vs-elastic-bedrock">Rigid bedrock vs. elastic bedrock</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="how_to_build.html">How to Build</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">Copyright and license</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">DrLayer</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Theory and Examples</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/theory.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="theory-and-examples">
+<h1>Theory and Examples<a class="headerlink" href="#theory-and-examples" title="Permalink to this heading"></a></h1>
+<p>This page describes basic concepts of one-dimensional ground response analysis and the usage of transfer functions. For more details, the user is encounged to read <span id="id1">[<a class="reference internal" href="#id4" title="S. L. Kramer. Geotechnical Earthquake Engineering. Pearson, 1996. ISBN 9783642196294.">Kra96</a>]</span>.</p>
+<section id="one-dimensional-ground-response-analysis">
+<h2>One-dimensional ground response analysis<a class="headerlink" href="#one-dimensional-ground-response-analysis" title="Permalink to this heading"></a></h2>
+<p>Evaluation of ground response is one of the most common tasks in geotechnical earthquake engineering. Ground response analyses are used to predict ground surface
+motions, to develop design response spectra, to evaluate potential for liquefaction, and to determine earthquake induced loads to super structures. As seismic
+body waves travel through different geologic units, they are reflected and refracted when reaching boundaries. One-dimensional ground response analyses are based
+on the assumption that all boundaries are horizontal and that the response of a soil deposit is predominantly caused by SH-waves propagating vertically from the
+underlying bedrock.</p>
+</section>
+<section id="transfer-function">
+<h2>Transfer function<a class="headerlink" href="#transfer-function" title="Permalink to this heading"></a></h2>
+<p>An important method for ground response analysis is based on the use of transfer functions, which determine how each frequency in the bedrock (input) motion is
+amplified, or deamplified, by the soil deposit. A transfer function may be viewed as a filter that acts upon some input signal to produce an output signal.
+For one dimensional site response analysis, the transfer function can be used to calcualte various response parameters, such as acceleration, velocity,
+displacement, shear stress, and shear strain, under an input motion parameter such as a bedrock acceleration. Because this method relies on the principle of
+superposition, this analysis is limited to the analysis of linear systems.</p>
+<p>The basic steps are as following:</p>
+<ol class="arabic simple">
+<li><p>Obtain the Fourier series for the applied motion using the Fast Fourier Transform (FFT).</p></li>
+<li><p>Multiply the Fourier series by the appropriate value of the transfer function at each frequency to obtain the output Fourier series.</p></li>
+<li><p>Express the output Fourier series in the time domain using the inverse FFT.</p></li>
+</ol>
+<p>The greatest amplification will occur approximately at the lowest natural frequency, also know as the <strong>fundamental frequency</strong>.
+For a uniform soil profile the fundamental frequency is</p>
+<div class="math notranslate nohighlight">
+\[\omega_0 = \frac{\pi v_s}{2H}\]</div>
+<p>where <span class="math notranslate nohighlight">\(v_s\)</span> and <span class="math notranslate nohighlight">\(H\)</span> are the shear wave velocity and thickness of the soil profile.</p>
+<p>The period of vibration corresponding to the fundamental frequency is called the <strong>characteristic site period</strong>:</p>
+<div class="math notranslate nohighlight">
+\[T_s = \frac{2\pi}{\omega_0} = \frac{4H}{v_s}\]</div>
+</section>
+<section id="evaluation-of-transfer-function">
+<h2>Evaluation of Transfer function<a class="headerlink" href="#evaluation-of-transfer-function" title="Permalink to this heading"></a></h2>
+<p>Within the profile, both upward and downward travelling waves exist due to reflection at each layer boundary (refraction
+is ignored in 1D assumption). When the bedrock is rigid, any downward travelling waves in the soil are completely reflected back toward the
+ground surface. Thus all elastic wave energy is trapped in the system. An elastic bedrock, on the other hand, only reflects part of the
+downward travelling waves that reach the soil-rock interface; part of the elastic wave energy is transmitted through the interface and lost from
+the system. This is a form of radiation damping and it causes the free surface motion amplitudes to be smaller than those for the case of
+rigid bedrock. The fraction of reflected waves depends on the <em>complex impedance ratio</em>, <span class="math notranslate nohighlight">\(\alpha_z\)</span>, that is defined as,</p>
+<div class="math notranslate nohighlight">
+\[\frac{G^*_mk^*_m}{G^*_{m+1}k^*_{m+1}} = \frac{\rho_m(v_s^*)_m}{\rho_{m+1}(v_s^*)_{m+1}} \,,\]</div>
+<p>where <span class="math notranslate nohighlight">\(G^*,\,k^*,\,v_s^*\)</span> are the complex shear modulus, complex wave number, and complex shear wave velocity, respectively.</p>
+<figure class="align-center" id="id5">
+<a class="reference internal image-reference" href="_images/schematic.png"><img alt="_images/schematic.png" src="_images/schematic.png" style="width: 382.6px; height: 288.2px;" /></a>
+<figcaption>
+<p><span class="caption-text">Schematic for a layered soil deposit on rock</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p><span id="id2">[<a class="reference internal" href="#id4" title="S. L. Kramer. Geotechnical Earthquake Engineering. Pearson, 1996. ISBN 9783642196294.">Kra96</a>]</span> presents details about the evaluation of transfer functions for four different cases by varing the assumptions for soil and
+bedrock, respectively. These cases are replicated in the figures below using this tool:</p>
+<section id="unifom-undamped-soil-on-rigid-rock">
+<h3>Unifom, undamped soil on rigid rock<a class="headerlink" href="#unifom-undamped-soil-on-rigid-rock" title="Permalink to this heading"></a></h3>
+<figure class="align-center" id="id6">
+<a class="reference internal image-reference" href="_images/case1.png"><img alt="_images/case1.png" src="_images/case1.png" style="width: 315.20000000000005px; height: 238.20000000000002px;" /></a>
+<figcaption>
+<p><span class="caption-text">Transfer function for an uniform, undamped soil on rigid rock</span><a class="headerlink" href="#id6" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="uniform-damped-soil-on-rigid-rock">
+<h3>Uniform, damped soil on rigid rock<a class="headerlink" href="#uniform-damped-soil-on-rigid-rock" title="Permalink to this heading"></a></h3>
+<figure class="align-center" id="id7">
+<a class="reference internal image-reference" href="_images/case2.png"><img alt="_images/case2.png" src="_images/case2.png" style="width: 315.20000000000005px; height: 238.20000000000002px;" /></a>
+<figcaption>
+<p><span class="caption-text">Transfer function for an uniform, damped soil on rigid rock</span><a class="headerlink" href="#id7" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="unifom-damped-soil-on-elastic-rock">
+<h3>Unifom, damped soil on elastic rock<a class="headerlink" href="#unifom-damped-soil-on-elastic-rock" title="Permalink to this heading"></a></h3>
+<figure class="align-center" id="id8">
+<a class="reference internal image-reference" href="_images/case3.png"><img alt="_images/case3.png" src="_images/case3.png" style="width: 315.20000000000005px; height: 238.20000000000002px;" /></a>
+<figcaption>
+<p><span class="caption-text">Transfer function for an uniform, damped soil on elastic rock with impedance ratio = 0.5</span><a class="headerlink" href="#id8" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="layered-damped-soil-on-elastic-rock">
+<h3>Layered, damped soil on elastic rock<a class="headerlink" href="#layered-damped-soil-on-elastic-rock" title="Permalink to this heading"></a></h3>
+<figure class="align-center" id="id9">
+<a class="reference internal image-reference" href="_images/case4.png"><img alt="_images/case4.png" src="_images/case4.png" style="width: 315.20000000000005px; height: 238.20000000000002px;" /></a>
+<figcaption>
+<p><span class="caption-text">Transfer function for layered, damped soil on elastic rock</span><a class="headerlink" href="#id9" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="rigid-bedrock-vs-elastic-bedrock">
+<h2>Rigid bedrock vs. elastic bedrock<a class="headerlink" href="#rigid-bedrock-vs-elastic-bedrock" title="Permalink to this heading"></a></h2>
+<p>If the <strong>within</strong> motion is known, a rigid bedrock condition should be used for estimating the surface motion. In this tool, a rigid based condition can be approximately represented by increasing the stiffness (shear wave velocity and/or density) of the bedrock. When including the elastic bedrock a <strong>bedrock</strong> motion should be used instead. A bedrock motion can be obtained from the decombolution of an <strong>outcrop</strong> (surface) motion.</p>
+<div class="docutils container" id="id3">
+<div class="citation" id="id4" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Kra96<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id2">2</a>)</span>
+<p>S. L. Kramer. <em>Geotechnical Earthquake Engineering</em>. Pearson, 1996. ISBN 9783642196294.</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="quickstart.html" class="btn btn-neutral float-left" title="Quick start" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="how_to_build.html" class="btn btn-neutral float-right" title="How to Build" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, UW Computational Group.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
