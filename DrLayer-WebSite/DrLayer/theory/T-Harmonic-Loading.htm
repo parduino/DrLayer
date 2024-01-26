@@ -1,0 +1,399 @@
+<html>
+<head>
+<!-- STYLESHEETS --> 
+<STYLE TYPE="text/css">
+BODY{font-family: verdana, arial, helvetica, sans serif; font-size: 10px}
+P{font-family: verdana, arial, helvetica, sans serif; font-size: 10px}
+TD{font-family: verdana, arial, helvetica, sans serif; font-size: 10px}
+A.courselink{font-family: verdana, arial, helvetica, sans serif; font-size: 11px; text-decoration: none; color: white; font-weight: bold}
+A.navlink1{font-family: verdana, arial, helvetica, sans serif; font-size: 11px; line-height: 14px; text-decoration: none; color: black}
+A.navlink2{font-family: verdana, arial, helvetica, sans serif; font-size: 10px; line-height: 12px; text-decoration: none; indent: 10px; color: black}
+A.navlink2org{font-family: verdana, arial, helvetica, sans serif; font-size: 10px; line-height: 12px; color: #FF6600; text-decoration: none; indent: 10px}
+H3.head{font-family: verdana, arial, helvetica, sans serif; font-size: 14px; line-height: 12px; color: #336699}
+H4.subhead{font-family: verdana, arial, helvetica, sans serif; font-size: 11px; color: #FF6600}
+H4.subtitle{font-family: verdana, arial, helvetica, sans serif; font-size: 12px; color: #FF6600}
+</STYLE>
+<!-- STYLESHEETS --> 
+<title>Theory-Harmonic Loading</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name=GENERATOR content="Claris Home Page 2.0">
+<x-sas-window top=25 bottom=605 left=142 right=988> 
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="Template" content="C:\OFFICE\OFFICE\html.dot">
+</head>
+
+<body bgcolor="#FFFFFF" link="#0000FF" vlink="#800080">
+<!--This file created 3:07 PM  8/18/98 by Claris Home Page version 2.0--> 
+<p><a name="top"></a></p>
+<p>
+<table border=0 cellpadding=10 width=700>
+  <tr> 
+    <td valign=top rowspan=4 bgcolor="#999999" width=108> 
+      <p><font face="Verdana, Arial, Helvetica, sans-serif"><b><a href="../theory.html">Back 
+        to Theory</a></b></font></p>
+      <hr>
+      <p><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><b><a href="T-Basic-Concepts.htm">Basic 
+        Concepts</a></b> </font></p>
+      <p><b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><a href="T-Harmonic-Loading.htm">Harmonic 
+        Loading</a></font></b></p>
+      <p><b><font size="-1"
+         face="Verdana, Helvetica, Arial, Sans-Serif"><a href="T-Impedance-Ratio.htm">Impedance 
+        Ratio</a></font></b></p>
+      <p><b><font size="-1"
+         face="Verdana, Helvetica, Arial, Sans-Serif"><a href="T-Transfer-Function.htm">Transfer 
+        Function </a></font></b></p>
+      <p><b><font size="-1"
+         face="Verdana, Helvetica, Arial, Sans-Serif"><a href="T-NumSol.html">Numerical 
+        Solution</a></font></b></p>
+      <p><b><font size="-1"
+         face="Verdana, Helvetica, Arial, Sans-Serif"><a href="T-Fourier.html">Fourier 
+        Analysis</a></font></b></p>
+      <p>&nbsp;</p>
+      <p>&nbsp; 
+    </td>
+    <td width=546> 
+      <p><b><font size="+3" face="Verdana, Helvetica, Arial, Sans-Serif">Dr. Layer 
+        1.0 <br>
+        </font></b><font size="+2" face="Verdana, Helvetica, Arial, Sans-Serif">An 
+        Introduction to the Theory of Wave Propagation in Layer Media</font><font size="+3" face="Verdana, Helvetica, Arial, Sans-Serif"></font><font size="+3" face="Verdana, Helvetica, Arial, Sans-Serif"><br>
+        <b>Harmonic Loading</b></font><font size="+3" face="Verdana, Helvetica, Arial, Sans-Serif"> 
+        </font> 
+    </td>
+  </tr>
+  <tr> 
+    <td width=546> 
+      <p><font size="+2" face="Verdana, Helvetica, Arial, Sans-Serif"> <a name="Intro"></a>Introduction</font> 
+    </td>
+  </tr>
+  <tr> 
+    <td width=546 bgcolor="#FFFFFF" > 
+      <h3><b>Traveling Waves</b></h3>
+      <p class=MsoBodyText2><font size="2">Let us consider an expression for the 
+        longitudinal displacement of the form</font></p>
+      <table width="98%" border="0" height="40">
+        <tr> 
+          <td width="79%" height="59"> 
+            <div align="center"><span
+style='font-family:Times;"Times New Roman"'><sub><img width=176 height=29
+src="T-Harmonic-Loading_files/image007.gif" v:shapes="_x0000_i1177"></sub></span></div>
+          </td>
+          <td width="21%" height="59"> 
+            <div align="center">(1)</div>
+          </td>
+        </tr>
+      </table>
+      <p class=MsoBodyText2><font size="2">where the amplitude A is independent 
+        of x and t. Equation (1) is of the general form <i>f(x-ct)</i> and thus 
+        clearly represents a traveling wave. The argument <i>k(x-ct) </i>is called 
+        the phase of the wave; points of constant phase are propagated with the 
+        phase velocity c. At any instant <i>t</i>, <i>u(x,t)</i> is a periodic 
+        function of <i>x</i> with wavelength<font face="Symbol"> l</font>, where 
+        <font face="Symbol">l</font>=2<font face="Symbol">p</font>/k. The quantity 
+        k=2<font face="Symbol">p</font>/<font face="Symbol">l</font>, which counts 
+        the number of wavelengths over 2<font face="Symbol">p</font>, is termed 
+        the wavenumber. At any position the displacement <i>u(x,t)</i> is time-harmonic 
+        with time period T, where T=2<font face="Symbol">p</font>/<font face="Symbol">w</font>. 
+        The circular frequency <span style='font-family:
+Symbol'>w</span><span style='font-family:Times;"Times New Roman"'> follows from 
+        ( ) as</span></font></p>
+      <table width="98%" border="0" height="54">
+        <tr> 
+          <td width="79%" height="63"> 
+            <div align="center"><span
+style='font-family:Times;"Times New Roman"'><sub><img width=47 height=19
+src="T-Harmonic-Loading_files/image027.gif" v:shapes="_x0000_i1197"></sub></span></div>
+          </td>
+          <td width="21%" height="63"> 
+            <div align="center">(2)</div>
+          </td>
+        </tr>
+      </table>
+      <p class=MsoBodyText2><font size="2">It follows that an alternative representation 
+        of <i>u(x,t)</i> is</font></p>
+      <table width="98%" border="0" height="40">
+        <tr> 
+          <td width="79%" height="62"> 
+            <div align="center"><span
+style='font-family:Times;"Times New Roman"'><sub><img width=168 height=48
+src="T-Harmonic-Loading_files/image031.gif" v:shapes="_x0000_i1201"></sub></span></div>
+          </td>
+          <td width="21%" height="62"> 
+            <div align="center">(3)</div>
+          </td>
+        </tr>
+      </table>
+      <p class=MsoBodyText2><font size="2">Equations 
+        ( ) and ( ) are called traveling harmonic waves. The expressions represent 
+        trains of sinusoidal waves, which disturb at any instant of time the complete 
+        (unbounded) extend of the medium. Harmonic waves are steady-state waves, 
+        as opposed to the transient waves (pulses) which were introduced in the 
+        previous theoretical handout.</font></p>
+      <p class=MsoBodyText2><font size="2">By substituting ( ) into the wave equation 
+        ( ) we obtain</font></p>
+      <table width="98%" border="0" height="40">
+        <tr> 
+          <td width="79%" height="62"> 
+            <div align="center"><span
+style='font-family:Times;"Times New Roman"'><sub><img width=125 height=24
+src="T-Harmonic-Loading_files/image033.gif" v:shapes="_x0000_i1203"></sub></span></div>
+          </td>
+          <td width="21%" height="62"> 
+            <div align="center">(4)</div>
+          </td>
+        </tr>
+      </table>
+      <p class=MsoBodyText2><font size="2">Equations ( ) show that the phase velocities 
+        of traveling harmonic waves in one-dimensional longitudinal strain are 
+        independent of the wavelength <font face="Symbol">l</font>.This implies 
+        that very short waves propagate with the same phase velocity as long waves. 
+        If the phase velocity does not depend on the wavelength we say that the 
+        system is nondispersive. If the material is notpurely elastic but displays 
+        dissipative behavior, it is found that the phase velocity of harmonic 
+        waves depend on the wavelength, and the system is said to be dispersive. 
+        Dispersion is an important phenomenon because it governs the change in 
+        shape of a pulse as it propagates through a dispersive medium</font></p>
+      <p class=MsoBodyText2><font size="2">The phase velocity c should be clearly 
+        distinguished from the particle velocity <sub><img width=44 height=21
+src="T-Harmonic-Loading_files/image037.gif" v:shapes="_x0000_i1207"></sub>, which 
+        is obtained as</font></p>
+      <table width="98%" border="0" height="40">
+        <tr> 
+          <td width="79%" height="62"> 
+            <div align="center"><span
+style='font-family:Times;"Times New Roman"'><sub><img width=191 height=29
+src="T-Harmonic-Loading_files/image039.gif" v:shapes="_x0000_i1209"></sub></span></div>
+          </td>
+          <td width="21%" height="62"> 
+            <div align="center">(5)</div>
+          </td>
+        </tr>
+      </table>
+      <p class=MsoBodyText2><font size="2">For one-dimensional longitudinal or 
+        shear strain the maximum value of the ratioof the particle velocity and 
+        the phase velocity is thus obtained as</font></p>
+      <table width="98%" border="0" height="40">
+        <tr> 
+          <td width="79%" height="62"> 
+            <div align="center"><span
+style='font-family:Times;"Times New Roman"'><sub><img width=165 height=27
+src="T-Harmonic-Loading_files/image041.gif" v:shapes="_x0000_i1211"></sub></span></div>
+          </td>
+          <td width="21%" height="62"> 
+            <div align="center">(6)</div>
+          </td>
+        </tr>
+      </table>
+      <p class=MsoBodyText2><font size="2">Within the range of validity of the 
+        linear theory the ratio <i>A/k</i> should be much less than unity.</font></p>
+      <h3 class=MsoBodyText2><b>Complex Notation</b></h3>
+      <p class=MsoBodyText2><font size="2">For mathematical convenience we generally 
+        use, instead of ( ), the expression</font></p>
+      <table width="98%" border="0" height="40">
+        <tr> 
+          <td width="79%" height="62"> 
+            <div align="center"><span
+style='font-family:Times;"Times New Roman"'><sub><img width=184 height=28
+src="T-Harmonic-Loading_files/image045.gif" v:shapes="_x0000_i1215"></sub></span></div>
+          </td>
+          <td width="21%" height="62"> 
+            <div align="center">(7)</div>
+          </td>
+        </tr>
+      </table>
+      <p class=MsoBodyText2><font size="2">where <sub><img width=64 height=27
+src="T-Harmonic-Loading_files/image047.gif" v:shapes="_x0000_i1217"></sub>. Withoutn 
+        stating it explicitly, henceforth it is understood that the real or imaginary 
+        part of ( ) is to be taken for the physical interpretation of the solution. 
+        For the case of one-dimensional shear strains the corresponding shear 
+        stress is then represented by</font></p>
+      <table width="98%" border="0" height="40">
+        <tr> 
+          <td width="79%" height="62"> 
+            <div align="center"><span
+style='font-family:Times;"Times New Roman"'><sub><img width=205 height=29
+src="T-Harmonic-Loading_files/image049.gif" v:shapes="_x0000_i1219"></sub></span></div>
+          </td>
+          <td width="21%" height="62"> 
+            <div align="center">(8)</div>
+          </td>
+        </tr>
+      </table>
+      <p class=MsoBodyText2><font size="2">and the particle velocity is written 
+        as</font></p>
+      <table width="98%" border="0" height="40">
+        <tr> 
+          <td width="79%" height="62"> 
+            <div align="center"><span
+style='font-family:Times;"Times New Roman"'><sub><img width=236 height=29
+src="T-Harmonic-Loading_files/image051.gif" v:shapes="_x0000_i1221"></sub></span></div>
+          </td>
+          <td width="21%" height="62"> 
+            <div align="center">(9)</div>
+          </td>
+        </tr>
+      </table>
+      <h3 ><b>Standing Waves</b></h3>
+      <p class=MsoBodyText2><font size="2">Let us consider two displacement waves 
+        of the same frequency and wavelength, but traveling in opposite directions. 
+        Since the wave equation is linear the resultant displacement is</font></p>
+      <table width="98%" border="0" height="40">
+        <tr> 
+          <td width="79%" height="62"> 
+            <div align="center"><span
+style='font-family:Times;"Times New Roman"'><sub><img width=221 height=24
+src="T-Harmonic-Loading_files/image053.gif" v:shapes="_x0000_i1223"></sub></span></div>
+          </td>
+          <td width="21%" height="62"> 
+            <div align="center">(10)</div>
+          </td>
+        </tr>
+      </table>
+      <p class=MsoBodyText2><font size="2">where A<font size="-2">+</font> and 
+        A<font size="-2">-</font> are real-valued amplitudes, and <font face="Symbol">g</font><font size="-2">+</font> 
+        and <font face="Symbol">g</font><font size="-2">-</font> are phase angles. 
+        If the amplitudes of the two simple harmonic waves are equal, A<font size="-2">+</font> 
+        = A<font size="-2">-</font> = A, we can write</font></p>
+      <table width="98%" border="0" height="40">
+        <tr> 
+          <td width="79%" height="62"> 
+            <div align="center"><span
+style='font-family:Times;"Times New Roman"'><sub><img width=413 height=77
+src="T-Harmonic-Loading_files/image065.gif" v:shapes="_x0000_i1235"></sub></span></div>
+          </td>
+          <td width="21%" height="62"> 
+            <div align="center">(11)</div>
+          </td>
+        </tr>
+      </table>
+      <p class=MsoBodyText2><font size="2">The real part of this expression is</font></p>
+      <table width="98%" border="0" height="40">
+        <tr> 
+          <td width="79%" height="62"> 
+            <div align="center"><span
+style='font-family:Times;"Times New Roman"'><sub><img width=396 height=23
+src="T-Harmonic-Loading_files/image067.gif" v:shapes="_x0000_i1237"></sub></span></div>
+          </td>
+          <td width="21%" height="62"> 
+            <div align="center">(12)</div>
+          </td>
+        </tr>
+      </table>
+      <p class=MsoBodyText2><font size="2">Equation ( ) represent a standing wave, 
+        since the shape of the wave does not travel. At points where cos( kx + 
+        1/2 <font face="Symbol">g</font><font size="-2">+</font> + 1/2 <font face="Symbol">g</font><font size="-2">-</font> 
+        ) = 0, the two traveling waves always cancel each other and the medium 
+        is at rest. These points are called nodal points. Halfway between each 
+        pair of nodal points are the antinodes, where the motion has the largest 
+        amplitude.</font></p>
+      <h3><b>Modes of Vibration</b></h3>
+      <p><font size="2">Standing waves form certain modes of free vibration of 
+        an elastic body. As an example we consider the vibrations of a rod. If 
+        we consider a semi-infinite rod and if we require that the displacement 
+        vanishes at <i>x = 0</i>, the possible harmonic motions are subject to 
+        restrictions. Equation (1) can now not be used and we have to employ the 
+        standing wave form ( ) with the angles <font face="Symbol">g</font>+ and 
+        <font face="Symbol">g</font>-  chosen so that a nodal point coincides 
+        with the boundary <i>x = 0</i>, i.e.,</font></p>
+      <table width="98%" border="0" height="40">
+        <tr> 
+          <td width="79%" height="62"> 
+            <div align="center"><span
+style='font-family:Times;"Times New Roman"'><sub><img width=76 height=23
+src="T-Harmonic-Loading_files/image079.gif" v:shapes="_x0000_i1249"></sub></span></div>
+          </td>
+          <td width="21%" height="62"> 
+            <div align="center">(13)</div>
+          </td>
+        </tr>
+      </table>
+      <table width="98%" border="0" height="40">
+        <tr> 
+          <td width="79%" height="62"> 
+            <div align="center"><span
+style='font-family:Times;"Times New Roman"'><sub><img width=221 height=23
+src="T-Harmonic-Loading_files/image081.gif" v:shapes="_x0000_i1251"></sub></span></div>
+          </td>
+          <td width="21%" height="62"> 
+            <div align="center">(14)</div>
+          </td>
+        </tr>
+      </table>
+      <p class=MsoBodyText2><font size="2">When, as a second boundary condition 
+        we add <i>u=0</i> at <i>x=l</i>, the harmonic motion is still further 
+        limited, for now of all the harmonic motions represented by ( ) only those 
+        which have a nodal point at <i>x=l</i> can be used. Thus we require</font></p>
+      <table width="98%" border="0" height="40">
+        <tr> 
+          <td width="79%" height="62"> 
+            <div align="center"><span
+style='font-family:Times;"Times New Roman"'><sub><img width=73 height=21
+src="T-Harmonic-Loading_files/image089.gif" v:shapes="_x0000_i1259"></sub></span></div>
+          </td>
+          <td width="21%" height="62"> 
+            <div align="center">(15)</div>
+          </td>
+        </tr>
+      </table>
+      <p class=MsoBodyText2><font size="2">which implies</font></p>
+      <table width="98%" border="0" height="40">
+        <tr> 
+          <td width="79%" height="63"> 
+            <div align="center"><span
+style='font-family:Times;"Times New Roman"'><sub><img width=192 height=41
+src="T-Harmonic-Loading_files/image091.gif" v:shapes="_x0000_i1261"></sub></span></div>
+          </td>
+          <td width="21%" height="63"> 
+            <div align="center">(16)</div>
+          </td>
+        </tr>
+      </table>
+      <p class=MsoBodyText2><font size="2">The distance between nodal points is 
+        half the wavelength, and thus this distance must be <i>l, l/2, l/3</i>, 
+        etc. The corresponding circular frequencies are</font></p>
+      <table width="98%" border="0" height="40">
+        <tr> 
+          <td width="79%" height="62"> 
+            <div align="center"><span
+style='font-family:Times;"Times New Roman"'><sub><img width=109 height=41
+src="T-Harmonic-Loading_files/image095.gif" v:shapes="_x0000_i1265"></sub></span></div>
+          </td>
+          <td width="21%" height="62"> 
+            <div align="center">(17)</div>
+          </td>
+        </tr>
+      </table>
+      <p class=MsoBodyText2><font size="2">The circular frequency of the lowest 
+        or fundamental mode, which is called the fundamental frequency, is <font face="Symbol">w</font><font size="-2">0</font> 
+        = <font face="Symbol">p</font> <font face="Symbol">n</font><font size="-2">s</font>/l<span> </span>radians 
+        per second; in cycles per second the fundamental frequency is f<font size="-2">0</font> 
+        = <font face="Symbol">n</font><font size="-2">s</font>/2l. The frequencies 
+        of the higher modes are in cycles per second, f2 = <font face="Symbol">2n</font><font size="-2">s</font>/2l, 
+        f3 = <font face="Symbol">3n</font><font size="-2">s</font>/2l, etc. The 
+        higher frequencies are called overtones. For the example of the rod with 
+        rigidly supported ends the overtones are integral multiples of the fundamental 
+        frequency. Overtones with this simple relation to the fundamental are 
+        called harmonics. Only for the simplest vibrating systems governed by 
+        the wave equation are the modes of vibration as simple as discussed in 
+        this section.</font></p>
+      </td>
+  </tr>
+  <tr> </tr>
+  <tr> 
+    <td width=108> 
+      <p><b><font size="-1">&nbsp;</font><font size="-1"
+         face="Arial"><a href="#top">BACK TO TOP</a></font></b></p>
+      <p><em><font size="-1" face="Verdana, Helvetica, Arial, Sans-Serif">&nbsp;Last 
+        Updated:<br>
+        11/21/00</font></em>
+    </td>
+    <td width=546> 
+      <p align=RIGHT><i><font size="-1">Contact us at: </font><font
+         size="-1"><a href="mailto:support@drsoftware-home.com">parduino@u.washington.edu</a></font></i> 
+      </p>
+      <p>&nbsp; 
+    </td>
+  </tr>
+</table>
+<p></p>
+</body>
+</html>

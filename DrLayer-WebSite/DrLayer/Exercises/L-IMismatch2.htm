@@ -1,0 +1,204 @@
+<html><!-- #BeginTemplate "/Templates/lesson.dwt" -->
+<head>
+<!-- STYLESHEETS -->
+<STYLE TYPE="text/css">
+BODY{font-family: verdana, arial, helvetica, sans serif; font-size: 10px}
+P{font-family: verdana, arial, helvetica, sans serif; font-size: 10px}
+TD{font-family: verdana, arial, helvetica, sans serif; font-size: 10px}
+A.courselink{font-family: verdana, arial, helvetica, sans serif; font-size: 11px; text-decoration: none; color: white; font-weight: bold}
+A.navlink1{font-family: verdana, arial, helvetica, sans serif; font-size: 11px; line-height: 14px; text-decoration: none; color: black}
+A.navlink2{font-family: verdana, arial, helvetica, sans serif; font-size: 10px; line-height: 12px; text-decoration: none; indent: 10px; color: black}
+A.navlink2org{font-family: verdana, arial, helvetica, sans serif; font-size: 10px; line-height: 12px; color: #FF6600; text-decoration: none; indent: 10px}
+H3.head{font-family: verdana, arial, helvetica, sans serif; font-size: 14px; line-height: 12px; color: #336699}
+H4.subhead{font-family: verdana, arial, helvetica, sans serif; font-size: 11px; color: #FF6600}
+H4.subtitle{font-family: verdana, arial, helvetica, sans serif; font-size: 12px; color: #FF6600}
+</STYLE>
+<!-- STYLESHEETS --> <!-- #BeginEditable "doctitle" --> 
+<title>Impedance Mismatch2</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name=GENERATOR content="Claris Home Page 2.0">
+<x-sas-window top=25 bottom=605 left=142 right=988> 
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="Template" content="C:\OFFICE\OFFICE\html.dot">
+</head>
+
+<body bgcolor="#FFFFFF" link="#0000FF" vlink="#800080">
+<!--This file created 3:07 PM  8/18/98 by Claris Home Page version 2.0--> 
+<p><a name="top"></a></p>
+<p>
+<table border=0 cellpadding=10 width=693>
+  <tr> 
+    <td valign=top rowspan=4 bgcolor="#999999" width=110> 
+      <p><font face="Verdana, Arial, Helvetica, sans-serif"><b><a href="../Exercises.html">Back 
+        to Exercises</a></b></font></p>
+      <hr>
+      <p><b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><a href="L-BConcepts.htm">Basic 
+        Concepts </a> </font></b></p>
+      <p><b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><a href="L-Loading.htm">Loading 
+        </a></font></b></p>
+      <p><b><font size="-1"
+         face="Verdana, Helvetica, Arial, Sans-Serif"><a href="L-BConditions.htm">Boundary 
+        Conditions </a></font><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"></font></b></p>
+      <p><b><font size="-1"
+         face="Verdana, Helvetica, Arial, Sans-Serif"><a href="L-IMismatch.htm">Impedance 
+        Mismatch</a></font><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"></font></b></p>
+      <p><b><font size="-1"
+         face="Verdana, Helvetica, Arial, Sans-Serif"><a href="L-DEffects.htm">Damping 
+        Effects</a></font><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"></font></b></p>
+      <p><b><b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><a href="L-FDomain.htm">Natural 
+        Mode of Vibration</a></font></b></b></p>
+      <p><b><b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><a href="L-TFunction.htm">Transfer 
+        Function</a></font></b><br>
+        <br>
+        <font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><a href="L-FDomain.htm">Frequency 
+        Response</a></font></b></p>
+      <p><b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><a href="L-TStepping.htm">Time 
+        Stepping</a></font></b></p>
+      <p><b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><a href="L-MModel.htm">Material 
+        Behavior </a></font></b></p>
+      <p>&nbsp; 
+    </td>
+    <td width=537> <b><font size="+3" face="Verdana, Helvetica, Arial, Sans-Serif"><img src="../images/DrLLogo.gif" width="34" height="35" align="absmiddle" name="DrLogo"> 
+      Dr. Layer 1.0 <br>
+      </font></b><font size="+3" face="Verdana, Helvetica, Arial, Sans-Serif"><!-- #BeginEditable "Title" -->Exercise 
+      4b - Impedance Ratio Effects<!-- #EndEditable --></font></td>
+  </tr>
+  <tr> 
+    <td width=537> 
+      <p><font size="+2" face="Verdana, Helvetica, Arial, Sans-Serif"> <a name="Intro"></a>Introduction</font> 
+      </p>
+      <!-- #BeginEditable "Introduction" --><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Introduction</font><!-- #EndEditable --></td>
+  </tr>
+  <tr> 
+    <td width=537 > 
+      <h3><a name="Background"></a>Background<!-- #BeginEditable "background1" --><!-- #EndEditable --></h3>
+      <!-- #BeginEditable "background" --><font size="2">During wave propagation 
+      the presence of different interfaces will affect the amplitudes of the wave 
+      travel. The partitioning of energy at the interface is a function of the 
+      specific impedance of materials in the different media. The specific impedance 
+      is a measure of the density and wave propagation velocity in a particular 
+      material.</font><!-- #EndEditable --> 
+      <h3><b><font size="-1">&nbsp;</font><font size="-1"
+         face="Arial"><a href="#top">BACK TO TOP</a></font></b></h3>
+      <h3><a name="Objective"></a>Objective</h3>
+      <!-- #BeginEditable "Objective" --><font size="2">After this exercise you 
+      should be able to show how the impedance ratio affects the proportion of 
+      the wave that is trapped on soft layers and the effect of a transmitting 
+      boundary on the dissipation of energy in an semi-infinite soil layer.</font><!-- #EndEditable --> 
+      <p><b><font size="-1">&nbsp;</font><font size="-1"
+         face="Arial"><a href="#top">BACK TO TOP</a></font></b></p>
+      <h3><a name="ThingstoDo"></a>Things to Do</h3>
+      <!-- #BeginEditable "ThingToDo" --> 
+      <ol>
+        <li><font size="2">Open the Dr. Layer program. Starting with the initial 
+          configuration, assign to the bottom eight layers a &quot;<b>very fast</b>&quot; 
+          wave velocity and to the upper four layers a &quot;<b>slow</b>&quot; 
+          wave velocity as shown in Figure 1. </font><br>
+          <br>
+        </li>
+        <li> 
+          <div align="left"><font size="2">Select a &quot;<b>pulse</b>&quot; load 
+            condition and assign to it a high amplitude and high frequency (close 
+            to 80% of max). Select from the &quot;<b>options</b>&quot; menu the 
+            &quot;<b>Release Base</b>&quot; and &quot;<b>Radiation Damping</b>&quot; 
+            conditions.</font><br>
+            <br>
+            <img src="L-IMismatch_files/prob01-image01.gif" width="500" height="398"> 
+            <br>
+            <br>
+          </div>
+        </li>
+        <li><font size="2">Using the results from exercises 1 (basic concepts) 
+          and 3 (impedance ratio) determine the specific impedance of each layer 
+          group and the impedance ratio at the interface between the two materials.<br>
+          </font> 
+          <div align="left"><br>
+          </div>
+        </li>
+        <li><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Starting 
+          with the set up described above, move the cursor to the upper left portion 
+          of the screen and press on the time increment button <img src="L-BConcepts_files/B-run.gif" width="23" height="23" align="absbottom"> 
+          to set up the wave motion. You will immediately notice a pulse wave 
+          that travels in the upward direction.</font><font size="2"><br>
+          </font><font size="2"><br>
+          </font></li>
+        <li> <font size="2">At the interface part of the energy carried by the 
+          wave will be transmitted and part will be reflected. Note the direction 
+          and amplitude of the transmitted and reflected waves.<br>
+          <br>
+          </font></li>
+        <li><font size="2">The reflected portion of the wave will travel down 
+          through the lower material and once it reaches the base it will be completely 
+          absorbed. Note that at this point the wave amplitude completely vanishes. 
+          To simulate this phenomenon DrLayer uses a transmitting element characterized 
+          by a simple dashpot connected to the base. This condition allow us simulate 
+          a realistic semiinfinite soil layer.</font><font size="2"><br>
+          <br>
+          </font></li>
+        <li> <font size="2"> The transmitted portion of the wave will travel through 
+          the upper layer with a slower wave speed and eventually will reach a 
+          free boundary. Based on the results from exercise 2 we can now ascertain 
+          that at this boundary the wave will be completely reflected.<br>
+          <br>
+          </font></li>
+        <li><font size="2"> The reflected wave will travel down through material 
+          2 and eventually will reach again the interface between the two materials. 
+          At this point part of the wave will be transmitted and part will be 
+          reflected.<br>
+          <br>
+          </font></li>
+        <li><font size="2"> As time goes on these interactions will repeat several 
+          times. Observe the effect of time on the amplitude of the trapped wave. 
+          <br>
+          </font></li>
+      </ol>
+      <!-- #EndEditable --> 
+      <h3><b><font size="-1">&nbsp;</font><font size="-1"
+         face="Arial"><a href="#top">BACK TO TOP</a></font></b></h3>
+      <h3><a name="Observation"></a>Observation</h3>
+      <font face="Verdana, Arial, Helvetica, sans-serif"><!-- #BeginEditable "Observation" --><font size="2">Notice 
+      that during the motion a fraction of the energy carried by the wave is entertained 
+      (or trapped) in the upper layer. This fraction diminishes as time goes on 
+      and eventually the system reaches the at rest condition. Base on your current 
+      knowledge on wave propagation explain why the motion dissipates??</font>.<!-- #EndEditable --></font> 
+      <p><b><font size="-1"
+         face="Arial"><a href="#top">BACK TO TOP</a></font></b></p>
+      <h3><a name="OnYourOwn"></a>On Your Own</h3>
+      <font face="Arial, Helvetica, sans-serif" size="2"><!-- #BeginEditable "OnYourOwn" --><font size="2"> 
+      <ol>
+        <li> <font face="Verdana, Arial, Helvetica, sans-serif">Try different 
+          layer configurations using different wave speed combinations and layer 
+          thickness. <br>
+          <br>
+          </font></li>
+        <li><font face="Verdana, Arial, Helvetica, sans-serif">Using different 
+          layer widths estimate the time required to completely dissipate the 
+          pulse wave.</font></li>
+      </ol>
+      </font><!-- #EndEditable --> 
+      </font> 
+      <h3><b><font size="-1">&nbsp;</font><font size="-1"
+         face="Arial"><a href="#top">BACK TO TOP</a></font></b></h3>
+      </td>
+  </tr>
+  <tr> </tr>
+  <tr> 
+    <td width=110> 
+      <p><b><font size="-1">&nbsp;</font><font size="-1"
+         face="Arial"><a href="#top">BACK TO TOP</a></font></b></p>
+      <p><em><font size="-1" face="Verdana, Helvetica, Arial, Sans-Serif">&nbsp;Last 
+        Updated:<br>
+        </font></em> 12/27/00
+    </td>
+    <td width=537> 
+      <p align=RIGHT><i><font size="-1">Contact us at: </font><font
+         size="-1"><a href="mailto:support@drsoftware-home.com">parduino@u.washington.edu</a></font></i> 
+      </p>
+      <p>&nbsp; 
+    </td>
+  </tr>
+</table>
+<p></p>
+</body>
+<!-- #EndTemplate --></html>

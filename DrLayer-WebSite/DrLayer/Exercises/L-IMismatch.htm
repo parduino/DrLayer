@@ -1,0 +1,179 @@
+<html><!-- #BeginTemplate "/Templates/lesson.dwt" -->
+<head>
+<!-- STYLESHEETS -->
+<STYLE TYPE="text/css">
+BODY{font-family: verdana, arial, helvetica, sans serif; font-size: 10px}
+P{font-family: verdana, arial, helvetica, sans serif; font-size: 10px}
+TD{font-family: verdana, arial, helvetica, sans serif; font-size: 10px}
+A.courselink{font-family: verdana, arial, helvetica, sans serif; font-size: 11px; text-decoration: none; color: white; font-weight: bold}
+A.navlink1{font-family: verdana, arial, helvetica, sans serif; font-size: 11px; line-height: 14px; text-decoration: none; color: black}
+A.navlink2{font-family: verdana, arial, helvetica, sans serif; font-size: 10px; line-height: 12px; text-decoration: none; indent: 10px; color: black}
+A.navlink2org{font-family: verdana, arial, helvetica, sans serif; font-size: 10px; line-height: 12px; color: #FF6600; text-decoration: none; indent: 10px}
+H3.head{font-family: verdana, arial, helvetica, sans serif; font-size: 14px; line-height: 12px; color: #336699}
+H4.subhead{font-family: verdana, arial, helvetica, sans serif; font-size: 11px; color: #FF6600}
+H4.subtitle{font-family: verdana, arial, helvetica, sans serif; font-size: 12px; color: #FF6600}
+</STYLE>
+<!-- STYLESHEETS --> <!-- #BeginEditable "doctitle" --> 
+<title>Introduction</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name=GENERATOR content="Claris Home Page 2.0">
+<x-sas-window top=25 bottom=605 left=142 right=988> 
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="Template" content="C:\OFFICE\OFFICE\html.dot">
+</head>
+
+<body bgcolor="#FFFFFF" link="#0000FF" vlink="#800080">
+<!--This file created 3:07 PM  8/18/98 by Claris Home Page version 2.0--> 
+<p><a name="top"></a></p>
+<p>
+<table border=0 cellpadding=10 width=693>
+  <tr> 
+    <td valign=top rowspan=4 bgcolor="#999999" width=110> 
+      <p><font face="Verdana, Arial, Helvetica, sans-serif"><b><a href="../Exercises.html">Back 
+        to Exercises</a></b></font></p>
+      <hr>
+      <p><b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><a href="L-BConcepts.htm">Basic 
+        Concepts </a> </font></b></p>
+      <p><b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><a href="L-Loading.htm">Loading 
+        </a></font></b></p>
+      <p><b><font size="-1"
+         face="Verdana, Helvetica, Arial, Sans-Serif"><a href="L-BConditions.htm">Boundary 
+        Conditions </a></font><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"></font></b></p>
+      <p><b><font size="-1"
+         face="Verdana, Helvetica, Arial, Sans-Serif"><a href="L-IMismatch.htm">Impedance 
+        Mismatch</a></font><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"></font></b></p>
+      <p><b><font size="-1"
+         face="Verdana, Helvetica, Arial, Sans-Serif"><a href="L-DEffects.htm">Damping 
+        Effects</a></font><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"></font></b></p>
+      <p><b><b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><a href="L-FDomain.htm">Natural 
+        Mode of Vibration</a></font></b></b></p>
+      <p><b><b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><a href="L-TFunction.htm">Transfer 
+        Function</a></font></b><br>
+        <br>
+        <font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><a href="L-FDomain.htm">Frequency 
+        Response</a></font></b></p>
+      <p><b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><a href="L-TStepping.htm">Time 
+        Stepping</a></font></b></p>
+      <p><b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><a href="L-MModel.htm">Material 
+        Behavior </a></font></b></p>
+      <p>&nbsp; 
+    </td>
+    <td width=537> <b><font size="+3" face="Verdana, Helvetica, Arial, Sans-Serif"><img src="../images/DrLLogo.gif" width="34" height="35" align="absmiddle" name="DrLogo"> 
+      Dr. Layer 1.0 <br>
+      </font></b><font size="+3" face="Verdana, Helvetica, Arial, Sans-Serif"><!-- #BeginEditable "Title" -->Exercise 
+      4 - Impedance Mismatch<!-- #EndEditable --></font></td>
+  </tr>
+  <tr> 
+    <td width=537> 
+      <p><font size="+2" face="Verdana, Helvetica, Arial, Sans-Serif"> <a name="Intro"></a>Introduction</font> 
+      </p>
+      <!-- #BeginEditable "Introduction" --><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Introduction</font><!-- #EndEditable --></td>
+  </tr>
+  <tr> 
+    <td width=537 > 
+      <h3><a name="Background"></a>Background<!-- #BeginEditable "background1" --><!-- #EndEditable --></h3>
+      <!-- #BeginEditable "background" --><font size="2">During wave propagation 
+      the presence of different interfaces will affect the amplitudes of the wave 
+      travel. The partitioning of energy at the interface is a function of the 
+      specific impedances of materials in the different media. The specific impedance 
+      is a measure of the density and wave propagation velocity in a particular 
+      material.</font><!-- #EndEditable --> 
+      <h3><b><font size="-1">&nbsp;</font><font size="-1"
+         face="Arial"><a href="#top">BACK TO TOP</a></font></b></h3>
+      <h3><a name="Objective"></a>Objective</h3>
+      <!-- #BeginEditable "Objective" --><font size="2">After this exercise you 
+      should be able to show how the impedance ratio affects the proportion of 
+      the wave that is reflected or transmitted. The impedance ratio can be calculated 
+      from given relationships. You will also obtain the displacement amplitudes 
+      and have a better understanding of the relevance of this ratio with respect 
+      to the relative nature of “softness” or “stiffness “ of the intervening 
+      media.</font><!-- #EndEditable --> 
+      <p><b><font size="-1">&nbsp;</font><font size="-1"
+         face="Arial"><a href="#top">BACK TO TOP</a></font></b></p>
+      <h3><a name="ThingstoDo"></a>Things to Do</h3>
+      <!-- #BeginEditable "ThingToDo" --> 
+      <ol>
+        <li><font size="2">Open the Dr. Layer program. By default we get twelve 
+          layers. The top six layers are hardwired into the system with a very 
+          fast velocity. The bottom six layers are hardwired with a very slow 
+          velocity.</font><br>
+          <br>
+        </li>
+        <li> <font size="2">Starting with the set up above, move the cursor on 
+          the bottom left portion of our screen and depress on the time increment 
+          button to set up the wave motion.</font><br>
+          <br>
+          <img src="L-IMismatch_files/image005.gif" width="435" height="436"> 
+          <br>
+          <br>
+        </li>
+        <li> <font size="2">Determine the time it takes to get the wave to reach 
+          the top of the sixth layer (in the very slow wave speed materials) and 
+          note the time. The velocity can be determined from these. Check the 
+          density of the material from the attached property tables.<br>
+          <br>
+          </font></li>
+        <li> <font size="2">Obtain the specific impedance of each layer group 
+          and hence the impedance ratio of the two different materials.<br>
+          <br>
+          </font></li>
+        <li> <font size="2">Repeat the procedure above for a very fast wavespeed 
+          in the bottom six layer group and a very slow top six layer group. To 
+          change material properties select the six layers with the cursor and 
+          depress the shift key. Then go to the wavespeed menu button and select 
+          the appropriate wave speed.<br>
+          <br>
+          </font></li>
+        <li> <font size="2"> Try as many different combinations as possible obtaining 
+          impedance ratios for each case.</font></li>
+      </ol>
+      <!-- #EndEditable --> 
+      <h3><b><font size="-1">&nbsp;</font><font size="-1"
+         face="Arial"><a href="#top">BACK TO TOP</a></font></b></h3>
+      <h3><a name="Observation"></a>Observation</h3>
+      <font face="Verdana, Arial, Helvetica, sans-serif"><!-- #BeginEditable "Observation" --><font size="2">The 
+      values of the impedance ratios obtained reflects the relative softness/stiffness 
+      of the layers. When the impedance ratio is less than one, an incident wave 
+      can be thought of as approaching a softer material. If the impedance ratio 
+      is greater than one the material is approaching a stiffer material.</font><!-- #EndEditable --></font> 
+      <p><b><font size="-1"
+         face="Arial"><a href="#top">BACK TO TOP</a></font></b></p>
+      <h3><a name="OnYourOwn"></a>On Your Own</h3>
+      <font face="Arial, Helvetica, sans-serif" size="2"><!-- #BeginEditable "OnYourOwn" --><font size="2"> 
+      <ol>
+        <li> <font face="Verdana, Arial, Helvetica, sans-serif">Think about what 
+          happens when we have impedance ratios of zero, unity and infinity.<br>
+          <br>
+          </font></li>
+        <li> <font face="Verdana, Arial, Helvetica, sans-serif">Note what happens 
+          at i.e. how much is transmitted and reflected. <br>
+          (*hint: To do this you need to note displacement amplitudes from the 
+          plot box after the wave reaches the boundary)</font></li>
+      </ol>
+      </font><!-- #EndEditable --> 
+      </font> 
+      <h3><b><font size="-1">&nbsp;</font><font size="-1"
+         face="Arial"><a href="#top">BACK TO TOP</a></font></b></h3>
+      </td>
+  </tr>
+  <tr> </tr>
+  <tr> 
+    <td width=110> 
+      <p><b><font size="-1">&nbsp;</font><font size="-1"
+         face="Arial"><a href="#top">BACK TO TOP</a></font></b></p>
+      <p><em><font size="-1" face="Verdana, Helvetica, Arial, Sans-Serif">&nbsp;Last 
+        Updated:<br>
+        </font></em> 12/27/00
+    </td>
+    <td width=537> 
+      <p align=RIGHT><i><font size="-1">Contact us at: </font><font
+         size="-1"><a href="mailto:support@drsoftware-home.com">parduino@u.washington.edu</a></font></i> 
+      </p>
+      <p>&nbsp; 
+    </td>
+  </tr>
+</table>
+<p></p>
+</body>
+<!-- #EndTemplate --></html>

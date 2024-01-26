@@ -1,0 +1,416 @@
+<html>
+<head>
+<!-- STYLESHEETS -->
+<STYLE TYPE="text/css">
+BODY{font-family: verdana, arial, helvetica, sans serif; font-size: 10px}
+P{font-family: verdana, arial, helvetica, sans serif; font-size: 10px}
+TD{font-family: verdana, arial, helvetica, sans serif; font-size: 10px}
+A.courselink{font-family: verdana, arial, helvetica, sans serif; font-size: 11px; text-decoration: none; color: white; font-weight: bold}
+A.navlink1{font-family: verdana, arial, helvetica, sans serif; font-size: 11px; line-height: 14px; text-decoration: none; color: black}
+A.navlink2{font-family: verdana, arial, helvetica, sans serif; font-size: 10px; line-height: 12px; text-decoration: none; indent: 10px; color: black}
+A.navlink2org{font-family: verdana, arial, helvetica, sans serif; font-size: 10px; line-height: 12px; color: #FF6600; text-decoration: none; indent: 10px}
+H3.head{font-family: verdana, arial, helvetica, sans serif; font-size: 14px; line-height: 12px; color: #336699}
+H4.subhead{font-family: verdana, arial, helvetica, sans serif; font-size: 11px; color: #FF6600}
+H4.subtitle{font-family: verdana, arial, helvetica, sans serif; font-size: 12px; color: #FF6600}
+</STYLE>
+<!-- STYLESHEETS -->
+<title>Theory-Layer Transfer Functions</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name=GENERATOR content="Claris Home Page 2.0">
+<x-sas-window top=25 bottom=605 left=142 right=988> 
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="Template" content="C:\OFFICE\OFFICE\html.dot">
+</head>
+
+<body bgcolor="#FFFFFF" link="#0000FF" vlink="#800080">
+<!--This file created 3:07 PM  8/18/98 by Claris Home Page version 2.0--> 
+<p><a name="top"></a></p>
+<p>
+<table border=0 cellpadding=10 width=700>
+  <tr> 
+    <td valign=top rowspan=4 bgcolor="#999999" width=108> 
+      <p><font face="Verdana, Arial, Helvetica, sans-serif"><b><a href="../theory.html">Back 
+        to Theory</a></b></font></p>
+      <hr>
+      <p><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><b><a href="T-Basic-Concepts.html">Basic 
+        Concepts</a></b> </font></p>
+      <p><b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><a href="T-Harmonic-Loading.htm">Harmonic 
+        Loading</a></font></b></p>
+      <p><b><font size="-1"
+         face="Verdana, Helvetica, Arial, Sans-Serif"><a href="T-Impedance-Ratio.htm">Impedance 
+        Ratio</a></font></b></p>
+      <p><b><font size="-1"
+         face="Verdana, Helvetica, Arial, Sans-Serif"><a href="T-Transfer-Function.htm">Transfer 
+        Function </a></font></b></p>
+      <p><b><font size="-1"
+         face="Verdana, Helvetica, Arial, Sans-Serif"><a href="T-NumSol.htm">Numerical 
+        Solution</a></font></b></p>
+      <p><b><font size="-1"
+         face="Verdana, Helvetica, Arial, Sans-Serif"><a href="T-Fourier.htm">Fourier 
+        Analysis</a></font></b></p>
+      <p>&nbsp;</p>
+      <p>&nbsp; 
+    </td>
+    <td width=546> 
+      <p><b><font size="+3" face="Verdana, Helvetica, Arial, Sans-Serif">Dr. Layer 
+        1.0 <br>
+        </font></b><font size="+2" face="Verdana, Helvetica, Arial, Sans-Serif">An 
+        Introduction to the Theory of Wave Propagation in Layer Media</font>
+      <p><font face="Verdana, Helvetica, Arial, Sans-Serif" size="+3"><b>Transfer 
+        Functions</b> </font> 
+    </td>
+  </tr>
+  <tr> 
+    <td width=546> 
+      <p><font size="+2" face="Verdana, Helvetica, Arial, Sans-Serif"> <a name="Intro"></a>Introduction</font> 
+    </td>
+  </tr>
+  <tr> 
+    <td width=546 > 
+      <p>          <font size="2">In the following sections, transfer functions 
+        are derived for a series of successively more complicated geotechnical 
+        conditions. Although the simplest of these may only rarely be applicable 
+        to actual problems, they illustrate some of the important effects of soil 
+        deposits on ground motion characteristics without undue mathematical complexity. 
+        The more complex are capable of describing the most important aspects 
+        of ground response and are very commonly used in geotechnical earthquake 
+        engineering practice.</font></p>
+      <font size="+2"><b>Uniform Undamped Soil on Rigid Rock</b></font> 
+      <p><font size="2">First, consider a uniform layer of isotropic, linear elastic 
+        soil overlying rigid bedrock as shown in Figure 1. Harmonic horizontal 
+        motion of the bedrock will produce vertically propagating shear waves 
+        in the overlying soil. The resulting horizontal displacement can be expressed 
+        as:<br>
+        </font></p>
+      <table width="98%" border="0" height="40">
+        <tr> 
+          <td width="79%" height="82"> 
+            <div align="center"><span
+style='font-family:Times;"Times New Roman"'><sub><img width=184 height=24
+src="./transfer-function_files/image002.gif" v:shapes="_x0000_i1025"></sub></span></div>
+          </td>
+          <td width="21%" height="82"> 
+            <div align="center">(1)</div>
+          </td>
+        </tr>
+      </table>
+      <p><font size="2">where w is the circular frequency of ground shaking, k 
+        the wave number (=<span style='font-family:Symbol'>w</span>/<span style='font-family:
+Symbol'>n</span><sub>s</sub>) and A and B the amplitudes of waves traveling in 
+        the –z (upward) and +z (downward) directions, respectively. At the free 
+        surface (z=0), the shear stress, and consequently the shear strain, must 
+        vanish; that is,<br>
+        </font></p>
+      <table width="98%" border="0" height="40">
+        <tr> 
+          <td width="79%" height="87"> 
+            <div align="center"><span
+style='font-family:Times;"Times New Roman"'><sub><img width=213 height=41
+src="./transfer-function_files/image004.gif" v:shapes="_x0000_i1026"></sub></span></div>
+          </td>
+          <td width="21%" height="87"> 
+            <div align="center">(2)</div>
+          </td>
+        </tr>
+      </table>
+      <p><font size="2">Substituting (1) into (2) and differentiating yields<br>
+        </font></p>
+      <table width="98%" border="0" height="40">
+        <tr> 
+          <td width="79%" height="87"> 
+            <div align="center"><span
+style='font-family:Times;"Times New Roman"'><sub><img width=296 height=24
+src="./transfer-function_files/image006.gif" v:shapes="_x0000_i1027"></sub></span></div>
+          </td>
+          <td width="21%" height="87"> 
+            <div align="center">(3)</div>
+          </td>
+        </tr>
+      </table>
+      <p><font size="2">which is satisfied (nontrivially) when A=B. The displacement 
+        can then be expressed as<br>
+        </font></p>
+      <table width="98%" border="0" height="40">
+        <tr> 
+          <td width="79%" height="87"> 
+            <div align="center"><span
+style='font-family:Times;"Times New Roman"'><sub><img width=269 height=44
+src="./transfer-function_files/image008.gif" v:shapes="_x0000_i1037"></sub></span></div>
+          </td>
+          <td width="21%" height="87"> 
+            <div align="center">(4)</div>
+          </td>
+        </tr>
+      </table>
+      <p><font size="2">which describes a standing wave of amplitude 2A cos(kz). 
+        The standing wave is produced by the constructive interference of the 
+        upward and downward traveling waves and has a fixed shape with respect 
+        to depth. Equation (4) can be used to define a transfer function that 
+        describes the ratio of displacement amplitudes at any two points in the 
+        soil layer. Choosing these two points to be the top and bottom of the 
+        soil layer gives the transfer function<br>
+        </font></p>
+      <table width="98%" border="0" height="40">
+        <tr> 
+          <td width="79%" height="87"> 
+            <div align="center"><span
+style='font-family:Times;"Times New Roman"'><sub><img width=404 height=48
+src="./transfer-function_files/image010.gif" v:shapes="_x0000_i1038"></sub></span></div>
+          </td>
+          <td width="21%" height="87"> 
+            <div align="center">(5)</div>
+          </td>
+        </tr>
+      </table>
+      <p class=MTDisplayEquation><font size="2">The modulus for the transfer function 
+        is the amplification function<br>
+        </font></p>
+      <table width="98%" border="0" height="40">
+        <tr> 
+          <td width="79%" height="87"> 
+            <div align="center"><span
+style='font-family:Times;"Times New Roman"'><sub><img width=356 height=47
+src="./transfer-function_files/image012.gif" v:shapes="_x0000_i1039"></sub></span></div>
+          </td>
+          <td width="21%" height="87"> 
+            <div align="center">(6)</div>
+          </td>
+        </tr>
+      </table>
+      <p><font size="2">which indicates that the surface displacement is always 
+        at least as large as the bedrock displacement (since the denominator can 
+        never be greater than 1) and, at certain frequencies, is much larger. 
+        Thus |F1(<span
+style='font-family:Symbol'>w</span>)| is the ratio of the free surface motion 
+        amplitude to the bedrock motion amplitude (or, since the bedrock is rigid 
+        in this case, the bedrock outcropping motion). As <span style='font-family:Symbol'>w</span>H/<span
+style='font-family:Symbol'>n</span><sub>s</sub> approaches <span
+style='font-family:Symbol'>p</span>/2+n<span style='font-family:Symbol'>p</span>, 
+        the denominator of equation (6) approaches zero, which implies that infinite 
+        amplification, or resonance, will occur (Figure ()). Even this very simple 
+        model illustrates that the response of a soil deposit is highly dependent 
+        upon the frequency of the base motion, and that the frequencies at which 
+        strong amplification occurs depend on the geometry (thickness) and material 
+        properties (s-wave velocity) of the soil layer.</font></p>
+      <font size="+2"><b>Uniform, Damped Soil on Rigid Rock</b></font> 
+      <p><font size="2">Obviously, the type of unbounded amplification predicted 
+        by the previous analysis cannot physically occur. The previous analysis 
+        assumed no dissipation of energy, or damping, in the soil. Since damping 
+        is present in all materials, more realistic results can be obtained by 
+        repeating the analysis with damping. Assuming the soil to have the shearing 
+        characteristics of a Kelvin-Voigt solid, the wave equation can be written 
+        as<br>
+        </font></p>
+      <table width="98%" border="0" height="40">
+        <tr> 
+          <td width="79%" height="87"> 
+            <div align="center"><span
+style='font-family:Times;"Times New Roman"'><sub><img width=159 height=44
+src="./transfer-function_files/image014.gif" v:shapes="_x0000_i1035"></sub></span></div>
+          </td>
+          <td width="21%" height="87"> 
+            <div align="center">(7)</div>
+          </td>
+        </tr>
+      </table>
+      <p><font size="2">As shown in the previous section, the solution to this 
+        wave equation is of the form<br>
+        </font></p>
+      <table width="98%" border="0" height="40">
+        <tr> 
+          <td width="79%" height="87"> 
+            <div align="center"><span
+style='font-family:Times;"Times New Roman"'><sub><img width=193 height=27
+src="./transfer-function_files/image016.gif" v:shapes="_x0000_i1036"></sub></span></div>
+          </td>
+          <td width="21%" height="87"> 
+            <div align="center">(8)</div>
+          </td>
+        </tr>
+      </table>
+      <p class=MTDisplayEquation><font size="2">where k* is a complex wave number 
+        with real part k<sub>1</sub> and imaginary part k<sub>2</sub>. Repeating 
+        the previous algebraic manipulations with the complex wave number, the 
+        transfer function for the case of damped soil over rigid rock can be expressed 
+        as<br>
+        </font></p>
+      <table width="98%" border="0" height="40">
+        <tr> 
+          <td width="79%" height="87"> 
+            <div align="center"><span
+style='font-family:Times;"Times New Roman"'><sub><img width=217 height=45
+src="./transfer-function_files/image018.gif" v:shapes="_x0000_i1031"></sub></span></div>
+          </td>
+          <td width="21%" height="87"> 
+            <div align="center">(9)</div>
+          </td>
+        </tr>
+      </table>
+      <p class=MTDisplayEquation><font size="2">Since the frequency-independent 
+        complex shear modulus is given by G*=G(1+i2<span
+style='font-family:Symbol'>x</span>), the complex shear velocity can be expressed 
+        as<br>
+        </font></p>
+      <table width="98%" border="0" height="40">
+        <tr> 
+          <td width="79%" height="87"> 
+            <div align="center"><span
+style='font-family:Times;"Times New Roman"'><sub><img width=329 height=51
+src="./transfer-function_files/image020.gif" v:shapes="_x0000_i1032"></sub></span></div>
+          </td>
+          <td width="21%" height="87"> 
+            <div align="center">(10)</div>
+          </td>
+        </tr>
+      </table>
+      <p class=MTDisplayEquation><font size="2">for small <span style='font-family:Symbol'>x. 
+        </span>Then the complex wave number can be written, again for small x, 
+        as<br>
+        </font></p>
+      <table width="98%" border="0" height="40">
+        <tr> 
+          <td width="79%" height="87"> 
+            <div align="center"><span
+style='font-family:Times;"Times New Roman"'><sub><img width=279 height=45
+src="./transfer-function_files/image022.gif" v:shapes="_x0000_i1033"></sub></span></div>
+          </td>
+          <td width="21%" height="87"> 
+            <div align="center">(11)</div>
+          </td>
+        </tr>
+      </table>
+      <p class=MTDisplayEquation><font size="2">and finally, the trasfer function 
+        as<br>
+        </font></p>
+      <table width="98%" border="0" height="40">
+        <tr> 
+          <td width="79%" height="87"> 
+            <div align="center"><span
+style='font-family:Times;"Times New Roman"'><sub><img width=300 height=45
+src="./transfer-function_files/image024.gif" v:shapes="_x0000_i1034"></sub></span></div>
+          </td>
+          <td width="21%" height="87"> 
+            <div align="center">(12)</div>
+          </td>
+        </tr>
+      </table>
+      <p class=MTDisplayEquation><font size="2">Using the identity |cos(x+iy)| 
+        = sqrt[cos<sup>2</sup>(x)+sinh<sup>2</sup>(y)], the amplification function 
+        can be expressed as<br>
+        </font></p>
+      <table width="98%" border="0" height="40">
+        <tr> 
+          <td width="79%" height="87"> 
+            <div align="center"><span
+style='font-family:Times;"Times New Roman"'><sub><img width=227 height=49
+src="./transfer-function_files/image026.gif" v:shapes="_x0000_i1059"></sub></span></div>
+          </td>
+          <td width="21%" height="87"> 
+            <div align="center">(13)</div>
+          </td>
+        </tr>
+      </table>
+      <p class=MTDisplayEquation><font size="2">Since sinh2y ~ y2 for small y, 
+        the amplification function can be simplified to<br>
+        </font></p>
+      <table width="98%" border="0" height="40">
+        <tr> 
+          <td width="79%" height="87"> 
+            <div align="center"><span
+style='font-family:Times;"Times New Roman"'><sub><img width=409 height=49
+src="./transfer-function_files/image028.gif" v:shapes="_x0000_i1060"></sub></span></div>
+          </td>
+          <td width="21%" height="87"> 
+            <div align="center">(14)</div>
+          </td>
+        </tr>
+      </table>
+      <p class=MTDisplayEquation><font size="2">For small damping ratios, equation 
+        (14) indicates that amplification by a damped soil layer also varies with 
+        frequency. The amplification will reach a local maximum whenever kH~p/2+np 
+        but will never reach a value of infinity since (for x&gt;0) the denominator 
+        will always be greater than zero. The frequencies that correspond to the 
+        local maxima are the natural frequencies of the soil deposit. The variation 
+        of amplification factor with frequency is shown for different levels of 
+        damping in Figure (). This amplification factor is also equal to the ratio 
+        of the free surface motion amplitude to the bedrock (or bedrock outcropping) 
+        motion amplitude. Comparing Figures () and () shows that damping affects 
+        the response at high frequencies more than at lower frequencies. </font></p>
+      <p class=MTDisplayEquation><font size="2">The nth natural frequency of the 
+        soil deposit is given by<br>
+        </font></p>
+      <table width="98%" border="0" height="40">
+        <tr> 
+          <td width="79%" height="87"> 
+            <div align="center"><span
+style='font-family:Times;"Times New Roman"'><sub><img width=291 height=45
+src="./transfer-function_files/image030.gif" v:shapes="_x0000_i1028"></sub></span></div>
+          </td>
+          <td width="21%" height="87"> 
+            <div align="center">(15)</div>
+          </td>
+        </tr>
+      </table>
+      <p class=MTDisplayEquation><font size="2">Since the peak amplification factor 
+        decreases with increasing natural frequency, the greatest amplification 
+        factor will occur approximately at the lowest natural frequency, also 
+        known as the fundamental frequency<br>
+        </font></p>
+      <table width="98%" border="0" height="40">
+        <tr> 
+          <td width="79%" height="87"> 
+            <div align="center"><span
+style='font-family:Times;"Times New Roman"'><sub><img width=68 height=41
+src="./transfer-function_files/image032.gif" v:shapes="_x0000_i1029"></sub></span></div>
+          </td>
+          <td width="21%" height="87"> 
+            <div align="center">(16)</div>
+          </td>
+        </tr>
+      </table>
+      <p class=MTDisplayEquation><font size="2">The period of vibration corresponding 
+        to the fundamental frequency is called the characteristic site period,<br>
+        </font></p>
+      <table width="98%" border="0" height="40">
+        <tr> 
+          <td width="79%" height="87"> 
+            <div align="center"><span
+style='font-family:Times;"Times New Roman"'><sub><img width=96 height=45
+src="./transfer-function_files/image034.gif" v:shapes="_x0000_i1030"></sub></span></div>
+          </td>
+          <td width="21%" height="87"> 
+            <div align="center">(17)</div>
+          </td>
+        </tr>
+      </table>
+      <p class=MTDisplayEquation><font size="2">The characteristic site period, 
+        which depends on the thickness and shear wave velocity of the soil, provides 
+        a very useful indication of the period of vibration at which the most 
+        significant amplification can be expected.</font></p>
+      <p><b><font size="+2">Uniform Damped Soil on Elastic Rock</font></b></p>
+      <p class=MTDisplayEquation align="left"><font size="+1"><b>References</b></font></p>
+      <p class=MTDisplayEquation align="left"><font size="2">Kramer, S. L. (1996), 
+        &quot;Geotechnical Enarthquake Engineering&quot;, Prentice Hall.</font></p>
+      <p>&nbsp;</p>
+    </td>
+  </tr>
+  <tr> </tr>
+  <tr> 
+    <td width=108> 
+      <p><b><font size="-1">&nbsp;</font><font size="-1"
+         face="Arial"><a href="#top">BACK TO TOP</a></font></b></p>
+      <p><em><font size="-1" face="Verdana, Helvetica, Arial, Sans-Serif">&nbsp;Last 
+        Updated:<br>
+        11/21/00</font></em>
+    </td>
+    <td width=546> 
+      <p align=RIGHT><i><font size="-1">Contact us at: </font><font
+         size="-1"><a href="mailto:support@drsoftware-home.com">parduino@u.washington.edu</a></font></i> 
+      </p>
+      <p>&nbsp; 
+    </td>
+  </tr>
+</table>
+<p></p>
+</body>
+</html>

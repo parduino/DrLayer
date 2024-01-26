@@ -1,0 +1,378 @@
+<html>
+<head>
+<!-- STYLESHEETS -->
+<STYLE TYPE="text/css">
+BODY{font-family: verdana, arial, helvetica, sans serif; font-size: 10px}
+P{font-family: verdana, arial, helvetica, sans serif; font-size: 10px}
+TD{font-family: verdana, arial, helvetica, sans serif; font-size: 10px}
+A.courselink{font-family: verdana, arial, helvetica, sans serif; font-size: 11px; text-decoration: none; color: white; font-weight: bold}
+A.navlink1{font-family: verdana, arial, helvetica, sans serif; font-size: 11px; line-height: 14px; text-decoration: none; color: black}
+A.navlink2{font-family: verdana, arial, helvetica, sans serif; font-size: 10px; line-height: 12px; text-decoration: none; indent: 10px; color: black}
+A.navlink2org{font-family: verdana, arial, helvetica, sans serif; font-size: 10px; line-height: 12px; color: #FF6600; text-decoration: none; indent: 10px}
+H3.head{font-family: verdana, arial, helvetica, sans serif; font-size: 14px; line-height: 12px; color: #336699}
+H4.subhead{font-family: verdana, arial, helvetica, sans serif; font-size: 11px; color: #FF6600}
+H4.subtitle{font-family: verdana, arial, helvetica, sans serif; font-size: 12px; color: #FF6600}
+</STYLE>
+<!-- STYLESHEETS -->
+<title>Theory-Basic Concepts</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name=GENERATOR content="Claris Home Page 2.0">
+<x-sas-window top=25 bottom=605 left=142 right=988> 
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="Template" content="C:\OFFICE\OFFICE\html.dot">
+</head>
+
+<body bgcolor="#FFFFFF" link="#0000FF" vlink="#800080">
+<!--This file created 3:07 PM  8/18/98 by Claris Home Page version 2.0--> 
+<p><a name="top"></a></p>
+<p>
+<table border=0 cellpadding=10 width=700>
+  <tr> 
+    <td valign=top rowspan=4 bgcolor="#999999" width=108> 
+      <p><font face="Verdana, Arial, Helvetica, sans-serif"><b><a href="index.html">Home</a></b></font></p>
+      <hr>
+      <p><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><b><a href="T-Basic-Concepts.html">Basic 
+        Concepts</a></b> </font></p>
+      <p><b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><a href="T-Harmonic.html">Harmonic 
+        Loading</a></font></b></p>
+      <p><b><font size="-1"
+         face="Verdana, Helvetica, Arial, Sans-Serif"><a href="T-Impedance.html">Impedance 
+        Ratio</a></font></b></p>
+      <p><b><font size="-1"
+         face="Verdana, Helvetica, Arial, Sans-Serif"><a href="T-NumSol.html">Numerical 
+        Solution</a></font></b></p>
+      <p><b><font size="-1"
+         face="Verdana, Helvetica, Arial, Sans-Serif"><a href="T-Fourier.html">Fourier 
+        Analysis</a></font></b></p>
+      <p>&nbsp;</p>
+      <p>&nbsp; 
+    </td>
+    <td width=546> 
+      <p><b><font size="+3" face="Verdana, Helvetica, Arial, Sans-Serif">Dr. Layer 
+        1.0 <br>
+        </font></b><font size="+3" face="Verdana, Helvetica, Arial, Sans-Serif">An 
+        Introduction to the Theory of Wave Propagation in Layer Media</font><font size="+3" face="Verdana, Helvetica, Arial, Sans-Serif"></font> 
+    </td>
+  </tr>
+  <tr> 
+    <td width=546> 
+      <p><font size="+2" face="Verdana, Helvetica, Arial, Sans-Serif"> <a name="Intro"></a>Introduction</font> 
+    </td>
+  </tr>
+  <tr> 
+    <td width=546 > 
+      <p><span style='font-family:Times'><font face="Verdana, Arial, Helvetica, sans-serif" size="2">The 
+        local excitation of a medium is not instantaneously detected at positions 
+        that are at a distance from the region of the excitation. It takes time 
+        for a disturbance to propagate from its source to other positions. This 
+        phenomenon of propagation of disturbances is well known from physical 
+        experience, and is usually referred as wave propagation. For example, 
+        an earthquake or an underground nuclear explosion is recorded in another 
+        continent well after it has occurred. … These examples illustrate mechanical 
+        wave motions or mechanical wave propagation.</font></span></p>
+      <p class=MsoBodyText2><span style='font-family:Symbol'>¨<span
+style='font:7.0pt "Times New Roman"'><font face="Verdana, Arial, Helvetica, sans-serif" size="-1">&nbsp;</font></span></span><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><b><span
+style='font-family:Times'>Propagation of Mechanical Waves</span></b></font></p>
+      <p class=MsoBodyText2><span style='font-family:Times'>Mechanical waves originate 
+        in the forced motion of a portion of a deformable medium. As elements 
+        of the medium are deformed the disturbance, or wave, progresses through 
+        the medium. In this process the resistance offered to deformation by the 
+        consistency of the medium, as well as the resistance to motion offered 
+        by inertia, must be overcome. As the disturbance propagates through the 
+        medium it carries along amounts of energy in the forms of kinetic and 
+        potential energies. Energy can be transmitted over considerable distances 
+        by wave motions. The transmission of energy is effected because motion 
+        is passed on from one particle to the next and not by any sustained bulk 
+        motion of the entire medium. Mechanical waves are characterized by the 
+        transport of energy through motions of particles about an equilibrium 
+        position. Thus, bulk motions of a medium such as occur, for example, in 
+        turbulence in a fluid are not wave motions.</span></p>
+      <p class=MsoBodyText2><span style='font-family:Times'>Deformability and 
+        inertia are essential properties of a medium for the transmission of mechanical 
+        wave motions. If the medium were not deformable any part of the medium 
+        would immediately experience a disturbance in the form of an inertial 
+        force, or an acceleration, upon application of a localized excitation. 
+        Similarly, if a hypothetical medium were without inertia there would be 
+        no delay in the displacement of particles and the transmission of the 
+        disturbance from particle to particle would be effected instantaneously 
+        to the most distant particle. All real materials are, of course, deformable 
+        and possess mass and thus all real materials transmit mechanical waves.</span></p>
+      <p class=MsoBodyText2><span style='font-family:Times'>The inertia of the 
+        medium offers resistance to motion, but once the medium is in motion inertia 
+        in conjunction with resilience of the medium tends to sustain the motion. 
+        If, after a certain interval the externally applied excitation becomes 
+        stationary, the motion of the medium will eventually subside due to frictional 
+        losses and a state of static deformation will be reached. The importance 
+        of dynamic effects depends on the relative magnitudes of two characteristic 
+        times: the time characterizing the external application of the disturbance 
+        and the characteristic time of transmission of the disturbances across 
+        the body.</span></p>
+      <p class=MsoBodyText2><span style='font-family:Symbol'>¨<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        </span></span><b><span
+style='font-family:Times'>One-Dimensional Wave Propagation</span></b><span
+style='font-family:Times'></span></p>
+      <p class=MsoBodyText2><span style='font-family:Times'>Some of the characteristic 
+        features of wave motion in a continuum can be brought out by an analysis 
+        in a one-dimensional geometry. With one spatial variable the concepts 
+        and principles of continuum mechanics can be deployed without the encumbrance 
+        of geometrical complications to display the essential aspects of motion 
+        of a continuum and to derive the governing system of equations. One-dimensional 
+        linearized elastic theory is governed by a simple partial differential 
+        equation whose general solution can be determined by the use of elementary 
+        mathematics. </span></p>
+      <p class=MsoBodyText2><span style='font-family:Times'>Consider the free 
+        vibration of an infinitely long, linear elastic, constrained rod with 
+        cross-sectional area A, Young’s modulus E, Poisson’s ratio </span><span style='font-family:
+Symbol'>n</span><span style='font-family:Times'>, and density </span><span
+style='font-family:Symbol'>r</span>, as shown in Figure 1. If the rod is constrained 
+        against radial straining, then particle displacements caused by a longitudinal 
+        wave must be parallel to the axis of the rod. Assume that cross-sectional 
+        planes will remain planar and that stresses will be distributed uniformly 
+        over each cross section. As a stress wave travels along the rod and passes 
+        through the small element shown in Figure 2, the axial stress at the left 
+        of the element <sub><img width=49 height=15
+src="T-Basic_files/image007.gif" v:shapes="_x0000_i1027"></sub> is <sub><img width=20 height=11
+src="T-Basic_files/image009.gif" v:shapes="_x0000_i1028"></sub>. At the right 
+        end <sub><img width=80 height=15
+src="T-Basic_files/image011.gif" v:shapes="_x0000_i1029"></sub>, the axial stress 
+        is <sub><img width=124 height=24
+src="./R-Introduction_files/image013.gif" v:shapes="_x0000_i1030"></sub>. Then 
+        the dynamic equilibrium of the element requires that</p>
+      <p class=MsoBodyText2 align=center style='text-align:center'><span
+style='font-family:Times'><sub><img width=244 height=48
+src="./R-Introduction_files/image015.gif" v:shapes="_x0000_i1031"></sub></span></p>
+      <p class=MsoBodyText2><span style='font-family:Times'>where <sub><img width=13 height=15
+src="./R-Introduction_files/image017.gif" v:shapes="_x0000_i1032"></sub>is the 
+        displacement in the x-direction. This simply states that the unbalanced 
+        external forces acting on the ends of the element (the left side of equation 
+        1) must equal the inertial force induced by acceleration of the mass of 
+        the element (the right side). Simplifying yields the one-dimensional equation 
+        of motion:</span></p>
+      <p class=MsoBodyText2 align=center style='text-align:center'><span
+style='font-family:Times'><sub><img width=85 height=37
+src="T-Basic_files/image019.gif" v:shapes="_x0000_i1033"></sub></span></p>
+      <p class=MsoBodyText2><span style='font-family:Times'>In this form, the 
+        equation of motion is valid for any stress-strain behavior but cannot 
+        be solved directly because it mixes stresses (on the left side of equation 
+        2) with displacements (on the right side). To simplify the equation of 
+        motion, the left side can be expressed in terms of displacements by using 
+        a linear elastic stress-strain relationship, <sub><img width=68 height=24
+src="./R-Introduction_files/image021.gif" v:shapes="_x0000_i1041"></sub>, where 
+        the constrained Modulus <sub><img width=209 height=21
+src="./R-Introduction_files/image023.gif" v:shapes="_x0000_i1042"></sub>, and 
+        the strain-displacement relationship <sub><img width=79 height=24
+src="./R-Introduction_files/image025.gif" v:shapes="_x0000_i1043"></sub>. These 
+        substitutions allow the one-dimensional equation of motion to be written 
+        in the familiar form of the one dimensional wave equation for a constrained 
+        rod:</span></p>
+      <p class=MsoBodyText2 align=center style='text-align:center'><span
+style='font-family:Times'><sub><img width=96 height=47
+src="./R-Introduction_files/image027.gif" v:shapes="_x0000_i1044"></sub></span></p>
+      <p class=MsoBodyText2><span style='font-family:Times'>The one-dimensional 
+        wave equation can be written in the alternative form</span></p>
+      <p class=MsoBodyText2 align=center style='text-align:center'><span
+style='font-family:Times'><sub><img width=96 height=44
+src="./R-Introduction_files/image029.gif" v:shapes="_x0000_i1045"></sub></span></p>
+      <p class=MsoBodyText2><span style='font-family:Times'>where <sub><img width=23 height=23
+src="./R-Introduction_files/image031.gif" v:shapes="_x0000_i1046"></sub>is the 
+        wave propagation velocity; for this case, the wave travels at <sub><img width=91 height=27
+src="./R-Introduction_files/image033.gif" v:shapes="_x0000_i1047"></sub>. Note 
+        that the wave propagation velocity depends only on the properties of the 
+        rod material (its stiffness and density) and its independent of the amplitude 
+        of the stress wave. The wave propagation velocity increases with increasing 
+        stiffness and with decreasing density.</span></p>
+      <p class=MsoBodyText2><span style='font-family:Times'>A general solution 
+        to the linear wave equation can be obtained by introducing the substitutions:</span></p>
+      <p class=MsoBodyText2 align=center style='text-align:center'><span
+style='font-family:Times'><sub><img width=181 height=45
+src="./R-Introduction_files/image035.gif" v:shapes="_x0000_i1048"></sub></span></p>
+      <p class=MsoBodyText2><span style='font-family:Times'>whereby Equation () 
+        reduces to</span></p>
+      <p class=MsoBodyText2 align=center style='text-align:center'><span
+style='font-family:Times'><sub><img width=72 height=48
+src="./R-Introduction_files/image037.gif" v:shapes="_x0000_i1049"></sub></span></p>
+      <p class=MsoBodyText2>Integrating, it follows that <sub><img width=49 height=19
+src="./R-Introduction_files/image039.gif" v:shapes="_x0000_i1050"></sub> is a 
+        function of <span
+style='font-family:Symbol'>a </span><span style='font-family:"Times New Roman"'>only. 
+        Integrating again, we find that </span><span style='font-family:Times'><sub><img width=44 height=21
+src="./R-Introduction_files/image041.gif" v:shapes="_x0000_i1051"></sub>must be 
+        of the form</span></p>
+      <p class=MsoBodyText2 align=center style='text-align:center'><span
+style='font-family:Times'><sub><img width=284 height=51
+src="./R-Introduction_files/image043.gif" v:shapes="_x0000_i1052"></sub></span></p>
+      <p class=MsoBodyText2><span style='font-family:Times'>Any arbitrary form 
+        of the functions F( ), and G( ) employed in this equation will give a 
+        solution of the linear wave equation. If time <i>t</i> is increased by 
+        any value, say </span><i><span
+style='font-family:Symbol'>D</span></i><i><span style='font-family:Times'>t</span></i>, 
+        and simultaneously <i>x</i> is increased by  <i>v<sub>M</sub> </i><i><span
+style='font-family:Symbol'>D</span></i><i><span style='font-family:Times'>t, </span></i><span
+style='font-family:Times'>the argument <i>(t-x/v<sub>M</sub>)</i> is clearly not 
+        altered. The term <i>F(t-x/v<sub>M</sub>)</i> thus represents a displacement 
+        disturbance propagating in the positive <i>x</i>-direction. Similarly, 
+        <i>G(t+x/v<sub>M</sub>) </i>represents a disturbance propagating in the 
+        negative <i>x</i>-direction. Since the shape of the propagating disturbances 
+        does not alter, the propagation is called distortionless and lossless.</span></p>
+      <p class=MsoBodyText2><span style='font-family:Symbol'>¨<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        </span></span><b><span
+style='font-family:Times'>Half-Sapce Subjected to Uniform Surface Tractions</span></b><span
+style='font-family:Times'></span></p>
+      <p class=MsoBodyText2><span style='font-family:Times'>The wave equation 
+        presented in the previous section is only valid for a constrained rod.</span></p>
+      <p class=MsoBodyText2>Using these concepts we can now analyze the propagation 
+        of shear waves on a half-space subjected to uniform normal or tangential 
+        surface tractions. Suppose that the half-space is defined by <sub><img width=37 height=19
+src="./R-Introduction_files/image045.gif" v:shapes="_x0000_i1053"></sub> (see 
+        Figure 3). Denoting the normal stress in the <i>z</i>-direction by <sub><img width=49 height=23
+src="./R-Introduction_files/image047.gif" v:shapes="_x0000_i1054"></sub>, we have 
+        at the boundary <sub><img width=37 height=19
+src="./R-Introduction_files/image049.gif" v:shapes="_x0000_i1055"></sub></p>
+      <p class=MsoBodyText2 align=center style='text-align:center'><span
+style='font-family:Times'><sub><img width=77 height=23
+src="./R-Introduction_files/image051.gif" v:shapes="_x0000_i1056"></sub>, where 
+        <sub><img width=57 height=21
+src="./R-Introduction_files/image053.gif" v:shapes="_x0000_i1057"></sub>for <sub><img width=35 height=19
+src="./R-Introduction_files/image055.gif" v:shapes="_x0000_i1058"></sub></span></p>
+      <p class=MsoBodyText2><span style='font-family:Times'>the other stress components 
+        vanish identically at <sub><img width=37 height=19
+src="./R-Introduction_files/image057.gif" v:shapes="_x0000_i1059"></sub>.</span></p>
+      <p class=MsoBodyText2><span>            </span>Any plane parallel to the 
+        <i>z</i>-axis is clearly a plane of symmetry. As a consequence, transverse 
+        displacements are not possible and the motion of the half-space is described 
+        by the displacements in the <i>z</i>-direction, denoted by <sub><img width=43 height=21
+src="./R-Introduction_files/image059.gif" v:shapes="_x0000_i1060"></sub>, which 
+        is a function of <i>z</i> and <i>t</i> only. The half-space is evidently 
+        in a state of one-dimensional deformation, and the equations defined in 
+        the previous section apply. Thus the deformation of the half-space is 
+        completely described by a single strain component of the form</p>
+      <p class=MsoBodyText2 align=center style='text-align:center'><span
+style='font-family:Times'><sub><img width=56 height=41
+src="./R-Introduction_files/image061.gif" v:shapes="_x0000_i1061"></sub></span></p>
+      <p class=MsoBodyText2><span style='font-family:Times'>we say that the half-plane 
+        is in a state of one-dimensional longitudinal strain. In the longitudinal 
+        direction in a half-space the stress and strain are related by</span></p>
+      <p class=MsoBodyText2 align=center style='text-align:center'><span
+style='font-family:Times'><sub><img width=72 height=41
+src="./R-Introduction_files/image063.gif" v:shapes="_x0000_i1062"></sub></span></p>
+      <p class=MsoBodyText2><span style='font-family:Times'>where <i>E</i> is 
+        Young’s modulus of elasticity. Then, the resulting displacement equation 
+        of motion (wave equation) is </span></p>
+      <p class=MsoBodyText2 align=center style='text-align:center'><span
+style='font-family:Times'><sub><img width=92 height=44
+src="./R-Introduction_files/image065.gif" v:shapes="_x0000_i1063"></sub></span></p>
+      <p class=MsoBodyText2>where <sub><img width=81 height=27
+src="./R-Introduction_files/image067.gif" v:shapes="_x0000_i1064"></sub> is the 
+        longitudinal wave velocity. It is important to note the similarity between 
+        the wave equation for the constrained rod and for longitudinal waves in 
+        a half space. Likewise, the propagation of shear waves in a half space 
+        subjected to uniform tangential surface tractions, <i><span style='font-family:Symbol'>t</span></i><i><sub><span
+style='font-family:Times'>s</span></sub></i><span style='font-family:Times'>, 
+        is one-dimensional in nature and can be represented by a single equation. 
+        For this particular case, the half-space is completely described by the 
+        single shear strain component</span></p>
+      <p class=MsoBodyText2 align=center style='text-align:center'><span
+style='font-family:Times'><sub><img width=59 height=41
+src="./R-Introduction_files/image069.gif" v:shapes="_x0000_i1065"></sub></span></p>
+      <p class=MsoBodyText2><span style='font-family:Times'>where <i>w</i> is 
+        the horizontal deformation. We say then, that the half-plane is in a state 
+        of one-dimensional shear strain. In a one-dimensional shear strain state, 
+        the stress and strain are related by</span></p>
+      <p class=MsoBodyText2 align=center style='text-align:center'><span
+style='font-family:Times'><sub><img width=63 height=23
+src="./R-Introduction_files/image071.gif" v:shapes="_x0000_i1066"></sub></span></p>
+      <p class=MsoBodyText2><span style='font-family:Times'>where <i>G</i> is 
+        shear modulus of the material. Then, the resulting displacement equation 
+        of motion (wave equation) results in</span></p>
+      <p class=MsoBodyText2 align=center style='text-align:center'><span
+style='font-family:Times'><sub><img width=97 height=44
+src="./R-Introduction_files/image073.gif" v:shapes="_x0000_i1067"></sub></span></p>
+      <p class=MsoBodyText2>where <sub><img width=81 height=27
+src="./R-Introduction_files/image075.gif" v:shapes="_x0000_i1068"></sub> is the 
+        shear wave velocity of the half-space. It is important to note the similarity 
+        between Equations ( ) and ( ) and the equation of motion (wave equation) 
+        for a constrained rod, (Equation ( )). They all represent the same type 
+        of differential equation. The only difference is in the expression for 
+        the wave velocity. In the three cases the wave velocity is associated 
+        with the stiffness and the mass. </p>
+      <p class=MsoBodyText2>The shear wave propagation velocity is the velocity 
+        at which a shear stress wave would travel along the rod. It is not the 
+        same as the particle velocity, which is the velocity at which a single 
+        point within the half-space would move as the shear wave passes though 
+        it. Moreover, the particle motion does not always coincide with the direction 
+        of the wave motion. In the case of longitudinal waves the particle motion 
+        direction coincides with the direction of the wave travel. However, in 
+        the case of shear waves, the particle motion  is perpendicular to the 
+        direction of the wave travel.  </p>
+      <p class=MsoBodyText2>Knowing that <sub><img width=71 height=23
+src="./R-Introduction_files/image077.gif" v:shapes="_x0000_i1069"></sub>(from 
+        the strain-displacement relationship), <sub><img width=73 height=23
+src="./R-Introduction_files/image079.gif" v:shapes="_x0000_i1070"></sub>(from 
+        the stress-strain relationship), and <sub><img width=69 height=24
+src="./R-Introduction_files/image081.gif" v:shapes="_x0000_i1071"></sub>(from 
+        the definition of wave propagation velocity), the particle velocity <sub><img width=16 height=19
+src="./R-Introduction_files/image083.gif" v:shapes="_x0000_i1072"></sub> can be 
+        shown to be</p>
+      <p class=MsoBodyText2 align=center style='text-align:center'><span
+style='font-family:Times'><sub><img width=341 height=47
+src="./R-Introduction_files/image085.gif" v:shapes="_x0000_i1073"></sub></span></p>
+      <p class=MsoBodyText2><span style='font-family:Times'>Equation () shows 
+        that the particle velocity is proportional to the shear stress in the 
+        half-space. The coefficient of proportionality, <sub><img width=32 height=24
+src="./R-Introduction_files/image087.gif" v:shapes="_x0000_i1074"></sub>, is called 
+        the specific impedance of the material. The specific impedance is another 
+        important property that influences the behavior of waves at boundaries 
+        (lesson…).</span></p>
+      <p class=MsoBodyText2>The propagation of waves in a half-space is actually 
+        more complex. Since the earth is three-dimensional and sources of seismic 
+        energy are three-dimensional, seismic waves must be described in terms 
+        of three-dimensional wave propagation. Derivations of three-dimensional 
+        equations of motion follow the same steps as those used for one-dimensional 
+        propagation; the equations of motion are formulated from equilibrium considerations, 
+        stress-strain relationships, and strain-displacement relationships. In 
+        the three-dimensional case, however, the various relationships are more 
+        complex and the derivations more cumbersome. In this introduction to wave 
+        propagation we will concentrate in the one-dimensional propagation of 
+        shear waves which is of great importance in civil engineering practice.  
+        A more complete analysis on the propagation of waves can be found elsewhere 
+        (Kramer, Achenbach).</p>
+      <p>&nbsp;</p>
+      <h3><a name="GeneralOp"></a>Introduction</h3>
+      <p>Dr. Layer's operation is controlled via </p>
+      <h3><a name="TimeControl"></a><a href="Harmonic.html">Harmonic Loading</a></h3>
+      <p>Time can be controlled using either the keyboard or the time control 
+        buttons:</p>
+      <h3><a name="ManipTools"></a>Impedance Ratio</h3>
+      <p>Dr. Layer's tool palette is illustrated below (Windows version: the Mac 
+        version is similar but grouped a bit differently):</p>
+      <h3><a name="ScaleBar"></a>Numerical Solution</h3>
+      <p>Dr. Layer has a suite of scaling buttons for adjusting various aspects 
+        of the display. The Windows version scaling toolbar is shown below (again, 
+        the Mac version has the same tools, but uses a different grouping):</p>
+      <h3><a name="PlotBoxes"></a>Fourier Analysis</h3>
+      <p>Plot boxes are used by Dr. Layer to display various characteristics of 
+        a given layer motion. There are three types of plot boxes available: </p>
+      </td>
+  </tr>
+  <tr> </tr>
+  <tr> 
+    <td width=108> 
+      <p><b><font size="-1">&nbsp;</font><font size="-1"
+         face="Arial"><a href="#top">BACK TO TOP</a></font></b></p>
+      <p><em><font size="-1" face="Verdana, Helvetica, Arial, Sans-Serif">&nbsp;Last 
+        Updated:<br>
+        11/21/00</font></em>
+    </td>
+    <td width=546> 
+      <p align=RIGHT><i><font size="-1">Contact us at: </font><font
+         size="-1"><a href="mailto:support@drsoftware-home.com">parduino@u.washington.edu</a></font></i> 
+      </p>
+      <p>&nbsp; 
+    </td>
+  </tr>
+</table>
+<p></p>
+</body>
+</html>

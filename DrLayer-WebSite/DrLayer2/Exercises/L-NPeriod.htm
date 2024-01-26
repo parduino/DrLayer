@@ -1,0 +1,271 @@
+<html><!-- #BeginTemplate "/Templates/lesson.dwt" -->
+<head>
+<!-- STYLESHEETS -->
+<STYLE TYPE="text/css">
+BODY{font-family: verdana, arial, helvetica, sans serif; font-size: 10px}
+P{font-family: verdana, arial, helvetica, sans serif; font-size: 10px}
+TD{font-family: verdana, arial, helvetica, sans serif; font-size: 10px}
+A.courselink{font-family: verdana, arial, helvetica, sans serif; font-size: 11px; text-decoration: none; color: white; font-weight: bold}
+A.navlink1{font-family: verdana, arial, helvetica, sans serif; font-size: 11px; line-height: 14px; text-decoration: none; color: black}
+A.navlink2{font-family: verdana, arial, helvetica, sans serif; font-size: 10px; line-height: 12px; text-decoration: none; indent: 10px; color: black}
+A.navlink2org{font-family: verdana, arial, helvetica, sans serif; font-size: 10px; line-height: 12px; color: #FF6600; text-decoration: none; indent: 10px}
+H3.head{font-family: verdana, arial, helvetica, sans serif; font-size: 14px; line-height: 12px; color: #336699}
+H4.subhead{font-family: verdana, arial, helvetica, sans serif; font-size: 11px; color: #FF6600}
+H4.subtitle{font-family: verdana, arial, helvetica, sans serif; font-size: 12px; color: #FF6600}
+</STYLE>
+<!-- STYLESHEETS --> <!-- #BeginEditable "doctitle" --><!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name=GENERATOR content="Claris Home Page 2.0">
+<x-sas-window top=25 bottom=605 left=142 right=988> 
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="Template" content="C:\OFFICE\OFFICE\html.dot">
+</head>
+
+<body bgcolor="#FFFFFF" link="#0000FF" vlink="#800080">
+<!--This file created 3:07 PM  8/18/98 by Claris Home Page version 2.0--> 
+<p><a name="top"></a></p>
+<p>
+<table border=0 cellpadding=10 width=693>
+  <tr> 
+    <td valign=top rowspan=4 bgcolor="#999999" width=110> 
+      <p><font face="Verdana, Arial, Helvetica, sans-serif"><b><a href="../Exercises.html">Back 
+        to Exercises</a></b></font></p>
+      <hr>
+      <p><b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><a href="L-BConcepts.htm">Basic 
+        Concepts </a> </font></b></p>
+      <p><b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><a href="L-Loading.htm">Loading 
+        </a></font></b></p>
+      <p><b><font size="-1"
+         face="Verdana, Helvetica, Arial, Sans-Serif"><a href="L-BConditions.htm">Boundary 
+        Conditions </a></font><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"></font></b></p>
+      <p><b><font size="-1"
+         face="Verdana, Helvetica, Arial, Sans-Serif"><a href="L-IMismatch.htm">Impedance 
+        Mismatch</a></font><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"></font></b></p>
+      <p><b><font size="-1"
+         face="Verdana, Helvetica, Arial, Sans-Serif"><a href="L-DEffects.htm">Damping 
+        Effects</a></font><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"></font></b></p>
+      <p><b><b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><a href="L-NPeriod.htm">Natural 
+        Mode of Vibration</a></font></b></b></p>
+      <p><b><b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><a href="L-TFunction.htm">Transfer 
+        Function</a></font></b><br>
+        <br>
+        <font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><a href="L-FDomain.htm">Frequency 
+        Response</a></font></b></p>
+      <p><b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><a href="L-TStepping.htm">Time 
+        Stepping</a></font></b></p>
+      <p><b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><a href="L-MModel.htm">Material 
+        Behavior </a></font></b></p>
+      <p>&nbsp; 
+    </td>
+    <td width=537> <b><font size="+3" face="Verdana, Helvetica, Arial, Sans-Serif"><img src="../images/DrLLogo.gif" width="34" height="35" align="absmiddle" name="DrLogo"> 
+      Dr. Layer 1.0 <br>
+      </font></b><font size="+3" face="Verdana, Helvetica, Arial, Sans-Serif"><!-- #BeginEditable "Title" -->Exercise 
+      8- Natural Period of Homogeneous Soil Deposits<!-- #EndEditable --></font></td>
+  </tr>
+  <tr> 
+    <td width=537> 
+      <p><font size="+2" face="Verdana, Helvetica, Arial, Sans-Serif"> <a name="Intro"></a>Introduction</font> 
+      </p>
+      <!-- #BeginEditable "Introduction" --><FONT 
+      face="Verdana, Arial, Helvetica, sans-serif" size=2>Introduction</FONT><!-- #EndEditable --></td>
+  </tr>
+  <tr> 
+    <td width=537 > 
+      <h3><a name="Background"></a>Background<!-- #BeginEditable "background1" --><!-- #EndEditable --></h3>
+      <!-- #BeginEditable "background" --> 
+      <P><FONT size=2>In lesson No.4 (Transfer Functions) expressions for the 
+        transfer function and amplification factor for a uniform undamped soil 
+        layer on rigid rock were presented. In particular, the amplification function, 
+        |F|, was expressed by:</FONT></P>
+      <table width="98%" border="0" height="40">
+        <tr> 
+          <td width="79%" height="74"> 
+            <div align="center"><span
+style='font-family:Times;"Times New Roman"'><font face="Verdana, Arial, Helvetica, sans-serif"><img src="L-NPeriod_files/Eqn1.gif" width="148" height="46"></font></span></div>
+          </td>
+          <td width="21%" height="74"> 
+            <div align="center">(1)</div>
+          </td>
+        </tr>
+      </table>
+      <P><font size="2">where <font face="SymbolPS">w</font> is the frequency 
+        of the excitation, H is the thickness of the soil layer, and <i>v</i></font>s<font size="2"> 
+        is the layer shear wave velocity. A simple inspection of Equation (1) 
+        shows that as <font face="SymbolPS">w</font>H/<i>v</i>s approaches <font face="SymbolPS">p</font>/2+n<font face="SymbolPS">p</font>, 
+        the denominator approaches zero, which implies that infinite amplification, 
+        or resonance, will occur. The frequencies at which resonance occur are 
+        usually referred to as the resonance frequencies. The highest resonance 
+        frequency is usually referred as the natural frequency of the soil profile, 
+        <font face="SymbolPS">w</font><font size="1">o</font>. The inverse to 
+        the natural frequency is the natural period of the soil profile, <i>T</i><font size="1">o</font>.</font></P>
+      <table width="98%" border="0" height="40">
+        <tr> 
+          <td width="79%" height="74"> 
+            <div align="center"><img src="L-NPeriod_files/Eqn3.gif" width="113" height="44"></div>
+          </td>
+          <td width="21%" height="74"> 
+            <div align="center">(2)</div>
+          </td>
+        </tr>
+      </table>
+      <table width="98%" border="0" height="40">
+        <tr> 
+          <td width="79%" height="74"> 
+            <div align="center"><span
+style='font-family:Times;"Times New Roman"'><img src="L-NPeriod_files/Eqn2.gif" width="53" height="45"></span></div>
+          </td>
+          <td width="21%" height="74"> 
+            <div align="center">(3)</div>
+          </td>
+        </tr>
+      </table>
+      <P><font size="2"> It is important to note that the natural frequency depends 
+        on geometry (thickness) and material properties (s-wave velocity) of the 
+        soil layer. It is also important to distinguish between natural frequency 
+        of the soil profile, <font face="SymbolPS">w</font></font>o<font size="2">, 
+        and frequency of the excitation <font face="SymbolPS">w,</font> which 
+        is implemented on the slider bar in Dr. Layer. The frequency of the excitation 
+        represents the number of completed loading cycles per second applied at 
+        the bottom of the layer. In contrast, the natural frequency, <font face="SymbolPS">w</font></font>o<font size="2">, 
+        is a property of the soil layer.</font><BR>
+      </P>
+      <!-- #EndEditable --> 
+      <h3><b><font size="-1">&nbsp;</font><font size="-1"
+         face="Arial"><a href="#top">BACK TO TOP</a></font></b></h3>
+      <h3><a name="Objective"></a>Objective</h3>
+      <!-- #BeginEditable "Objective" --><FONT 
+      size=2>The objective of this exercise is to illustrate the concept of natural 
+      frequency in soil deposits. Different soil properties, harmonic loading 
+      conditions, and layered thicknesses are used to study resonance in soil 
+      layers.</FONT><!-- #EndEditable --> 
+      <p><b><font size="-1">&nbsp;</font><font size="-1"
+         face="Arial"><a href="#top">BACK TO TOP</a></font></b></p>
+      <h3><a name="ThingstoDo"></a>Things to Do</h3>
+      <!-- #BeginEditable "ThingToDo" --><FONT 
+      face="Verdana, Arial, Helvetica, sans-serif" size=2> </FONT> 
+      <OL>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Open the 
+          Dr. Layer program. By default we get twelve layers. The top six layers 
+          are hardwired into the system with a very fast velocity. Select the 
+          bottom six layers and assign them a very slow wave velocity.<BR>
+          <BR>
+          </font>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Starting 
+          with the set up above, and using the slider bars, increase the loading 
+          amplitude and frequency to a 50% relative to the maximum values. For 
+          this exercise use the default harmonic loading condition.<br>
+          <br>
+          </font>
+        <LI><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> Using 
+          the plot box tool, <img src="tool-images/B-graph.gif" width="23" height="23" align="absbottom">, 
+          create a displacement time history plot at the top of the soil profile. 
+          By default a displacement time history box is already attached to the 
+          bottom of the soil profile. Use this plot to check the loading condition 
+          that is applied to the soil layer.<br>
+          <br>
+          </font>
+        <LI> 
+          <div align="left"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
+            Move the cursor to the bottom left portion of the screen and push 
+            the time increment button, <img src="tool-images/B-run.gif" width="23" height="23" align="absbottom"> 
+            to set up the wave motion. Observe the wave motion for a couple of 
+            minutes. Check the displacement plot box at the top of the layer and 
+            check if the displacement increases or decreases with time. If the 
+            displacement continuously increases with time you have reached resonance. 
+            If the displacement slows down with time and then increases again 
+            you have not reached resonance. Notice that the displacement time 
+            history plot at the bottom of the soil layer shows constant amplitude 
+            and frequency.</font> 
+            <div align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><br>
+              </font> <font face="Verdana, Arial, Helvetica, sans-serif" size="2"><img src="L-NPeriod_files/figure1.gif" width="350" height="287"> 
+              <br>
+              Figure 1</font> 
+              <div align="left"> 
+                <div align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><br>
+                  </font></div>
+              </div>
+            </div>
+          </div>
+        <LI> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">Notice 
+          that the rigid block moves little. Most of the deformation recorded 
+          in the upper plot is due to the deformation of the bottom soft layer. 
+          If we consider the upper layer as rigid, it is possible to approximately 
+          estimate the natural frequency of the soil layer. By measuring the height 
+          of the bottom soft layer and the frequency of the excitation, and using 
+          the wave velocity for a soft material and Equation 2 it is possible 
+          to calculate the natural frequencies for the system. Check if the natural 
+          frequency of the system, <img src="L-NPeriod_files/Eqn4.gif" width="20" height="24" align="absbottom">, 
+          coincides with the frequency of the excitation, <font face="SymbolPS">w</font>. 
+          To evaluate the height of the layer use the axis bars. To evaluate the 
+          shear wave velocity refer to exercise 1.<br>
+          <br>
+          </font>
+        <LI><font size="2">Repeat the analysis with an upper layer formed by four. 
+          and eight, top rigid sublayers as shown in Figure 2. Use the same loading 
+          condition in all cases. For each case evaluate if resonance is reached.<br>
+          </font><font size="2"><br>
+          </font> 
+          <div align="center"><font size="2"><br>
+            <img src="L-NPeriod_files/figure2.gif" width="620" height="245"><br>
+            </font><font size="2"><font face="Verdana, Arial, Helvetica, sans-serif">Figure 
+            2 <BR>
+            </font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><BR>
+            </font></div>
+      </OL>
+      <!-- #EndEditable --> 
+      <h3><b><font size="-1">&nbsp;</font><font size="-1"
+         face="Arial"><a href="#top">BACK TO TOP</a></font></b></h3>
+      <h3><a name="Observation"></a>Observation</h3>
+      <font face="Verdana, Arial, Helvetica, sans-serif"><!-- #BeginEditable "Observation" --><FONT 
+      size=2> 
+      <ol>
+        <li>Equations 2 shows that for the same height, H, and shear wave velocity, 
+          <font 
+      face="Verdana, Arial, Helvetica, sans-serif"><font 
+      size=2><img src="L-NPeriod_files/Eqn5.gif" width="16" height="24" align="absbottom">,</font></font><FONT 
+      size=2> </FONT>resonance may be reached for each positive value of n. That 
+          is, an infinite number of loading frequencies, <font face="SymbolPS">w</font>, 
+          may induce resonance.<br>
+          <br>
+        </li>
+        <li>The natural frequency depends on the material properties of the layer 
+          (i.e. <img src="L-NPeriod_files/Eqn5.gif" width="16" height="24" align="absbottom">) 
+          and layer geometry (i.e. height H).</li>
+      </ol>
+      </FONT><FONT 
+      size=2></FONT><!-- #EndEditable --></font> 
+      <p><b><font size="-1"
+         face="Arial"><a href="#top">BACK TO TOP</a></font></b></p>
+      <h3><a name="OnYourOwn"></a>On Your Own</h3>
+      <font face="Arial, Helvetica, sans-serif" size="2"><!-- #BeginEditable "OnYourOwn" --><FONT 
+      face="Verdana, Arial, Helvetica, sans-serif">
+      <ol>
+        <li>Repeat the analysis with different loading amplitude and frequencies, 
+          and different sublayers wave speeds. </li>
+      </ol>
+      </FONT><!-- #EndEditable --> 
+      </font> 
+      <h3><b><font size="-1">&nbsp;</font><font size="-1"
+         face="Arial"><a href="#top">BACK TO TOP</a></font></b></h3>
+      </td>
+  </tr>
+  <tr> </tr>
+  <tr> 
+    <td width=110> 
+      <p><b><font size="-1">&nbsp;</font><font size="-1"
+         face="Arial"><a href="#top">BACK TO TOP</a></font></b></p>
+      <p><em><font size="-1" face="Verdana, Helvetica, Arial, Sans-Serif">&nbsp;Last 
+        Updated:<br>
+        </font></em> 12/27/00
+    </td>
+    <td width=537> 
+      <p align=RIGHT><i><font size="-1">Contact us at: </font><font
+         size="-1"><a href="mailto:support@drsoftware-home.com">parduino@u.washington.edu</a></font></i> 
+      </p>
+      <p>&nbsp; 
+    </td>
+  </tr>
+</table>
+<p></p>
+</body>
+<!-- #EndTemplate --></html>

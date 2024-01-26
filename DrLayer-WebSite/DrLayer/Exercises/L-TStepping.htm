@@ -1,0 +1,221 @@
+<html><!-- #BeginTemplate "/Templates/lesson.dwt" -->
+<head>
+<!-- STYLESHEETS -->
+<STYLE TYPE="text/css">
+BODY{font-family: verdana, arial, helvetica, sans serif; font-size: 10px}
+P{font-family: verdana, arial, helvetica, sans serif; font-size: 10px}
+TD{font-family: verdana, arial, helvetica, sans serif; font-size: 10px}
+A.courselink{font-family: verdana, arial, helvetica, sans serif; font-size: 11px; text-decoration: none; color: white; font-weight: bold}
+A.navlink1{font-family: verdana, arial, helvetica, sans serif; font-size: 11px; line-height: 14px; text-decoration: none; color: black}
+A.navlink2{font-family: verdana, arial, helvetica, sans serif; font-size: 10px; line-height: 12px; text-decoration: none; indent: 10px; color: black}
+A.navlink2org{font-family: verdana, arial, helvetica, sans serif; font-size: 10px; line-height: 12px; color: #FF6600; text-decoration: none; indent: 10px}
+H3.head{font-family: verdana, arial, helvetica, sans serif; font-size: 14px; line-height: 12px; color: #336699}
+H4.subhead{font-family: verdana, arial, helvetica, sans serif; font-size: 11px; color: #FF6600}
+H4.subtitle{font-family: verdana, arial, helvetica, sans serif; font-size: 12px; color: #FF6600}
+</STYLE>
+<!-- STYLESHEETS --> <!-- #BeginEditable "doctitle" --> 
+<title>Time Stepping</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name=GENERATOR content="Claris Home Page 2.0">
+<x-sas-window top=25 bottom=605 left=142 right=988> 
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="Template" content="C:\OFFICE\OFFICE\html.dot">
+</head>
+
+<body bgcolor="#FFFFFF" link="#0000FF" vlink="#800080">
+<!--This file created 3:07 PM  8/18/98 by Claris Home Page version 2.0--> 
+<p><a name="top"></a></p>
+<p>
+<table border=0 cellpadding=10 width=693>
+  <tr> 
+    <td valign=top rowspan=4 bgcolor="#999999" width=110> 
+      <p><font face="Verdana, Arial, Helvetica, sans-serif"><b><a href="../Exercises.html">Back 
+        to Exercises</a></b></font></p>
+      <hr>
+      <p><b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><a href="L-BConcepts.htm">Basic 
+        Concepts </a> </font></b></p>
+      <p><b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><a href="L-Loading.htm">Loading 
+        </a></font></b></p>
+      <p><b><font size="-1"
+         face="Verdana, Helvetica, Arial, Sans-Serif"><a href="L-BConditions.htm">Boundary 
+        Conditions </a></font><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"></font></b></p>
+      <p><b><font size="-1"
+         face="Verdana, Helvetica, Arial, Sans-Serif"><a href="L-IMismatch.htm">Impedance 
+        Mismatch</a></font><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"></font></b></p>
+      <p><b><font size="-1"
+         face="Verdana, Helvetica, Arial, Sans-Serif"><a href="L-DEffects.htm">Damping 
+        Effects</a></font><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"></font></b></p>
+      <p><b><b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><a href="L-FDomain.htm">Natural 
+        Mode of Vibration</a></font></b></b></p>
+      <p><b><b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><a href="L-TFunction.htm">Transfer 
+        Function</a></font></b><br>
+        <br>
+        <font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><a href="L-FDomain.htm">Frequency 
+        Response</a></font></b></p>
+      <p><b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><a href="L-TStepping.htm">Time 
+        Stepping</a></font></b></p>
+      <p><b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><a href="L-MModel.htm">Material 
+        Behavior </a></font></b></p>
+      <p>&nbsp; 
+    </td>
+    <td width=537> <b><font size="+3" face="Verdana, Helvetica, Arial, Sans-Serif"><img src="../images/DrLLogo.gif" width="34" height="35" align="absmiddle" name="DrLogo"> 
+      Dr. Layer 1.0 <br>
+      </font></b><font size="+3" face="Verdana, Helvetica, Arial, Sans-Serif"><!-- #BeginEditable "Title" -->Exercise 
+      9- Time Stepping<!-- #EndEditable --></font></td>
+  </tr>
+  <tr> 
+    <td width=537> 
+      <p><font size="+2" face="Verdana, Helvetica, Arial, Sans-Serif"> <a name="Intro"></a>Introduction</font> 
+      </p>
+      <!-- #BeginEditable "Introduction" --><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Introduction</font><!-- #EndEditable --></td>
+  </tr>
+  <tr> 
+    <td width=537 > 
+      <h3><a name="Background"></a>Background<!-- #BeginEditable "background1" --><!-- #EndEditable --></h3>
+      <!-- #BeginEditable "background" --> 
+      <p class=MsoBodyText2><font size="2">In addition to varying the layer properties, 
+        another tool that comes in handy is a variation on the computational side. 
+        It involves varying the time step, i.e. the time it takes to repeat each 
+        computation. The defining rule for the iteration used in the time stepping 
+        procedure for Dr. Layer is the central difference method. It is not an 
+        exact procedure but it ensures that the iteration converges, achieves 
+        stability, and is close enough to the exact solution.</font></p>
+      <p class=MsoBodyText2><font size="2">The central difference hinges on a 
+        finite difference approximation of velocity and acceleration. The central 
+        difference method will “blow up”, giving meaningless results, if the chosen 
+        time step is not small enough. Stability of the solution requires</font></p>
+      <p class=MTDisplayEquation><span>                                                                  
+        </span><sub><img width=51 height=41
+src="L-TStepping_files/image005.gif" v:shapes="_x0000_i1026"></sub></p>
+      <p class=MsoBodyText2><font size="2">Where  <span><font face="Symbol">D</font></span>t 
+        is the time for each iteration and T is the period (time it takes to complete 
+        one cycle of the input loading)</font></p>
+      <p><font size="2">The steps below summarize the central difference procedure 
+        as it was programmed in Dr. Layer. (Check the time stepping theory for 
+        a better understanding of this process)</font></p>
+      <p><font size="3">1a.</font> <sub> <img width=129 height=41
+src="L-TStepping_files/image007.gif" v:shapes="_x0000_i1027"></sub></p>
+      <p><font size="3">1b.</font> <sub><img width=157 height=48
+src="L-TStepping_files/image009.gif" v:shapes="_x0000_i1028"></sub></p>
+      <p><font size="3">1c.</font> <sub><img width=107 height=49
+src="L-TStepping_files/image011.gif" v:shapes="_x0000_i1029"></sub></p>
+      <p><font size="3">1d.</font> <sub><img width=108 height=49
+src="L-TStepping_files/image013.gif" v:shapes="_x0000_i1030"></sub></p>
+      <p><font size="3">1e.</font><sub><img width=88 height=49
+src="L-TStepping_files/image015.gif" v:shapes="_x0000_i1031"></sub></p>
+      <p><span> </span></p>
+      <p><font size="2">computations for each time step I</font></p>
+      <p><font size="2">2a.</font> <sub><img width=125 height=24
+src="L-TStepping_files/image017.gif" v:shapes="_x0000_i1032"></sub></p>
+      <p><font size="2">2b.</font> <sub><img width=59 height=41
+src="L-TStepping_files/image019.gif" v:shapes="_x0000_i1033"></sub></p>
+      <p><span style='font-family:Arial'><font size="2">2c.</font> <sub><img width=92 height=45
+src="L-TStepping_files/image021.gif" v:shapes="_x0000_i1034"></sub></span></p>
+      <p><span style='font-family:Arial'><font size="2">2d.</font> <sub><img width=127 height=49
+src="L-TStepping_files/image023.gif" v:shapes="_x0000_i1035"></sub></span></p>
+      <p><font size="2">Repetition for each time step</font></p>
+      <p><font size="2">Substitute i +1 for i and repeat the steps 2a, 2b and 
+        2c.</font></p>
+      <!-- #EndEditable --> 
+      <h3><b><font size="-1">&nbsp;</font><font size="-1"
+         face="Arial"><a href="#top">BACK TO TOP</a></font></b></h3>
+      <h3><a name="Objective"></a>Objective</h3>
+      <!-- #BeginEditable "Objective" --><font size="2">It shows on the computation 
+      side of the output how varying the time step can significantly affect the 
+      speed of result output and stability of our analysis.</font><!-- #EndEditable --> 
+      <p><b><font size="-1">&nbsp;</font><font size="-1"
+         face="Arial"><a href="#top">BACK TO TOP</a></font></b></p>
+      <h3><a name="ThingstoDo"></a>Things to Do</h3>
+      <!-- #BeginEditable "ThingToDo" --><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
+      <ol>
+        <li>Open the Dr. Layer program. By default we get <br>
+          twelve layers. The top six layers&nbsp;&nbsp;&nbsp; are hardwired into 
+          the system with a very fast velocity. The bottom six layers are hardwired 
+          with a very slow velocity.<br>
+          <br>
+        </li>
+        <li>By default we get a medium time step.&nbsp; Push the time increment 
+          <br>
+          button. Nothing exciting happens!<br>
+          <br>
+        </li>
+        <li>Go to the time step menu and change to large. Push the time increment 
+          button.<br>
+          <br>
+          <img src="L-TStepping_files/image026.gif" width="347" height="395"> 
+          <br>
+          <br>
+        </li>
+        <li> Keeping the time step on large, go to the edit menu and select <br>
+          all, then change the wave speed to very slow. Push the time increment 
+          <br>
+          button.<br>
+          <br>
+        </li>
+        <li> Change the wave speed to different values. Change different parameters 
+          like damping, load type and the input frequency on the slider bar. <br>
+        </li>
+      </ol>
+      </font><!-- #EndEditable --> 
+      <h3><b><font size="-1">&nbsp;</font><font size="-1"
+         face="Arial"><a href="#top">BACK TO TOP</a></font></b></h3>
+      <h3><a name="Observation"></a>Observation</h3>
+      <font face="Verdana, Arial, Helvetica, sans-serif"><!-- #BeginEditable "Observation" --><font size="2">The 
+      numerical procedure becomes unstable at large time steps but it is still 
+      a function of the relationship <sub><img width=73 height=23
+src="L-TStepping_files/image028.gif" v:shapes="_x0000_i1037"></sub></font><!-- #EndEditable --></font> 
+      <p><b><font size="-1"
+         face="Arial"><a href="#top">BACK TO TOP</a></font></b></p>
+      <h3><a name="OnYourOwn"></a>On Your Own</h3>
+      <font face="Arial, Helvetica, sans-serif" size="2"><!-- #BeginEditable "OnYourOwn" --><font face="Verdana, Arial, Helvetica, sans-serif"> 
+      <ol>
+        <li>Determine by making general statements what role the input frequency 
+          (related to the period) plays in the stability of our analysis.<br>
+          <br>
+        </li>
+        <li>Determine by making general statements the effect of the wave speed 
+          through the layers on the stability of the layers.<br>
+          <br>
+        </li>
+        <li>Does damping have an effect on the stability of the analysis.<br>
+          <br>
+        </li>
+        <li>We know the relationship governing stability that relates T and <span>D</span>t. 
+          Obtain the limiting values of T  that will cause instability.<br>
+          <p class=MsoBodyText2><span><font face="Symbol">D</font></span>t 
+            (small) =<br>
+          </p>
+           
+          <p class=MsoBodyText2><span><font face="Symbol">D</font></span>t (medium) 
+            = </p>
+          <p class=MsoBodyText2><span><font face="Symbol">D</font></span>t (large) 
+            = </p>
+        </li>
+      </ol>
+      </font><!-- #EndEditable --> 
+      </font> 
+      <h3><b><font size="-1">&nbsp;</font><font size="-1"
+         face="Arial"><a href="#top">BACK TO TOP</a></font></b></h3>
+      </td>
+  </tr>
+  <tr> </tr>
+  <tr> 
+    <td width=110> 
+      <p><b><font size="-1">&nbsp;</font><font size="-1"
+         face="Arial"><a href="#top">BACK TO TOP</a></font></b></p>
+      <p><em><font size="-1" face="Verdana, Helvetica, Arial, Sans-Serif">&nbsp;Last 
+        Updated:<br>
+        </font></em> 12/27/00
+    </td>
+    <td width=537> 
+      <p align=RIGHT><i><font size="-1">Contact us at: </font><font
+         size="-1"><a href="mailto:support@drsoftware-home.com">parduino@u.washington.edu</a></font></i> 
+      </p>
+      <p>&nbsp; 
+    </td>
+  </tr>
+</table>
+<p></p>
+</body>
+<!-- #EndTemplate --></html>

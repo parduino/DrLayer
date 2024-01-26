@@ -1,0 +1,172 @@
+<html><!-- #BeginTemplate "/Templates/lesson.dwt" -->
+<head>
+<!-- STYLESHEETS -->
+<STYLE TYPE="text/css">
+BODY{font-family: verdana, arial, helvetica, sans serif; font-size: 10px}
+P{font-family: verdana, arial, helvetica, sans serif; font-size: 10px}
+TD{font-family: verdana, arial, helvetica, sans serif; font-size: 10px}
+A.courselink{font-family: verdana, arial, helvetica, sans serif; font-size: 11px; text-decoration: none; color: white; font-weight: bold}
+A.navlink1{font-family: verdana, arial, helvetica, sans serif; font-size: 11px; line-height: 14px; text-decoration: none; color: black}
+A.navlink2{font-family: verdana, arial, helvetica, sans serif; font-size: 10px; line-height: 12px; text-decoration: none; indent: 10px; color: black}
+A.navlink2org{font-family: verdana, arial, helvetica, sans serif; font-size: 10px; line-height: 12px; color: #FF6600; text-decoration: none; indent: 10px}
+H3.head{font-family: verdana, arial, helvetica, sans serif; font-size: 14px; line-height: 12px; color: #336699}
+H4.subhead{font-family: verdana, arial, helvetica, sans serif; font-size: 11px; color: #FF6600}
+H4.subtitle{font-family: verdana, arial, helvetica, sans serif; font-size: 12px; color: #FF6600}
+</STYLE>
+<!-- STYLESHEETS --> <!-- #BeginEditable "doctitle" --> 
+<title>Frequency Domain</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name=GENERATOR content="Claris Home Page 2.0">
+<x-sas-window top=25 bottom=605 left=142 right=988> 
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="Template" content="C:\OFFICE\OFFICE\html.dot">
+</head>
+
+<body bgcolor="#FFFFFF" link="#0000FF" vlink="#800080">
+<!--This file created 3:07 PM  8/18/98 by Claris Home Page version 2.0--> 
+<p><a name="top"></a></p>
+<p>
+<table border=0 cellpadding=10 width=693>
+  <tr> 
+    <td valign=top rowspan=4 bgcolor="#999999" width=110> 
+      <p><font face="Verdana, Arial, Helvetica, sans-serif"><b><a href="../Exercises.html">Back 
+        to Exercises</a></b></font></p>
+      <hr>
+      <p><b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><a href="L-BConcepts.htm">Basic 
+        Concepts </a> </font></b></p>
+      <p><b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><a href="L-Loading.htm">Loading 
+        </a></font></b></p>
+      <p><b><font size="-1"
+         face="Verdana, Helvetica, Arial, Sans-Serif"><a href="L-BConditions.htm">Boundary 
+        Conditions </a></font><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"></font></b></p>
+      <p><b><font size="-1"
+         face="Verdana, Helvetica, Arial, Sans-Serif"><a href="L-IMismatch.htm">Impedance 
+        Mismatch</a></font><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"></font></b></p>
+      <p><b><font size="-1"
+         face="Verdana, Helvetica, Arial, Sans-Serif"><a href="L-DEffects.htm">Damping 
+        Effects</a></font><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"></font></b></p>
+      <p><b><b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><a href="L-NPeriod.htm">Natural 
+        Mode of Vibration</a></font></b></b></p>
+      <p><b><b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><a href="L-TFunction.htm">Transfer 
+        Function</a></font></b><br>
+        <br>
+        <font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><a href="L-FDomain.htm">Frequency 
+        Response</a></font></b></p>
+      <p><b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><a href="L-TStepping.htm">Time 
+        Stepping</a></font></b></p>
+      <p><b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><a href="L-MModel.htm">Material 
+        Behavior </a></font></b></p>
+      <p>&nbsp; 
+    </td>
+    <td width=537> <b><font size="+3" face="Verdana, Helvetica, Arial, Sans-Serif"><img src="../images/DrLLogo.gif" width="34" height="35" align="absmiddle" name="DrLogo"> 
+      Dr. Layer 1.0 <br>
+      </font></b><font size="+3" face="Verdana, Helvetica, Arial, Sans-Serif"><!-- #BeginEditable "Title" -->Exercise 
+      8- Frequency Domain<!-- #EndEditable --></font></td>
+  </tr>
+  <tr> 
+    <td width=537> 
+      <p><font size="+2" face="Verdana, Helvetica, Arial, Sans-Serif"> <a name="Intro"></a>Introduction</font> 
+      </p>
+      <!-- #BeginEditable "Introduction" --><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Introduction</font><!-- #EndEditable --></td>
+  </tr>
+  <tr> 
+    <td width=537 > 
+      <h3><a name="Background"></a>Background<!-- #BeginEditable "background1" --><!-- #EndEditable --></h3>
+      <!-- #BeginEditable "background" --> 
+      <p><font size="2">The time required for an undamped system to complete one 
+        cycle of free vibration is the natural period of vibration of the system. 
+        We shall represent this as T in units of seconds. It is related to the 
+        natural circular frequency of vibration w with units of radians per second:</font></p>
+      <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="L-FDomain_files/image008.gif" width="52" height="41" align="middle"></p>
+      <font size="2">The natural cyclic frequency of vibration f which is implemented 
+      on the slider bar in Dr. Layer is given by the reciprocal value of T. This 
+      frequency represents the number of completed cycles per second. The units 
+      are Hertz (Hz). The frequency depends only on the mass and stiffness characteristics 
+      of the structure. This in effect means that the stiffer of two bodies with 
+      similar masses will posses a higher natural frequency and thus a shorter 
+      period. Conversely, the heavier of two bodies with the same stiffness will 
+      have a lower natural frequency. For linear systems these vibration properties 
+      are independent of the initial displacement and velocity.</font><br>
+      <!-- #EndEditable --> 
+      <h3><b><font size="-1">&nbsp;</font><font size="-1"
+         face="Arial"><a href="#top">BACK TO TOP</a></font></b></h3>
+      <h3><a name="Objective"></a>Objective</h3>
+      <!-- #BeginEditable "Objective" --><font size="2">After this exercise you 
+      will understand how the input frequency affects the type of wave travel 
+      obtained. </font><!-- #EndEditable --> 
+      <p><b><font size="-1">&nbsp;</font><font size="-1"
+         face="Arial"><a href="#top">BACK TO TOP</a></font></b></p>
+      <h3><a name="ThingstoDo"></a>Things to Do</h3>
+      <!-- #BeginEditable "ThingToDo" --><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
+      <ol>
+        <li>Open the Dr. Layer program. By default we get twelve layers. The top 
+          six layers are hardwired into the system with a very fast velocity. 
+          The bottom six layers are hardwired with a very slow velocity. <br>
+          <br>
+        </li>
+        <li>Starting with the set up above, move the cursor on the bottom left 
+          portion of the screen and push the time increment button to set up the 
+          wave motion.<br>
+          <br>
+        </li>
+        <li>Obtain the input period(T) from the plot box as the time it takes 
+          to complete one cycle.<br>
+          <br>
+        </li>
+        <li>Vary the frequency on the slider bar and obtain the new period.<br>
+          <br>
+        </li>
+        <li>The fast fourier transform plot can be obtained by pushing the plot 
+          box button and clicking on the existing plot box. You should obtain 
+          a box as shown below. <br>
+          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="L-FDomain_files/image007.gif" width="360" height="387"> 
+          <br>
+          <br>
+        </li>
+        <li>Change parameters to reflect the different wave speeds. What do you 
+          notice? <br>
+          <br>
+        </li>
+        <li>Try as many different combinations as possible and note the differences 
+          obtained in each combination. </li>
+      </ol>
+      </font><!-- #EndEditable --> 
+      <h3><b><font size="-1">&nbsp;</font><font size="-1"
+         face="Arial"><a href="#top">BACK TO TOP</a></font></b></h3>
+      <h3><a name="Observation"></a>Observation</h3>
+      <font face="Verdana, Arial, Helvetica, sans-serif"><!-- #BeginEditable "Observation" --><font size="2">The 
+      type of wave motion obtained is different for each input frequency employed. 
+      The shape of the fast fourier transform plot is also a function of the input 
+      frequency and the wave speed of travel along the different media.</font><!-- #EndEditable --></font> 
+      <p><b><font size="-1"
+         face="Arial"><a href="#top">BACK TO TOP</a></font></b></p>
+      <h3><a name="OnYourOwn"></a>On Your Own</h3>
+      <font face="Arial, Helvetica, sans-serif" size="2"><!-- #BeginEditable "OnYourOwn" --><font face="Verdana, Arial, Helvetica, sans-serif">Try 
+      different loading conditions and obtain the frequency values.</font><!-- #EndEditable --> 
+      </font> 
+      <h3><b><font size="-1">&nbsp;</font><font size="-1"
+         face="Arial"><a href="#top">BACK TO TOP</a></font></b></h3>
+      </td>
+  </tr>
+  <tr> </tr>
+  <tr> 
+    <td width=110> 
+      <p><b><font size="-1">&nbsp;</font><font size="-1"
+         face="Arial"><a href="#top">BACK TO TOP</a></font></b></p>
+      <p><em><font size="-1" face="Verdana, Helvetica, Arial, Sans-Serif">&nbsp;Last 
+        Updated:<br>
+        </font></em> 12/27/00
+    </td>
+    <td width=537> 
+      <p align=RIGHT><i><font size="-1">Contact us at: </font><font
+         size="-1"><a href="mailto:support@drsoftware-home.com">parduino@u.washington.edu</a></font></i> 
+      </p>
+      <p>&nbsp; 
+    </td>
+  </tr>
+</table>
+<p></p>
+</body>
+<!-- #EndTemplate --></html>

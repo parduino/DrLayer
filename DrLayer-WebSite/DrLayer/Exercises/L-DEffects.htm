@@ -1,0 +1,265 @@
+<html><!-- #BeginTemplate "/Templates/lesson.dwt" -->
+<head>
+<!-- STYLESHEETS -->
+<STYLE TYPE="text/css">
+BODY{font-family: verdana, arial, helvetica, sans serif; font-size: 10px}
+P{font-family: verdana, arial, helvetica, sans serif; font-size: 10px}
+TD{font-family: verdana, arial, helvetica, sans serif; font-size: 10px}
+A.courselink{font-family: verdana, arial, helvetica, sans serif; font-size: 11px; text-decoration: none; color: white; font-weight: bold}
+A.navlink1{font-family: verdana, arial, helvetica, sans serif; font-size: 11px; line-height: 14px; text-decoration: none; color: black}
+A.navlink2{font-family: verdana, arial, helvetica, sans serif; font-size: 10px; line-height: 12px; text-decoration: none; indent: 10px; color: black}
+A.navlink2org{font-family: verdana, arial, helvetica, sans serif; font-size: 10px; line-height: 12px; color: #FF6600; text-decoration: none; indent: 10px}
+H3.head{font-family: verdana, arial, helvetica, sans serif; font-size: 14px; line-height: 12px; color: #336699}
+H4.subhead{font-family: verdana, arial, helvetica, sans serif; font-size: 11px; color: #FF6600}
+H4.subtitle{font-family: verdana, arial, helvetica, sans serif; font-size: 12px; color: #FF6600}
+</STYLE>
+<!-- STYLESHEETS --> <!-- #BeginEditable "doctitle" --> 
+<title>Damping Effects</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name=GENERATOR content="Claris Home Page 2.0">
+<x-sas-window top=25 bottom=605 left=142 right=988> 
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="Template" content="C:\OFFICE\OFFICE\html.dot">
+</head>
+
+<body bgcolor="#FFFFFF" link="#0000FF" vlink="#800080">
+<!--This file created 3:07 PM  8/18/98 by Claris Home Page version 2.0--> 
+<p><a name="top"></a></p>
+<p>
+<table border=0 cellpadding=10 width=693>
+  <tr> 
+    <td valign=top rowspan=4 bgcolor="#999999" width=110> 
+      <p><font face="Verdana, Arial, Helvetica, sans-serif"><b><a href="../Exercises.html">Back 
+        to Exercises</a></b></font></p>
+      <hr>
+      <p><b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><a href="L-BConcepts.htm">Basic 
+        Concepts </a> </font></b></p>
+      <p><b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><a href="L-Loading.htm">Loading 
+        </a></font></b></p>
+      <p><b><font size="-1"
+         face="Verdana, Helvetica, Arial, Sans-Serif"><a href="L-BConditions.htm">Boundary 
+        Conditions </a></font><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"></font></b></p>
+      <p><b><font size="-1"
+         face="Verdana, Helvetica, Arial, Sans-Serif"><a href="L-IMismatch.htm">Impedance 
+        Mismatch</a></font><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"></font></b></p>
+      <p><b><font size="-1"
+         face="Verdana, Helvetica, Arial, Sans-Serif"><a href="L-DEffects.htm">Damping 
+        Effects</a></font><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"></font></b></p>
+      <p><b><b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><a href="L-FDomain.htm">Natural 
+        Mode of Vibration</a></font></b></b></p>
+      <p><b><b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><a href="L-TFunction.htm">Transfer 
+        Function</a></font></b><br>
+        <br>
+        <font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><a href="L-FDomain.htm">Frequency 
+        Response</a></font></b></p>
+      <p><b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><a href="L-TStepping.htm">Time 
+        Stepping</a></font></b></p>
+      <p><b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><a href="L-MModel.htm">Material 
+        Behavior </a></font></b></p>
+      <p>&nbsp; 
+    </td>
+    <td width=537> <b><font size="+3" face="Verdana, Helvetica, Arial, Sans-Serif"><img src="../images/DrLLogo.gif" width="34" height="35" align="absmiddle" name="DrLogo"> 
+      Dr. Layer 1.0 <br>
+      </font></b><font size="+3" face="Verdana, Helvetica, Arial, Sans-Serif"><!-- #BeginEditable "Title" -->Exercise 
+      5 - Damping Effects<!-- #EndEditable --></font></td>
+  </tr>
+  <tr> 
+    <td width=537> 
+      <p><font size="+2" face="Verdana, Helvetica, Arial, Sans-Serif"> <a name="Intro"></a>Introduction</font> 
+      </p>
+      <!-- #BeginEditable "Introduction" --><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Introduction</font><!-- #EndEditable --></td>
+  </tr>
+  <tr> 
+    <td width=537 > 
+      <h3><a name="Background"></a>Background<!-- #BeginEditable "background1" --><!-- #EndEditable --></h3>
+      <!-- #BeginEditable "background" --> 
+      <p><font size="2">In a homogeneous linear elastic material, stress waves 
+        travel indefinitely without change in amplitude. This type of behavior 
+        can not occur, however, in real conditions. The amplitudes of stress waves 
+        in real materials, such as those that comprise the earth, attenuate with 
+        distance. This attenuation can be attributed to two sources of energy 
+        dissipation, one which involves the material through which the waves travel 
+        and the other the geometry of the wave propagation problem. In this particular 
+        exercise we will concentrate on the first form of dissipation of energy.</font></p>
+      <p><font size="2">In real materials, part of the elastic energy of a traveling 
+        wave is always converted to heat. The conversion is accompanied by a decrease 
+        in the amplitude of the wave. </font><font size="2">For specific soils 
+        and structures, however, the operative mechanisms by which the energy 
+        is dissipated are not understood sufficiently to allow them to be explicitly 
+        modeled. As a result, the effects of the various energy loss mechanisms 
+        are usually lumped together and represented by some convenient damping 
+        mechanism. The most commonly used mechanism for representing energy dissipation 
+        is viscous damping which assumes the existence of dissipative forces that 
+        are a function of particle velocity. For most soils and structures, however, 
+        energy is dissipated hysteretically. That is by yielding or plastic straining 
+        of the material.</font></p>
+      <p><font size="2">The type of damping described above is called material 
+        damping, because the material absorbs the energy of travel during wave 
+        propagation. The reduction in energy per unit volume causes the amplitude 
+        of the wave to decrease with increasing displacement. However, a different 
+        type of damping (reduction in energy per unit volume) can be observed 
+        which occurs when the energy of the wave is spread over a very large area 
+        and thus it dies off quickly. This type of damping is usually referred 
+        as radiation damping.</font></p>
+      <!-- #EndEditable --> 
+      <h3><b><font size="-1">&nbsp;</font><font size="-1"
+         face="Arial"><a href="#top">BACK TO TOP</a></font></b></h3>
+      <h3><a name="Objective"></a>Objective</h3>
+      <!-- #BeginEditable "Objective" --><font size="2">In the examples that will 
+      comprise this section the attenuation of the wave amplitude will be investigated 
+      by: a)considering a viscous mechanism, and b)by considering the nonlinear 
+      non-elastic behavior of soils.</font><br>
+      <br>
+      <!-- #EndEditable --> 
+      <p><b><font size="-1">&nbsp;</font><font size="-1"
+         face="Arial"><a href="#top">BACK TO TOP</a></font></b></p>
+      <h3><a name="ThingstoDo"></a>Things to Do</h3>
+      <!-- #BeginEditable "ThingToDo" --><i><font size="4">a) Viscous Damping</font></i><br>
+      <font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
+      <ol>
+        <li>Open the Dr. Layer program. Select &quot;all layers&quot; and assign 
+          them a &quot;<b>very slow</b>&quot; wave speed. By default the no-damping 
+          option is selected. <br>
+          <br>
+        </li>
+        <li>Choose a pulse load and using the sliders adjust its amplitude and 
+          frequency to a high value (80% of max). <br>
+          <br>
+        </li>
+        <li>By default DrLayer starts with a single plotting window at the bottom 
+          of the layer. Using the plot box buttom, <img src="tool-images/B-graph.gif" width="23" height="23" align="absbottom">, 
+          add two additional plot-boxes at the top and middle of the layer as 
+          shown in Figure 1.<br>
+          <br>
+          <img src="L-DEffects_files/L-DEffects01.gif" width="535" height="478"> 
+          <br>
+          Figure 1 - Viscous damping in a single layer soil profile<br>
+          <br>
+        </li>
+        <li>Starting with the set up described above, press the time increment 
+          buttom, <img src="tool-images/B-run.gif" width="23" height="23" align="absbottom"> 
+          to set up the wave motion. Note that the wave travels along the layer 
+          without changes and its reflected at the free end.<br>
+          <br>
+        </li>
+        <li>Change the damping coefficient of all the layers to <b>&quot;high&quot;</b> 
+          by using the <b>&quot;damping&quot;</b> drop-down menu on the top of 
+          your screen, and reset the system by pressing the <img src="tool-images/B-stop.gif" width="23" height="23" align="absbottom"> 
+          buttom. Restart the motion by pressing the time increment buttom and 
+          observe the changes in the wave as it travels along the layer.<br>
+          <br>
+        </li>
+        <li>Answer the following questions: a)Is the wave motion amplitude affected?? 
+          b)Is the wave speed affected??; c)What can you say about the energy 
+          originally given to the system? Is it lost?? How?? 
+      </ol>
+      </font> 
+      <p><font size="4"><i>b) Hysteretic Damping</i></font></p>
+      <font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
+      <ol>
+        <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Restart 
+          the DrLayer program. Select the bottom eight layers and assign them 
+          a &quot;<b>very fast</b>&quot; wave speed. This material will be referred 
+          to as Material 1. Select the top four layers and assign them a &quot;<b>slow</b>&quot; 
+          wave speed. This material will be referred to as Material 2.<br>
+          <br>
+          </font></li>
+        <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Choose 
+          a pulse load and adjust its frequency to a high value (~80% max) by 
+          using the frequency slider on the top of your screen. </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><br>
+          <br>
+          </font></li>
+        <li>Select a bilinear material model with low yield stress using the &quot;<b>Material 
+          Models...</b>&quot; option available in the &quot;<b>options</b>&quot; 
+          drop down menu.<br>
+          <br>
+        </li>
+        <li>To visualize the stress-strain soil response add stress-strain plot 
+          boxes at convenient places using the <img src="tool-images/B-graph.gif" width="23" height="23"> 
+          buttom while pressing the Ctrl+Shift keys. For this particular problem 
+          we suggest to use two plot boxes located close to the material interface, 
+          Figure 2.<br>
+          <br>
+          <img src="L-DEffects_files/L-DEffects02.gif" width="535" height="448"><br>
+          Figure 2 - Material damping in a two layer soil profile<br>
+          <br>
+        </li>
+        <li>Starting with the set up described above, press the time increment 
+          buttom to set up the wave motion. Note that the wave travels along material 
+          1 without noticeable changes. At the interface, part of the energy carried 
+          by the wave is transferred to material 2 and part of it is reflected. 
+          Note that, as result of the interaction at the interface, permanent 
+          deformations are concentrated close to the interface. Consequently, 
+          the stress-strain curves at these points do not follow a straight line. 
+          At the top and bottom of the layer a similar behavior is also observed.<br>
+          <br>
+        </li>
+        <li>As time goes on the wave will be transmitted and reflected multiple 
+          times at the interface. During each interaction additional plastic deformations 
+          may occur.<br>
+          <br>
+        </li>
+        <li>Answer the following questions:<br>
+          a) Is the initial wave energy affected during the motion?? <br>
+          b) Where does the energy go??<br>
+          c) Can you imagine a way to estimate the amount of energy lost?<br>
+          d) Can you think of a similar mechanism in mechanics? Give a couple 
+          of examples.</li>
+      </ol>
+      </font><!-- #EndEditable --> 
+      <h3><b><font size="-1">&nbsp;</font><font size="-1"
+         face="Arial"><a href="#top">BACK TO TOP</a></font></b></h3>
+      <h3><a name="Observation"></a>Observation</h3>
+      <font face="Verdana, Arial, Helvetica, sans-serif"><!-- #BeginEditable "Observation" --><font size="2">Damping 
+      can be thought of as some form of resistance to impeding motion. Friction 
+      readily comes to mind and helps as an analogy for thinking about damping. 
+      Due to friction part of the energy is transformed to heat or is dissipated 
+      in the form or irrecoverable or plastic deformations.</font><!-- #EndEditable --></font> 
+      <p><b><font size="-1"
+         face="Arial"><a href="#top">BACK TO TOP</a></font></b></p>
+      <h3><a name="OnYourOwn"></a>On Your Own</h3>
+      <font face="Arial, Helvetica, sans-serif" size="2"><!-- #BeginEditable "OnYourOwn" --><font size="3"><i>Viscous 
+      Damping</i><br>
+      </font> 
+      <ol>
+        <li><font face="Verdana, Arial, Helvetica, sans-serif">Use different material 
+          stiffness and repeat the exercise.</font></li>
+        <li><font face="Verdana, Arial, Helvetica, sans-serif">Use different damping 
+          values and repeat the analysis.</font></li>
+      </ol>
+      <font size="3"><i>Hysteretic Damping</i> </font><br>
+      <font face="Verdana, Arial, Helvetica, sans-serif"> 
+      <ol>
+        <li>Repeat the process with elastic materials. Do you observe the attenuation 
+          of waves??</li>
+        <li>Use different material stiffness and different impedance ratios. </li>
+        <li>Use different yield stresses and investigate the effect of hardening 
+          in the attenuation of waves.<br>
+        </li>
+      </ol>
+      </font><!-- #EndEditable --> </font> 
+      <h3><b><font size="-1">&nbsp;</font><font size="-1"
+         face="Arial"><a href="#top">BACK TO TOP</a></font></b></h3>
+    </td>
+  </tr>
+  <tr> </tr>
+  <tr> 
+    <td width=110> 
+      <p><b><font size="-1">&nbsp;</font><font size="-1"
+         face="Arial"><a href="#top">BACK TO TOP</a></font></b></p>
+      <p><em><font size="-1" face="Verdana, Helvetica, Arial, Sans-Serif">&nbsp;Last 
+        Updated:<br>
+        </font></em> 12/27/00
+    </td>
+    <td width=537> 
+      <p align=RIGHT><i><font size="-1">Contact us at: </font><font
+         size="-1"><a href="mailto:support@drsoftware-home.com">parduino@u.washington.edu</a></font></i> 
+      </p>
+      <p>&nbsp; 
+    </td>
+  </tr>
+</table>
+<p></p>
+</body>
+<!-- #EndTemplate --></html>

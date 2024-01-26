@@ -1,0 +1,669 @@
+<html>
+<head>
+<!-- STYLESHEETS --> 
+<STYLE TYPE="text/css">
+BODY{font-family: verdana, arial, helvetica, sans serif; font-size: 10px}
+P{font-family: verdana, arial, helvetica, sans serif; font-size: 10px}
+TD{font-family: verdana, arial, helvetica, sans serif; font-size: 10px}
+A.courselink{font-family: verdana, arial, helvetica, sans serif; font-size: 11px; text-decoration: none; color: white; font-weight: bold}
+A.navlink1{font-family: verdana, arial, helvetica, sans serif; font-size: 11px; line-height: 14px; text-decoration: none; color: black}
+A.navlink2{font-family: verdana, arial, helvetica, sans serif; font-size: 10px; line-height: 12px; text-decoration: none; indent: 10px; color: black}
+A.navlink2org{font-family: verdana, arial, helvetica, sans serif; font-size: 10px; line-height: 12px; color: #FF6600; text-decoration: none; indent: 10px}
+H3.head{font-family: verdana, arial, helvetica, sans serif; font-size: 14px; line-height: 12px; color: #336699}
+H4.subhead{font-family: verdana, arial, helvetica, sans serif; font-size: 11px; color: #FF6600}
+H4.subtitle{font-family: verdana, arial, helvetica, sans serif; font-size: 12px; color: #FF6600}
+</STYLE>
+<!-- STYLESHEETS --> 
+<title>Theory-Impedance Ratio</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name=GENERATOR content="Claris Home Page 2.0">
+<x-sas-window top=25 bottom=605 left=142 right=988> 
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="Template" content="C:\OFFICE\OFFICE\html.dot">
+</head>
+
+<body bgcolor="#FFFFFF" link="#0000FF" vlink="#800080">
+<!--This file created 3:07 PM  8/18/98 by Claris Home Page version 2.0--> 
+<p><a name="top"></a></p>
+<p>
+<table border=0 cellpadding=10 width=700>
+  <tr> 
+    <td valign=top rowspan=4 bgcolor="#999999" width=108> 
+      <p><font face="Verdana, Arial, Helvetica, sans-serif"><b><a href="../theory.html">Back 
+        to Theory</a></b></font></p>
+      <hr>
+      <p><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><b><a href="T-Basic-Concepts.htm">Basic 
+        Concepts</a></b> </font></p>
+      <p><b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><a href="T-Harmonic-Loading.htm">Harmonic 
+        Loading</a></font></b></p>
+      <p><b><font size="-1"
+         face="Verdana, Helvetica, Arial, Sans-Serif"><a href="T-Impedance-Ratio.htm">Impedance 
+        Ratio</a></font></b></p>
+      <p><b><font size="-1"
+         face="Verdana, Helvetica, Arial, Sans-Serif"><a href="T-Transfer-Function.htm">Transfer 
+        Function </a></font></b></p>
+      <p><b><font size="-1"
+         face="Verdana, Helvetica, Arial, Sans-Serif"><a href="T-NumSol.html">Numerical 
+        Solution</a></font></b></p>
+      <p><b><font size="-1"
+         face="Verdana, Helvetica, Arial, Sans-Serif"><a href="T-Fourier.html">Fourier 
+        Analysis</a></font></b></p>
+      <p>&nbsp;</p>
+      <p>&nbsp; 
+    </td>
+    <td width=546> 
+      <p><b><font size="+3" face="Verdana, Helvetica, Arial, Sans-Serif">Dr. Layer 
+        1.0 <br>
+        </font></b><font size="+2" face="Verdana, Helvetica, Arial, Sans-Serif">An 
+        Introduction to the Theory of Wave Propagation in Layer Media</font><font size="+3" face="Verdana, Helvetica, Arial, Sans-Serif"><br>
+        <b>Material Boundary in an<br>
+        Elastic Half-space</b></font><font size="+3" face="Verdana, Helvetica, Arial, Sans-Serif"> 
+        </font> 
+    </td>
+  </tr>
+  <tr> 
+    <td width=546> 
+      <p><font size="+2" face="Verdana, Helvetica, Arial, Sans-Serif"> <a name="Intro"></a>Introduction</font> 
+    </td>
+  </tr>
+  <tr> 
+    <td width=546 > 
+      <p class=MsoNormal><a name="Impedance-Ratio "></a><font size="+2"><b>Impedance 
+        Ratio Coefficients</b></font></p>
+      <p class=MsoNormal><span style="mso-spacerun: yes">   </span><font size="2">Consider 
+        a harmonic stress wave traveling along an elastic half-space in the <i>+z</i> 
+        direction and approaching an interface between two different materials, 
+        as shown in Figure 1. Since the wave is traveling towards the interface, 
+        it will be referred as incident wave. Since it is traveling in material 
+        1, its wave-length will be <span style='font-family:Symbol'>l</span><sub>1</sub>=2<span
+style='font-family:Symbol'>p</span>/k<sub>1</sub>, and it can therefore be described 
+        by</font></p>
+      <p class=MsoNormal align="center"><font size="2"><br>
+        <img src="T-Impedance-Ratio_files/layer1.jpg" width="354" height="228"> 
+        <br>
+        <b>Figure 1</b>. One Dimensional Wave Propagation at Material Interface</font><o:p></o:p></p>
+      <table width="98%" border="0" height="40">
+        <tr> 
+          <td width="79%" height="74"> 
+            <div align="center"><span
+style='font-family:Times;"Times New Roman"'><sub><img width=123 height=25
+src="./T-Impedance-Ratio_files/image002.gif" v:shapes="_x0000_i1025"></sub></span></div>
+          </td>
+          <td width="21%" height="74"> 
+            <div align="center">(1)</div>
+          </td>
+        </tr>
+      </table>
+      <p class=MTDisplayEquation><o:p></o:p><font size="2">When the incident wave 
+        reaches the interface, part of the energy will be transmitted through 
+        the interface to continue traveling in the positive z-direction through 
+        material 2. This transmitted wave will have a wavelength <span style='font-family:Symbol'>l</span><sub>2</sub>=2<span
+style='font-family:Symbol'>p</span>/k<sub>2</sub>. The remainder will be reflected 
+        at the interface and will travel back through material 1 in the negative 
+        z-direction as a reflected wave. The transmitted and reflected waves can 
+        be described by</font><span style="mso-spacerun: yes"> </span><o:p></o:p></p>
+      <table width="98%" border="0" height="40">
+        <tr> 
+          <td width="79%" height="74"> 
+            <div align="center"><span
+style='font-family:Times;"Times New Roman"'><sub><img width=125 height=51
+src="./T-Impedance-Ratio_files/image004.gif" v:shapes="_x0000_i1026"></sub></span></div>
+          </td>
+          <td width="21%" height="74"> 
+            <div align="center">
+              <p>(2a)</p>
+              <p>(2b)</p>
+            </div>
+          </td>
+        </tr>
+      </table>
+      <p class=MTDisplayEquation><font size="2">Assuming that the displacements 
+        associated with each of these waves are of the same harmonic form as the 
+        stresses that cause them; that is</font><o:p></o:p></p>
+      <table width="98%" border="0" height="40">
+        <tr> 
+          <td width="79%" height="74"> 
+            <div align="center"><span
+style='font-family:Times;"Times New Roman"'><sub><img width=133 height=77
+src="./T-Impedance-Ratio_files/image006.gif" v:shapes="_x0000_i1027"></sub></span></div>
+          </td>
+          <td width="21%" height="74"> 
+            <div align="center">
+              <p>(3a)</p>
+              <p>(3b)</p>
+              <p>(3c)</p>
+            </div>
+          </td>
+        </tr>
+      </table>
+      <p class=MTDisplayEquation><o:p></o:p><font size="2">Stress-strain and strain-displacement 
+        relationships can be used to relate the stress amplitudes to the displacement 
+        amplitudes:</font><o:p></o:p></p>
+      <table width="98%" border="0" height="40">
+        <tr> 
+          <td width="79%" height="74"> 
+            <div align="center"><span
+style='font-family:Times;"Times New Roman"'><sub><img width=264 height=128
+src="./T-Impedance-Ratio_files/image008.gif" v:shapes="_x0000_i1028"></sub></span></div>
+          </td>
+          <td width="21%" height="74"> 
+            <div align="center">
+              <p>(4a)</p>
+              <p>(4b)</p>
+              <p>(4c)</p>
+            </div>
+          </td>
+        </tr>
+      </table>
+      <p class=MTDisplayEquation><o:p></o:p><o:p></o:p><font size="2">From these, 
+        the stress amplitudes are related to the displacement amplitudes by</font></p>
+      <table width="98%" border="0" height="40">
+        <tr> 
+          <td width="79%" height="74"> 
+            <div align="center"><span
+style='font-family:Times;"Times New Roman"'><sub><img width=119 height=72
+src="./T-Impedance-Ratio_files/image010.gif" v:shapes="_x0000_i1029"></sub></span></div>
+          </td>
+          <td width="21%" height="74"> 
+            <div align="center">
+              <p>(5a)</p>
+              <p>(5b)</p>
+              <p>(5c)</p>
+            </div>
+          </td>
+        </tr>
+      </table>
+      <p class=MTDisplayEquation><font size="2">At the interface, both compatibility 
+        of displacements and continuity of stresses must be satisfied. The former 
+        requires that</font><o:p></o:p></p>
+      <table width="98%" border="0" height="40">
+        <tr> 
+          <td width="79%" height="74"> 
+            <div align="center"><span
+style='font-family:Times;"Times New Roman"'><sub><img width=180 height=23
+src="./T-Impedance-Ratio_files/image012.gif" v:shapes="_x0000_i1110"></sub></span></div>
+          </td>
+          <td width="21%" height="74"> 
+            <div align="center">(6)</div>
+          </td>
+        </tr>
+      </table>
+      <p class=MTDisplayEquation><o:p></o:p><font size="2">and the latter that</font><o:p></o:p></p>
+      <table width="98%" border="0" height="40">
+        <tr> 
+          <td width="79%" height="74"> 
+            <div align="center"><span
+style='font-family:Times;"Times New Roman"'><sub><img width=171 height=23
+src="./T-Impedance-Ratio_files/image014.gif" v:shapes="_x0000_i1111"></sub></span></div>
+          </td>
+          <td width="21%" height="74"> 
+            <div align="center">(7)</div>
+          </td>
+        </tr>
+      </table>
+      <p class=MTDisplayEquation><o:p></o:p><o:p></o:p><font size="2">Substituting 
+        equations (3) and (4) into equations (6) and (7), respectively, indicates 
+        that</font><o:p></o:p></p>
+      <table width="98%" border="0" height="40">
+        <tr> 
+          <td width="79%" height="74"> 
+            <div align="center"><span
+style='font-family:Times;"Times New Roman"'><sub><img width=79 height=48
+src="./T-Impedance-Ratio_files/image016.gif" v:shapes="_x0000_i1030"></sub></span></div>
+          </td>
+          <td width="21%" height="74"> 
+            <div align="center">
+              <p>(8a)</p>
+              <p>(8b)</p>
+            </div>
+          </td>
+        </tr>
+      </table>
+      <p class=MTDisplayEquation><o:p></o:p><o:p></o:p><font size="2">at the interface. 
+        Substituting equations (5) into equation (8b) and using the relationship 
+        <i>kG</i> = <span style='font-family:
+Symbol'>wr</span><i>v</i><sub>s</sub>, gives</font><o:p></o:p></p>
+      <table width="98%" border="0" height="40">
+        <tr> 
+          <td width="79%" height="74"> 
+            <div align="center"><span
+style='font-family:Times;"Times New Roman"'><sub><img width=303 height=24
+src="./T-Impedance-Ratio_files/image018.gif" v:shapes="_x0000_i1031"></sub></span></div>
+          </td>
+          <td width="21%" height="74"> 
+            <div align="center">(9)</div>
+          </td>
+        </tr>
+      </table>
+      <p class=MTDisplayEquation><o:p></o:p><o:p></o:p><font size="2">Equation 
+        (9) can be rearranged to relate the displacement amplitude of the reflected 
+        wave to that of the incident wave:</font><o:p></o:p></p>
+      <table width="98%" border="0" height="40">
+        <tr> 
+          <td width="79%" height="74"> 
+            <div align="center"><span
+style='font-family:Times;"Times New Roman"'><sub><img width=237 height=45
+src="./T-Impedance-Ratio_files/image020.gif" v:shapes="_x0000_i1032"></sub></span></div>
+          </td>
+          <td width="21%" height="74"> 
+            <div align="center">(10)</div>
+          </td>
+        </tr>
+      </table>
+      <p class=MTDisplayEquation><o:p></o:p><o:p></o:p><font size="2">and knowing 
+        <i>A<sub>i</sub></i> and <i>A<sub>r</sub></i>, equation (8a) can be used 
+        to determine <i>A<sub>t</sub></i> as</font></p>
+      <table width="98%" border="0" height="40">
+        <tr> 
+          <td width="79%" height="74"> 
+            <div align="center"><span
+style='font-family:Times;"Times New Roman"'><sub><img width=236 height=45
+src="./T-Impedance-Ratio_files/image022.gif" v:shapes="_x0000_i1033"></sub></span></div>
+          </td>
+          <td width="21%" height="74"> 
+            <div align="center">(11)</div>
+          </td>
+        </tr>
+      </table>
+      <p class=MTDisplayEquation><o:p></o:p><o:p></o:p><font size="2">Remember 
+        that the product of the density and the wave propagation velocity is the 
+        specific impedance of the material. Equations (10) and (11) indicate that 
+        the partitioning of the energy at the interface depends only on the ratio 
+        of the specific impedances of the materials on either side of the interface. 
+        Defining the impedance ratio as <span style='font-family:Symbol'>a</span><sub>z</sub>=<span
+style='font-family:Symbol'>r</span><sub>2</sub>v<sub>s2</sub>/<span
+style='font-family:Symbol'>r</span><sub>1</sub>v<sub>s1</sub>, the displacement 
+        amplitudes of the reflected and transmitted waves are</font><o:p></o:p></p>
+      <table width="98%" border="0" height="40">
+        <tr> 
+          <td width="79%" height="74"> 
+            <div align="center"><span
+style='font-family:Times;"Times New Roman"'><sub><img width=89 height=45
+src="./T-Impedance-Ratio_files/image024.gif" v:shapes="_x0000_i1037"></sub></span></div>
+          </td>
+          <td width="21%" height="74"> 
+            <div align="center">(12)</div>
+          </td>
+        </tr>
+      </table>
+      <table width="98%" border="0" height="40">
+        <tr> 
+          <td width="79%" height="74"> 
+            <div align="center"><span
+style='font-family:Times;"Times New Roman"'><sub><img width=88 height=45
+src="./T-Impedance-Ratio_files/image026.gif" v:shapes="_x0000_i1042"></sub></span></div>
+          </td>
+          <td width="21%" height="74"> 
+            <div align="center">(13)</div>
+          </td>
+        </tr>
+      </table>
+      <p class=MTDisplayEquation><font size="2">&nbsp;After evaluating the effect 
+        of the interface on the displacement amplitudes of the reflected and transmitted 
+        waves, its effect on stress amplitudes can be investigated. From equations 
+        (5)</font><o:p></o:p></p>
+      <table width="98%" border="0" height="40">
+        <tr> 
+          <td width="79%" height="74"> 
+            <div align="center"><span
+style='font-family:Times;"Times New Roman"'><sub><img width=68 height=45
+src="./T-Impedance-Ratio_files/image028.gif" v:shapes="_x0000_i1084"></sub></span></div>
+          </td>
+          <td width="21%" height="74"> 
+            <div align="center">(14a)</div>
+          </td>
+        </tr>
+      </table>
+      <table width="98%" border="0" height="40">
+        <tr> 
+          <td width="79%" height="74"> 
+            <div align="center"><span
+style='font-family:Times;"Times New Roman"'><sub><img width=69 height=45
+src="./T-Impedance-Ratio_files/image030.gif" v:shapes="_x0000_i1086"></sub></span></div>
+          </td>
+          <td width="21%" height="74"> 
+            <div align="center">(14b)</div>
+          </td>
+        </tr>
+      </table>
+      <table width="98%" border="0" height="40">
+        <tr> 
+          <td width="79%" height="74"> 
+            <div align="center"><span
+style='font-family:Times;"Times New Roman"'><sub><img width=72 height=45
+src="./T-Impedance-Ratio_files/image032.gif" v:shapes="_x0000_i1088"></sub></span></div>
+          </td>
+          <td width="21%" height="74"> 
+            <div align="center">(14c)</div>
+          </td>
+        </tr>
+      </table>
+      <p><o:p></o:p><font size="2">Substituting equations (14) into equations 
+        (12) and (13) and rearranging gives</font><o:p></o:p></p>
+      <table width="98%" border="0" height="40">
+        <tr> 
+          <td width="79%" height="74"> 
+            <div align="center"><span
+style='font-family:Times;"Times New Roman"'><sub><img width=91 height=45
+src="./T-Impedance-Ratio_files/image034.gif" v:shapes="_x0000_i1068"></sub></span></div>
+          </td>
+          <td width="21%" height="74"> 
+            <div align="center">(15)</div>
+          </td>
+        </tr>
+      </table>
+      <table width="98%" border="0" height="40">
+        <tr> 
+          <td width="79%" height="74"> 
+            <div align="center"><span
+style='font-family:Times;"Times New Roman"'><sub><img width=89 height=45
+src="./T-Impedance-Ratio_files/image036.gif" v:shapes="_x0000_i1079"></sub></span></div>
+          </td>
+          <td width="21%" height="74"> 
+            <div align="center">(16)</div>
+          </td>
+        </tr>
+      </table>
+      <p>&nbsp;</p>
+      <p><a name="Impedance Ratio Consequences"></a><font size="+1"><b>Interesting 
+        Impedance Ratio Phenomena</b></font></p>
+      <p><font size="2">The importance of the impedance ratio in determining the 
+        nature of the reflection and transmission at interfaces can clearly be 
+        seen. Equations (12), (13), (15), and (16) indicate that fundamentally 
+        different types of behavior occur when the impedance ratio is less than 
+        or greater than 1. When the impedance ratio is less than 1, an incident 
+        wave can thought of as approaching a “softer” material. For this case, 
+        the reflected wave will have a smaller stress amplitude than the incident 
+        wave and its sign will be reversed. If the impedance ratio is greater 
+        than 1, the incident wave is approaching a “stiffer” material in which 
+        the stress amplitude of the transmitted wave will be greater than that 
+        of the incident wave and the stress amplitude of the reflected wave will 
+        be less than, but of the same sign, as that of the incident wave. The 
+        displacements amplitudes are also affected by the impedance ratio. The 
+        relative stress and displacement amplitudes of reflected and transmitted 
+        waves at boundaries with several different impedance ratios are illustrated 
+        in Table 1.</font><o:p></o:p></p>
+      <font size="2"><b>Table 1</b> Influence of Impedance Ratio on Displacement 
+      and Stress Amplitudes of Reflected and Transmitted Waves</font><br>
+      <br>
+      <table width="79%" border="0" bordercolorlight="#000000" bordercolordark="#000000" bgcolor="#FFFFCC" bordercolor="#009999" align="center">
+        <tr bgcolor="#33CCCC" bordercolor="#000000"> 
+          <td width="71" height="33">Impedance Ratio</td>
+          <td colspan="3" height="33"> 
+            <div align="center">Displacement Amplitudes</div>
+          </td>
+          <td colspan="3" height="33"> 
+            <div align="center">Stress Amplitudes</div>
+          </td>
+        </tr>
+        <tr bgcolor="#33CCCC"> 
+          <td width="71" height="24"> 
+            <p align="center"><font size="2"><span style='font-family:Symbol'>a</span><sub>z</sub></font></p>
+          </td>
+          <td width="46" height="24">Incident</td>
+          <td width="53" height="24"> 
+            <div align="center">Reflected</div>
+          </td>
+          <td width="68" height="24"> 
+            <div align="center">Transmitted</div>
+          </td>
+          <td width="46" height="24"> 
+            <div align="center">Incident</div>
+          </td>
+          <td width="53" height="24"> 
+            <div align="center">Reflected</div>
+          </td>
+          <td width="68" height="24"> 
+            <div align="center">Transmitted</div>
+          </td>
+        </tr>
+        <tr> 
+          <td height="14" width="71" bgcolor="#FFFFCC"> 
+            <p align="center">0</p>
+          </td>
+          <td height="14" width="46"> 
+            <div align="center">Ai</div>
+          </td>
+          <td height="14" width="53"> 
+            <div align="center">Ai</div>
+          </td>
+          <td height="14" width="68"> 
+            <div align="center">2Ai</div>
+          </td>
+          <td height="14" width="46"> 
+            <div align="center"><font face="Symbol">s</font>i</div>
+          </td>
+          <td height="14" width="53"> 
+            <div align="center">-<font face="Symbol">s</font>i</div>
+          </td>
+          <td height="14" width="68"> 
+            <div align="center">0</div>
+          </td>
+        </tr>
+        <tr> 
+          <td width="71" bgcolor="#FFFFCC"> 
+            <p align="center">1/4</p>
+          </td>
+          <td width="46"> 
+            <div align="center">Ai</div>
+          </td>
+          <td width="53"> 
+            <div align="center">3Ai/5</div>
+          </td>
+          <td width="68"> 
+            <div align="center">8Ai/5</div>
+          </td>
+          <td width="46"> 
+            <div align="center"><font face="Symbol">s</font>i</div>
+          </td>
+          <td width="53"> 
+            <div align="center">-3<font face="Symbol">s</font>i/5</div>
+          </td>
+          <td width="68"> 
+            <div align="center">2<font face="Symbol">s</font>i/5</div>
+          </td>
+        </tr>
+        <tr> 
+          <td width="71" bgcolor="#FFFFCC"> 
+            <p align="center">1/2</p>
+          </td>
+          <td width="46"> 
+            <div align="center">Ai</div>
+          </td>
+          <td width="53"> 
+            <div align="center">Ai/3</div>
+          </td>
+          <td width="68"> 
+            <div align="center">4Ai/3</div>
+          </td>
+          <td width="46"> 
+            <div align="center"><font face="Symbol">s</font>i</div>
+          </td>
+          <td width="53"> 
+            <div align="center">-<font face="Symbol">s</font>i/3</div>
+          </td>
+          <td width="68"> 
+            <div align="center">2<font face="Symbol">s</font>i/3</div>
+          </td>
+        </tr>
+        <tr> 
+          <td width="71" bgcolor="#FFFFCC"> 
+            <p align="center">1</p>
+          </td>
+          <td width="46"> 
+            <div align="center">Ai</div>
+          </td>
+          <td width="53"> 
+            <div align="center">0</div>
+          </td>
+          <td width="68"> 
+            <div align="center">Ai</div>
+          </td>
+          <td width="46"> 
+            <div align="center"><font face="Symbol">s</font>i</div>
+          </td>
+          <td width="53"> 
+            <div align="center">0</div>
+          </td>
+          <td width="68"> 
+            <div align="center"><font face="Symbol">s</font>i</div>
+          </td>
+        </tr>
+        <tr> 
+          <td width="71" bgcolor="#FFFFCC"> 
+            <p align="center">2</p>
+          </td>
+          <td width="46"> 
+            <div align="center">Ai</div>
+          </td>
+          <td width="53"> 
+            <div align="center">-Ai/3</div>
+          </td>
+          <td width="68"> 
+            <div align="center">2Ai/3</div>
+          </td>
+          <td width="46"> 
+            <div align="center"><font face="Symbol">s</font>i</div>
+          </td>
+          <td width="53"> 
+            <div align="center"><font face="Symbol">s</font>i/3</div>
+          </td>
+          <td width="68"> 
+            <div align="center">4<font face="Symbol">s</font>i/3</div>
+          </td>
+        </tr>
+        <tr> 
+          <td width="71" bgcolor="#FFFFCC"> 
+            <p align="center">4</p>
+          </td>
+          <td width="46"> 
+            <div align="center">Ai</div>
+          </td>
+          <td width="53"> 
+            <div align="center">-3Ai/5</div>
+          </td>
+          <td width="68"> 
+            <div align="center">2Ai/5</div>
+          </td>
+          <td width="46"> 
+            <div align="center"><font face="Symbol">s</font>i</div>
+          </td>
+          <td width="53"> 
+            <div align="center">3<font face="Symbol">s</font>i/5</div>
+          </td>
+          <td width="68"> 
+            <div align="center">8<font face="Symbol">s</font>i/5</div>
+          </td>
+        </tr>
+        <tr> 
+          <td width="71" bgcolor="#FFFFCC"> 
+            <p align="center"><font size="2"><span
+style='font-family:Symbol;mso-ascii-font-family:Verdana;mso-hansi-font-family:
+Verdana;mso-char-type:symbol;mso-symbol-font-family:Symbol'><span
+style='mso-char-type:symbol;mso-symbol-font-family:Symbol'>¥</span></span></font></p>
+          </td>
+          <td width="46"> 
+            <div align="center">Ai</div>
+          </td>
+          <td width="53"> 
+            <div align="center">-Ai</div>
+          </td>
+          <td width="68"> 
+            <div align="center">0</div>
+          </td>
+          <td width="46"> 
+            <div align="center"><font face="Symbol">s</font>i</div>
+          </td>
+          <td width="53"> 
+            <div align="center"><font face="Symbol">s</font>i</div>
+          </td>
+          <td width="68"> 
+            <div align="center">2<font face="Symbol">s</font>i</div>
+          </td>
+        </tr>
+      </table>
+      <p class=MTDisplayEquation><o:p></o:p><font size="2">The cases of <span style='font-family:Symbol'>a</span><sub>z</sub>=0 
+        and <span style='font-family:Symbol'>a</span><sub>z</sub>=<span
+style='font-family:Symbol;mso-ascii-font-family:Verdana;mso-hansi-font-family:
+Verdana;mso-char-type:symbol;mso-symbol-font-family:Symbol'><span
+style='mso-char-type:symbol;mso-symbol-font-family:Symbol'>¥</span></span> are 
+        of particular interest. An impedance ratio of zero implies that the incident 
+        wave is approaching a “free end” across which no stress can be transmitted 
+        (<span
+style='font-family:Symbol'>t</span><sub>t</sub>=0). To satisfy this zero stress 
+        boundary condition, the displacement of the boundary (the transmitted 
+        displacement) must be twice the displacement amplitude of the incident 
+        wave (A<sub>t</sub>=2A<sub>i</sub>). The reflected wave has the same amplitude 
+        as the incident wave but is of the opposite polarity (<span style='font-family:Symbol'>t</span><sub>r</sub>=-<span
+style='font-family:Symbol'>t</span><sub>i</sub>). In other words, a free end will 
+        reflect a compression wave as a tension wave of identical amplitude and 
+        shape and a tension wave as an identical compression wave. An infinite 
+        impedance ratio implies that the incident wave is approaching a “fixed 
+        end” at which no displacement can occur (w<sub>t</sub>=0). In that case 
+        the stress at the boundary is twice that of the incident wave (<span style='font-family:Symbol'>t</span><sub>t</sub>=2<span
+style='font-family:Symbol'>t</span><sub>i</sub>) and the reflected wave has the 
+        same amplitude and polarity as the incident wave (A<sub>r</sub>=-A<sub>i</sub>).<o:p></o:p></font><o:p></o:p></p>
+      <p class=MTDisplayEquation><font size="2">The case of <span style='font-family:Symbol'>a</span><sub>z</sub>=1, 
+        in which the impedances on each side of the boundary are equal, is also 
+        of interest. Equations (12), (13), (15), and (16) indicate that no reflected 
+        wave is produced and that the transmitted wave has, as expected, the same 
+        amplitude and polarity as the incident wave. In other words, all of the 
+        elastic energy of the wave crosses the boundary unchanged and travels 
+        away, never to return. Another way of looking at a boundary with an impedance 
+        ratio of unity is as a boundary between two identical semi-infinite media. 
+        A harmonic wave traveling in the positive z-direction (Figure 2-A) would 
+        impose an axial force<span
+style="mso-spacerun: yes">  </span>[(see equation()] on the boundary</font></p>
+      <p class=MTDisplayEquation align="center"><img src="T-Impedance-Ratio_files/layer2.jpg" width="451" height="290"></p>
+      <p class=MTDisplayEquation align="left"><br>
+        <b><font size="2">Figure 2.</font></b><font size="2"> (A)Harmonic shear 
+        wave traveling along two connected soil layers; (B) Soil layer connected 
+        to a dashpot</font></p>
+      <table width="98%" border="0" height="40">
+        <tr> 
+          <td width="79%" height="75"> 
+            <div align="center"><span
+style='font-family:Times;"Times New Roman"'><sub><img width=116 height=24
+src="./T-Impedance-Ratio_files/image038.gif" v:shapes="_x0000_i1082"></sub></span></div>
+          </td>
+          <td width="21%" height="75"> 
+            <div align="center">(19)</div>
+          </td>
+        </tr>
+      </table>
+      <p class=MTDisplayEquation align="left"><o:p></o:p><font size="2">This force 
+        is identical to that which would exist if the semi-infinite medium on 
+        the right side of the boundary were replaced by a dashpot (Figure 2-B) 
+        of coefficient c=<span style='font-family:
+Symbol'>r</span>v<sub>s</sub>A. In other words, the dashpot would absorb all the 
+        elastic energy of the incident wave, so the response of the medium on 
+        the top would be identical for both cases illustrated in Figure 2-B. This 
+        result has important implications for ground response and soil-structure 
+        interaction analyses, where the replacement of a semi-infinite domain 
+        by discrete elements such as dashpots can provide tremendous computational 
+        efficiencies.</font> </p>
+      <p class=MTDisplayEquation align="left"><font size="+1"><b>References</b></font></p>
+      <p class=MTDisplayEquation align="left"><font size="2">Kramer, S. L. (1996), 
+        &quot;Geotechnical Enarthquake Engineering&quot;, Prentice Hall.</font></p>
+      </td>
+  </tr>
+  <tr> </tr>
+  <tr> 
+    <td width=108> 
+      <p><b><font size="-1">&nbsp;</font><font size="-1"
+         face="Arial"><a href="#top">BACK TO TOP</a></font></b></p>
+      <p><em><font size="-1" face="Verdana, Helvetica, Arial, Sans-Serif">&nbsp;Last 
+        Updated:<br>
+        11/21/00</font></em>
+    </td>
+    <td width=546> 
+      <p align=RIGHT><i><font size="-1">Contact us at: </font><font
+         size="-1"><a href="mailto:support@drsoftware-home.com">parduino@u.washington.edu</a></font></i> 
+      </p>
+      <p>&nbsp; 
+    </td>
+  </tr>
+</table>
+<p></p>
+</body>
+</html>

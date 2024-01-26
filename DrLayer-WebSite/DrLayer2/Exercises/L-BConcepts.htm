@@ -1,0 +1,376 @@
+<html><!-- #BeginTemplate "/Templates/lesson.dwt" -->
+<head>
+<!-- STYLESHEETS -->
+<STYLE TYPE="text/css">
+BODY{font-family: verdana, arial, helvetica, sans serif; font-size: 10px}
+P{font-family: verdana, arial, helvetica, sans serif; font-size: 10px}
+TD{font-family: verdana, arial, helvetica, sans serif; font-size: 10px}
+A.courselink{font-family: verdana, arial, helvetica, sans serif; font-size: 11px; text-decoration: none; color: white; font-weight: bold}
+A.navlink1{font-family: verdana, arial, helvetica, sans serif; font-size: 11px; line-height: 14px; text-decoration: none; color: black}
+A.navlink2{font-family: verdana, arial, helvetica, sans serif; font-size: 10px; line-height: 12px; text-decoration: none; indent: 10px; color: black}
+A.navlink2org{font-family: verdana, arial, helvetica, sans serif; font-size: 10px; line-height: 12px; color: #FF6600; text-decoration: none; indent: 10px}
+H3.head{font-family: verdana, arial, helvetica, sans serif; font-size: 14px; line-height: 12px; color: #336699}
+H4.subhead{font-family: verdana, arial, helvetica, sans serif; font-size: 11px; color: #FF6600}
+H4.subtitle{font-family: verdana, arial, helvetica, sans serif; font-size: 12px; color: #FF6600}
+</STYLE>
+<!-- STYLESHEETS --> <!-- #BeginEditable "doctitle" --> 
+<title>Introduction</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name=GENERATOR content="Claris Home Page 2.0">
+<x-sas-window top=25 bottom=605 left=142 right=988> 
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="Template" content="C:\OFFICE\OFFICE\html.dot">
+</head>
+
+<body bgcolor="#FFFFFF" link="#0000FF" vlink="#800080">
+<!--This file created 3:07 PM  8/18/98 by Claris Home Page version 2.0--> 
+<p><a name="top"></a></p>
+<p>
+<table border=0 cellpadding=10 width=693>
+  <tr> 
+    <td valign=top rowspan=4 bgcolor="#999999" width=110> 
+      <p><font face="Verdana, Arial, Helvetica, sans-serif"><b><a href="../Exercises.html">Back 
+        to Exercises</a></b></font></p>
+      <hr>
+      <p><b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><a href="L-BConcepts.htm">Basic 
+        Concepts </a> </font></b></p>
+      <p><b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><a href="L-Loading.htm">Loading 
+        </a></font></b></p>
+      <p><b><font size="-1"
+         face="Verdana, Helvetica, Arial, Sans-Serif"><a href="L-BConditions.htm">Boundary 
+        Conditions </a></font><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"></font></b></p>
+      <p><b><font size="-1"
+         face="Verdana, Helvetica, Arial, Sans-Serif"><a href="L-IMismatch.htm">Impedance 
+        Mismatch</a></font><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"></font></b></p>
+      <p><b><font size="-1"
+         face="Verdana, Helvetica, Arial, Sans-Serif"><a href="L-DEffects.htm">Damping 
+        Effects</a></font><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"></font></b></p>
+      <p><b><b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><a href="L-NPeriod.htm">Natural 
+        Mode of Vibration</a></font></b></b></p>
+      <p><b><b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><a href="L-TFunction.htm">Transfer 
+        Function</a></font></b><br>
+        <br>
+        <font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><a href="L-FDomain.htm">Frequency 
+        Response</a></font></b></p>
+      <p><b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><a href="L-TStepping.htm">Time 
+        Stepping</a></font></b></p>
+      <p><b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><a href="L-MModel.htm">Material 
+        Behavior </a></font></b></p>
+      <p>&nbsp; 
+    </td>
+    <td width=537> <b><font size="+3" face="Verdana, Helvetica, Arial, Sans-Serif"><img src="../images/DrLLogo.gif" width="34" height="35" align="absmiddle" name="DrLogo"> 
+      Dr. Layer 1.0 <br>
+      </font></b><font size="+3" face="Verdana, Helvetica, Arial, Sans-Serif"><!-- #BeginEditable "Title" -->Exercise 
+      1 - Basic Concepts<!-- #EndEditable --></font></td>
+  </tr>
+  <tr> 
+    <td width=537> 
+      <p><font size="+2" face="Verdana, Helvetica, Arial, Sans-Serif"> <a name="Intro"></a>Introduction</font> 
+      </p>
+      <!-- #BeginEditable "Introduction" --><font size="2">This first lesson includes 
+      an introduction to basic concepts of 1-D wave propagation in layer media. 
+      The ideas of wave speed and wave length are visually introduced and possible 
+      analytical formulations are analyzed <a href="lessons/L-Basic.pdf">(.pdf)</a>.</font><!-- #EndEditable --></td>
+  </tr>
+  <tr> 
+    <td width=537 > 
+      <h3><a name="Background"></a>Background<!-- #BeginEditable "background1" --><!-- #EndEditable --></h3>
+      <!-- #BeginEditable "background" --> 
+      <p><span style='font-family:Times;"Times New Roman"'><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Mechanical 
+        waves originate in the forced motion of a portion of a deformable medium. 
+        As elements of the medium are deformed the disturbance, or wave, progresses 
+        through the medium. In this process the resistance offered to deformation 
+        by the consistency of the medium, as well as the resistance to motion 
+        offered by inertia, must be overcome.</font></span></p>
+      <p><span style='font-family:Times;"Times New Roman"'> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">As 
+        it is natural to expect, the local excitation of a medium is not instantaneously 
+        detected at positions that are at a distance from the region of the excitation. 
+        It takes time for a disturbance to propagate from its source to other 
+        positions. This phenomenon of propagation of disturbances is well known 
+        from physical experience, and is usually referred as wave propagation.</font></span></p>
+      <!-- #EndEditable --> 
+      <h3><b><font size="-1">&nbsp;</font><font size="-1"
+         face="Arial"><a href="#top">BACK TO TOP</a></font></b></h3>
+      <h3><a name="Objective"></a>Objective</h3>
+      <!-- #BeginEditable "Objective" --><span style='font-family:Times;
+'><font face="Verdana, Arial, Helvetica, sans-serif" size="2">In this first lesson 
+      we will introduce basic concepts of wave propagation and will present some 
+      simple illustrative examples. The propagation of 1-Dimensional shear waves 
+      in a half-space will be visualized in real time. Expressions for wave-speed, 
+      wave-length and wave-number will be established and its values calculated 
+      using Dr. Layer.</font></span><!-- #EndEditable --> 
+      <p><b><font size="-1">&nbsp;</font><font size="-1"
+         face="Arial"><a href="#top">BACK TO TOP</a></font></b></p>
+      <h3><a name="ThingstoDo"></a>Things to Do</h3>
+      <!-- #BeginEditable "ThingToDo" --> 
+      <p><b><i><span style='font-family:
+Times;"Times New Roman"'><font size="3" face="Verdana, Arial, Helvetica, sans-serif">Wave 
+        Velocity Calculations</font></span></i></b></p>
+      <p class=MsoBodyText2> 
+      <ol>
+        <li> 
+          <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Open 
+            the Dr. Layer program. By default we get twelve layers. The top six 
+            layers are hardwired into the system with a very high phase velocity. 
+            The bottom six layers are hardwired with a very low wave velocity 
+            (Figure 1a)</font>. </p>
+        </li>
+        <li> 
+          <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Starting 
+            with this default configuration, select with the mouse the upper six 
+            layers. To carry out this step press the mouse on each sub-layer while 
+            keeping the shift key pressed and hold down. Each time you choose 
+            a sub-layer, it becomes bigger showing it has been selected. Finally, 
+            choose the “very slow” option from the “wave speed” menu. The color 
+            of the selected sub-layers will change to confirm the change in wave 
+            speed, (Figure 1b).<br>
+            <br>
+            <span
+style='font-family:Times;"Times New Roman"'><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><img src="L-BConcepts_files/Lesson1-Image1b.gif" width="420" height="157"></font></span> 
+            <br>
+            </font><font size="2"><b>Figure 1</b>- a) Initial configuration b) 
+            Homogeneous Soil Layer</font><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
+            </font></p>
+        </li>
+        <li> 
+          <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">In the 
+            upper left corner of the Dr. Layer tool we find a text window with 
+            four different loading conditions; i.e. pulse, sinusoidal, ramp, and 
+            earthquake. The first three represent displacement boundary conditions. 
+            The earthquake option represents accelerations. In DrLayer, all the 
+            boundary conditions are applied to the bottom layer. By default the 
+            sinusoidal option is selected. For this particular exercise choose 
+            the pulse load from the loading window.</font></p>
+        </li>
+        <li> 
+          <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Starting 
+            with the set up described above, move the cursor to the upper left 
+            portion of the screen and press on the time increment button <img src="L-BConcepts_files/B-run.gif" width="23" height="23" align="absbottom"> 
+            to set up the wave motion. You will immediately notice a pulse wave 
+            that travels from the bottom of the layer. To better visualize the 
+            pulse traveling through the layer you can scale the displacements 
+            by pressing the <img src="L-BConcepts_files/B-scaleup-graph.gif" width="23" height="23" align="absbottom"> 
+            bottom.</font> </p>
+        </li>
+        <li> 
+          <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Determine 
+            the time it takes the pulse disturbance to reach the top of the soil 
+            layer and take note of the time. For your convenience the time is 
+            posted in seconds in the lower left corner of DrLayer. The velocity 
+            of propagation of the disturbance (or wave velocity) can be determined 
+            by dividing the total length of the layer by the time it takes the 
+            disturbance to travel it. This length can be determined using the 
+            bars that are provided in DrLayer to represent the axis. Each segment 
+            in each bar represents 10 feet. To better visualize the layer, and 
+            get a more accurate measurement of the layers’ length, use the pan 
+            <img src="L-BConcepts_files/B-pan.gif" width="23" height="23" align="absbottom">, 
+            camera orbit <img src="L-BConcepts_files/B-orbit.gif" width="23" height="23" align="absbottom">, 
+            and zoom <img src="L-BConcepts_files/B-zoomin.gif" width="23" height="23" align="absbottom"> 
+            tools. Assuming the density of the medium to be xxx estimate the stiffness 
+            of the medium. The time it takes the wave to travel along the soil 
+            layer can also be detected using a displacement plot box at the top 
+            of the layer. To do this, select the <img src="L-BConcepts_files/B-graph.gif" width="23" height="23" align="absbottom"> 
+            bottom and clip on any point in the soil layer, Figure 2).<br>
+            <br>
+            <span
+style='font-family:Times;"Times New Roman"'><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><img src="L-BConcepts_files/Lesson1-image2.gif" width="427" height="325"></font></span> 
+            <br>
+            <span
+style='font-family:Times;"Times New Roman"'><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Figure 
+            2</b> - Pulse shear wave traveling along soil layer</font></span> 
+            </font><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><br>
+            </font> </p>
+          <p> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">When 
+            the disturbance reaches the upper part of the medium it reaches a 
+            free boundary. The free boundary condition induces a reflection of 
+            the disturbance (Figure 3b). Note the sign and amplitude of the reflected 
+            wave. The reflected wave will travel back through the medium and eventually 
+            will reach the lower portion of the layer, which is not free to move. 
+            This boundary condition represents a fixed boundary condition. Upon 
+            reaching this point the disturbance will be reflected again, (Figure 
+            3c). Note the sign and amplitude of the reflected wave. Notice also 
+            that the reflections will continue infinitely as time goes on. Its 
+            like if the pulse were trapped in the medium. As we will see in further 
+            lessons this is an extreme condition  hardly found in real cases. 
+            Most real situations show some damping and/or radiation of energy.<br>
+            <br>
+            <span
+style='font-family:Times;"Times New Roman"'><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><img src="L-BConcepts_files/Lesson1-image3b.gif" width="660" height="157"></font></span><br>
+            </font><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
+            <span
+style='font-family:Times;"Times New Roman"'><font size="2"><b><font face="Verdana, Arial, Helvetica, sans-serif">Figure 
+            3</font></b><font face="Verdana, Arial, Helvetica, sans-serif"> - 
+            Characteristics of reflected waves: a)Incident wave; b)Reflected wave 
+            at free top surface; c)Reflected wave at fixed bottom boundary</font></font><font face="Verdana, Arial, Helvetica, sans-serif">.</font></span></font></p>
+        </li>
+      </ol>
+      <p><font size="3"><i><b>Wave Length Calculations</b></i></font> </p>
+      <ol>
+        <li> 
+          <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Reset 
+            the system to time zero by pushing the <img src="L-BConcepts_files/B-stop.gif" width="23" height="23" align="absbottom"> 
+            key. Select the sinusoidal loading option from the loading menu window.</font> 
+          </p>
+        </li>
+        <li> 
+          <p> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">Push 
+            the go <img src="L-BConcepts_files/B-run.gif" width="23" height="23" align="absbottom"> 
+            bottom to start the mot</font><font size="2">ion. A sinusoidal displacement 
+            wave will be generated at the bottom of the layer. This input oscillation 
+            (disturbance) can be visualized in the plot box that automatically 
+            appears at the bottom of the layer when DrLayer is opened. The characteristics 
+            of the harmonic disturbance can be obtained by clicking the right 
+            mouse bottom in any point inside the plot. The amplitude of the displacement 
+            and time at the selected point will appear in the lower portion of 
+            DrLayer. Using this capability try to get a good estimate of the maximun 
+            amplitude and time period, T (or frequency f=1/T), of the harmonic 
+            input displacement.</font> </p>
+        </li>
+        <li> 
+          <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">In addition, 
+            notice that, as time goes on the disturbance propagates through the 
+            layer in the same manner as in previous example. The</font><font size="2"> 
+            difference is that in this particular case the particle displacements 
+            follow a harmonic shape.</font> </p>
+        </li>
+        <li> 
+          <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Measure 
+            the wave length,<font face="Symbol"> l</font>, as the distance to 
+            undergo a single oscillation along the soil layer. To this end use 
+            the bars that are provided in the DrLayer axis. Each segment corresponds 
+            to 10 feet. Notice that since a harmonic wave travels through the 
+            layer, the wave length,<font face="Symbol"> l</font>, can be determined 
+            using a similar procedure as the one used to evaluate the input period. 
+            However, in contrast to the input period T, wave length has units 
+            of distance.<br>
+            <br>
+            <img src="L-BConcepts_files/Lesson1-image4.gif" width="500" height="391"><br>
+            <b>Figure 4</b> - Harmonic Motion; Wave-length vs. Input Time Period</font></p>
+        </li>
+        <li> 
+          <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Repeat 
+            the test using the same harmonic motion but different soil stiffness. 
+            To carry out this step, use the “select all” option from the “Edit” 
+            menu, and choose the “Slow”, “Medium”, “Fast” or “Very Fast” option 
+            from the “Wave Speed” menu. In DrLayer each wave speed is associated 
+            with a different stiffness.</font></p>
+        </li>
+        <li> 
+          <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Setback 
+            the motion to zero by pressing the <img src="L-BConcepts_files/B-stop.gif" width="23" height="23" align="absbottom"> 
+            key and restart the motion using the <img src="L-BConcepts_files/B-run.gif" width="23" height="23" align="absbottom"> 
+            key. Determine the wave-length following the same procedure as described 
+            above. Notice the change in wave-length as the stiffness changes.</font></p>
+        </li>
+        <li> 
+          <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Repeat 
+            the test for different input amplitudes and frequencies. To carry 
+            out this step use the scrolling bars for frequency and amplitude that 
+            are provided in the upper right portion of DrLayer. Note the change 
+            in wave-length as the amplitude and frequency of the harmonic input 
+            motion are varied.</font></p>
+        </li>
+        <li>
+          <p><span style='font-family:Times;"Times New Roman"'><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Another 
+            concept related to wave-length is that of wave-number, <i>k</i>, that 
+            accounts for the number of wave lengths over 2</font></span><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><span
+style='font-family:Symbol'>p.</span> By definition k=.... Using your calculations 
+            from the previous step estimate the corresponding wave-number values. 
+            Notice that the wave number is inversely proportional to the wave-length. 
+            Then, an increasing wave-length implies a decreasing wave-number.</font> 
+          </p>
+        </li>
+      </ol>
+      <!-- #EndEditable --> 
+      <h3><b><font size="-1">&nbsp;</font><font size="-1"
+         face="Arial"><a href="#top">BACK TO TOP</a></font></b></h3>
+      <h3><a name="Observation"></a>Observation</h3>
+      <font face="Verdana, Arial, Helvetica, sans-serif"><!-- #BeginEditable "Observation" --><b><font size="2"><i><font size="3">Wave 
+      Speed</font></i></font></b><br>
+      <font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
+      <ol>
+        <li>Upon reaching a <b>free</b> boundary, reflected waves show the same 
+          amplitude as incident waves but opposite sign. This is a characteristic 
+          of free boundary conditions and can be proved mathematically.<br>
+          <br>
+        </li>
+        <li>Upon reaching a <b>fixed</b> boundary, reflected waves show the same 
+          amplitude and sign as incident waves. This is a characteristic of fixed 
+          boundary conditions and can be proved mathematically.</li>
+      </ol>
+      </font><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b><font size="3"><i>Wave-Length</i></font></b></font></font><b><br>
+      </b><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
+      <ol>
+        <li> Notice that for a selected harmonic input motion, the wave-length 
+          increases as the soil stiffness (or wave speed) increases.<br>
+          <br>
+        </li>
+        <li>Notice that increasing the harmonic input motion amplitude the wave-length 
+          does not change. However, the wave-length is affected by changes in 
+          frequency. Increasing the harmonic motion frequency the wave-length 
+          decreases. These findings are in agreement with the theoretical definition 
+          of wave-length that says:<br>
+          <table width="98%" border="0" height="40">
+            <tr> 
+              <td width="79%" height="74"> 
+                <div align="center"><span
+style='font-family:Times;"Times New Roman"'><font face="Verdana, Arial, Helvetica, sans-serif"><sub><img src="L-BConcepts_files/image009.gif" width="193" height="44"></sub></font></span></div>
+              </td>
+              <td width="21%" height="74"> 
+                <div align="center">(1)</div>
+              </td>
+            </tr>
+          </table>
+          where <i>vs</i> is the shear wave velocity, <i>T</i> is the motion period, 
+          <i>f</i> is the motion frequency, <font face="Symbol">w</font> is the 
+          circular frequency and k the wave number.<br>
+          <br>
+        </li>
+      </ol>
+      </font> <font face="Verdana, Arial, Helvetica, sans-serif" size="2"></font><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
+      </font></font><!-- #EndEditable --></font> 
+      <p><b><font size="-1"
+         face="Arial"><a href="#top">BACK TO TOP</a></font></b></p>
+      <h3><a name="OnYourOwn"></a>On Your Own</h3>
+      <font face="Arial, Helvetica, sans-serif" size="2"><!-- #BeginEditable "OnYourOwn" --> 
+      <ol>
+        <li><font face="Verdana, Arial, Helvetica, sans-serif">Using a pulse displacement 
+          input motion, estimate values of wave speed for all possible DrLayer 
+          soil conditions. How does wave speed relate to soil stiffness??</font><br>
+          <br>
+        </li>
+        <li><font face="Verdana, Arial, Helvetica, sans-serif">Release the base 
+          and observe the characteristics of the reflected pulse wave.<br>
+          <br>
+          </font></li>
+        <li><font face="Verdana, Arial, Helvetica, sans-serif">Using the default 
+          values of amplitude and frequency determine the wave-length for all 
+          possible values of soil stiffness.</font></li>
+      </ol>
+      <!-- #EndEditable --> 
+      </font> 
+      <h3><b><font size="-1">&nbsp;</font><font size="-1"
+         face="Arial"><a href="#top">BACK TO TOP</a></font></b></h3>
+      </td>
+  </tr>
+  <tr> </tr>
+  <tr> 
+    <td width=110> 
+      <p><b><font size="-1">&nbsp;</font><font size="-1"
+         face="Arial"><a href="#top">BACK TO TOP</a></font></b></p>
+      <p><em><font size="-1" face="Verdana, Helvetica, Arial, Sans-Serif">&nbsp;Last 
+        Updated:<br>
+        </font></em> 12/27/00
+    </td>
+    <td width=537> 
+      <p align=RIGHT><i><font size="-1">Contact us at: </font><font
+         size="-1"><a href="mailto:support@drsoftware-home.com">parduino@u.washington.edu</a></font></i> 
+      </p>
+      <p>&nbsp; 
+    </td>
+  </tr>
+</table>
+<p></p>
+</body>
+<!-- #EndTemplate --></html>

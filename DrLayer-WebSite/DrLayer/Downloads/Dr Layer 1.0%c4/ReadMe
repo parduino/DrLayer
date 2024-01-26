@@ -1,0 +1,24 @@
+Welcome to Dr. Layer 1.0 for MacOS!
+
+To get started, simply open the application.  After the program starts up,
+hold down the 'g' key and you should observe animated wave motion in the
+layered medium.  The User Guide.html file has a complete command and tool
+reference, but the best way to learn to use the program is to go through
+the exercises that are distributed as a companion to the Dr. Layer
+program.
+
+For updates and further information, visit
+http://octavia.ce.washington.edu/DrLayer.
+
+Dr.  Layer is brought to you by Pedro Arduino, Greg Miller, and Ayokunle
+Ogunrinde at the University of Washington, and was developed under the
+auspices of the Pacific Earthquake Engineering Research (PEER) Center.
+
+(Note for Mac users: although much of the documentation is Windows-centric,
+Dr.  Layer was actually developed using Macs, and it's really a Mac program
+at heart.  We did not do extensive testing on pre-9.0 versions of the
+operating system--let us know if you have problems by e-mailing me at
+gmiller@u.washington.edu.  At a minimum, you will need to have the OpenGL
+libraries installed on your system.)
+
+Copyright 2000-01, Pedro Arduino and Greg Miller
