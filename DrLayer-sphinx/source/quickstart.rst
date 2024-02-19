@@ -1,9 +1,19 @@
 
 .. _quickstart:
 
-Quick start
+Quick Start
 ================================
 
+
+Visualize Shear Waves in Layered Media
+------------------------------------------------
+
+<insert image here>
+
+Acknowledgements
+------------------------------------------------
+
+Dr. Layer and the supporting materials were developed by Pedro Arduino, Greg Miller, and Ayokunle Ogunrinde in the Department of `Civil and Environmental Engineering at the University of Washington <https://www.ce.washington.edu/>`_ under the auspices of the Pacific Earthquake Engineering Research (`PEER <https://peer.berkeley.edu/>`_) Center.
 
 Download the |appName| 
 ------------------------------------------------

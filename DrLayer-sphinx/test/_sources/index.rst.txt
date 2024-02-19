@@ -15,7 +15,9 @@ The Sim Center Transfer Function Tool (TFT) is an educational tool that aims to 
    :caption: Contents:
    
    quickstart
+   user_guide
    theory
+   exercises
    how_to_build
    license
 

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Damping Effects &mdash; DrLayer 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Natural Modes of Vibration" href="natural_modes_of_vibration.html" />
+    <link rel="prev" title="Impedance Mismatch" href="impedance_mismatch.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            DrLayer
+              <img src="_static/DrLLogo2.gif" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user_guide.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="theory.html">Theory and Examples</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="exercises.html">Exercises</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="basic_concepts.html">Basic Concepts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loading.html">Loading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="boundary_conditions.html">Boundary Conditions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="impedance_mismatch.html">Impedance Mismatch</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Damping Effects</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#background">Background</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#objective">Objective</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#things-to-do">Things to Do</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#viscous-damping">Viscous Damping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hysteretic-damping">Hysteretic Damping</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#observation">Observation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#on-your-own">On Your Own</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">Viscous Damping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">Hysteretic Damping</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="natural_modes_of_vibration.html">Natural Modes of Vibration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transfer_function.html">Transfer Function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="frequency_domain.html">Frequency Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="time_stepping.html">Time Stepping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="material_behavior.html">Material Behavior</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises.html#introduction">Introduction</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="how_to_build.html">How to Build</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">Copyright and license</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">DrLayer</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="exercises.html">Exercises</a></li>
+      <li class="breadcrumb-item active">Damping Effects</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/damping_effects.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="damping-effects">
+<h1>Damping Effects<a class="headerlink" href="#damping-effects" title="Permalink to this heading"></a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading"></a></h2>
+</section>
+<section id="background">
+<h2>Background<a class="headerlink" href="#background" title="Permalink to this heading"></a></h2>
+<p>In a homogeneous linear elastic material, stress waves travel indefinitely without change in amplitude. This type of behavior can not occur, however, in real conditions. The amplitudes of stress waves in real materials, such as those that comprise the earth, attenuate with distance. This attenuation can be attributed to two sources of energy dissipation, one which involves the material through which the waves travel and the other the geometry of the wave propagation problem. In this particular exercise we will concentrate on the first form of dissipation of energy.</p>
+<p>In real materials, part of the elastic energy of a traveling wave is always converted to heat. The conversion is accompanied by a decrease in the amplitude of the wave. For specific soils and structures, however, the operative mechanisms by which the energy is dissipated are not understood sufficiently to allow them to be explicitly modeled. As a result, the effects of the various energy loss mechanisms are usually lumped together and represented by some convenient damping mechanism. The most commonly used mechanism for representing energy dissipation is viscous damping which assumes the existence of dissipative forces that are a function of particle velocity. For most soils and structures, however, energy is dissipated hysteretically. That is by yielding or plastic straining of the material.</p>
+<p>The type of damping described above is called material damping, because the material absorbs the energy of travel during wave propagation. The reduction in energy per unit volume causes the amplitude of the wave to decrease with increasing displacement. However, a different type of damping (reduction in energy per unit volume) can be observed which occurs when the energy of the wave is spread over a very large area and thus it dies off quickly. This type of damping is usually referred as radiation damping.</p>
+</section>
+<section id="objective">
+<h2>Objective<a class="headerlink" href="#objective" title="Permalink to this heading"></a></h2>
+<p>In the examples that will comprise this section the attenuation of the wave amplitude will be investigated by considering: <em>a viscous mechanism</em> and <em>the nonlinear non-elastic behavior of soils</em>.</p>
+</section>
+<section id="things-to-do">
+<h2>Things to Do<a class="headerlink" href="#things-to-do" title="Permalink to this heading"></a></h2>
+<section id="viscous-damping">
+<h3>Viscous Damping<a class="headerlink" href="#viscous-damping" title="Permalink to this heading"></a></h3>
+<ol class="arabic">
+<li><p>Open the Dr. Layer program. Select “all layers” and assign them a <strong>“very slow”</strong> wave speed. By default the no-damping option is selected.</p></li>
+<li><p>Choose a pulse load and using the sliders adjust its amplitude and frequency to a high value (80% of max).</p></li>
+<li><p>By default DrLayer starts with a single plotting window at the bottom of the layer. Using the plot box buttom, &lt;insert icon&gt;, add two additional plot-boxes at the top and middle of the layer as shown in Figure 1.</p>
+<blockquote>
+<div><p>&lt;insert image&gt;</p>
+</div></blockquote>
+</li>
+<li><p>Starting with the set up described above, press the time increment buttom, &lt;insert icon&gt; to set up the wave motion. Note that the wave travels along the layer without changes and its reflected at the free end.</p></li>
+<li><p>Change the damping coefficient of all the layers to <strong>“high”</strong> by using the <strong>“damping”</strong> drop-down menu on the top of your screen, and reset the system by pressing the &lt;insert icon&gt; buttom. Restart the motion by pressing the time increment buttom and observe the changes in the wave as it travels along the layer.</p></li>
+<li><p>Answer the following questions:</p>
+<blockquote>
+<div><ol class="loweralpha simple">
+<li><p>Is the wave motion amplitude affected?</p></li>
+<li><p>Is the wave speed affected?</p></li>
+<li><p>What can you say about the energy originally given to the system? Is it lost? How?</p></li>
+</ol>
+</div></blockquote>
+</li>
+</ol>
+</section>
+<section id="hysteretic-damping">
+<h3>Hysteretic Damping<a class="headerlink" href="#hysteretic-damping" title="Permalink to this heading"></a></h3>
+<ol class="arabic">
+<li><p>Restart the DrLayer program. Select the bottom eight layers and assign them a <strong>“very fast”</strong> wave speed. This material will be referred to as Material 1. Select the top four layers and assign them a <strong>“slow”</strong> wave speed. This material will be referred to as Material 2.</p></li>
+<li><p>Choose a pulse load and adjust its frequency to a high value (~80% max) by using the frequency slider on the top of your screen.</p></li>
+<li><p>Select a bilinear material model with low yield stress using the <strong>“Material Models…”</strong> option available in the “options” drop down menu.</p></li>
+<li><p>To visualize the stress-strain soil response add stress-strain plot boxes at convenient places using the &lt;insert icon&gt; button while pressing the Ctrl+Shift keys. For this particular problem we suggest to use two plot boxes located close to the material interface, Figure 2.</p>
+<blockquote>
+<div><p>&lt;insert image&gt;</p>
+</div></blockquote>
+</li>
+<li><p>Starting with the set up described above, press the time increment buttom to set up the wave motion. Note that the wave travels along material 1 without noticeable changes. At the interface, part of the energy carried by the wave is transferred to material 2 and part of it is reflected. Note that, as result of the interaction at the interface, permanent deformations are concentrated close to the interface. Consequently, the stress-strain curves at these points do not follow a straight line. At the top and bottom of the layer a similar behavior is also observed.</p></li>
+<li><p>As time goes on the wave will be transmitted and reflected multiple times at the interface. During each interaction additional plastic deformations may occur.</p></li>
+<li><p>Answer the following questions:</p>
+<blockquote>
+<div><ol class="loweralpha simple">
+<li><p>Is the initial wave energy affected during the motion??</p></li>
+<li><p>Where does the energy go??</p></li>
+<li><p>Can you imagine a way to estimate the amount of energy lost?</p></li>
+<li><p>Can you think of a similar mechanism in mechanics? Give a couple of examples.</p></li>
+</ol>
+</div></blockquote>
+</li>
+</ol>
+</section>
+</section>
+<section id="observation">
+<h2>Observation<a class="headerlink" href="#observation" title="Permalink to this heading"></a></h2>
+<p>Damping can be thought of as some form of resistance to impeding motion. Friction readily comes to mind and helps as an analogy for thinking about damping. Due to friction part of the energy is transformed to heat or is dissipated in the form or irrecoverable or plastic deformations.</p>
+</section>
+<section id="on-your-own">
+<h2>On Your Own<a class="headerlink" href="#on-your-own" title="Permalink to this heading"></a></h2>
+<section id="id1">
+<h3>Viscous Damping<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Use different material stiffness and repeat the exercise.</p></li>
+<li><p>Use different damping values and repeat the analysis.</p></li>
+</ol>
+</section>
+<section id="id2">
+<h3>Hysteretic Damping<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Repeat the process with elastic materials. Do you observe the attenuation of waves??</p></li>
+<li><p>Use different material stiffness and different impedance ratios.</p></li>
+<li><p>Use different yield stresses and investigate the effect of hardening in the attenuation of waves.</p></li>
+</ol>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="impedance_mismatch.html" class="btn btn-neutral float-left" title="Impedance Mismatch" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="natural_modes_of_vibration.html" class="btn btn-neutral float-right" title="Natural Modes of Vibration" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, UW Computational Group.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

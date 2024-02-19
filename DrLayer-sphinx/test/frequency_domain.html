@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frequency Domain &mdash; DrLayer 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Time Stepping" href="time_stepping.html" />
+    <link rel="prev" title="Transfer Function" href="transfer_function.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            DrLayer
+              <img src="_static/DrLLogo2.gif" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user_guide.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="theory.html">Theory and Examples</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="exercises.html">Exercises</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="basic_concepts.html">Basic Concepts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loading.html">Loading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="boundary_conditions.html">Boundary Conditions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="impedance_mismatch.html">Impedance Mismatch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="damping_effects.html">Damping Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="natural_modes_of_vibration.html">Natural Modes of Vibration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transfer_function.html">Transfer Function</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Frequency Domain</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#background">Background</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#objective">Objective</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#things-to-do">Things to Do</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#observation">Observation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#on-your-own">On Your Own</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="time_stepping.html">Time Stepping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="material_behavior.html">Material Behavior</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises.html#introduction">Introduction</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="how_to_build.html">How to Build</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">Copyright and license</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">DrLayer</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="exercises.html">Exercises</a></li>
+      <li class="breadcrumb-item active">Frequency Domain</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/frequency_domain.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="frequency-domain">
+<h1>Frequency Domain<a class="headerlink" href="#frequency-domain" title="Permalink to this heading"></a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading"></a></h2>
+</section>
+<section id="background">
+<h2>Background<a class="headerlink" href="#background" title="Permalink to this heading"></a></h2>
+<p>The time required for an undamped system to complete one cycle of free vibration is the natural period of vibration of the system. We shall represent this as <span class="math notranslate nohighlight">\(T\)</span> in units of seconds. It is related to the natural circular frequency of vibration w with units of radians per second:</p>
+<div class="math notranslate nohighlight">
+\[T = \frac{2\pi}{w}\]</div>
+<p>The natural cyclic frequency of vibration <span class="math notranslate nohighlight">\(f\)</span> which is implemented on the slider bar in Dr. Layer is given by the reciprocal value of <span class="math notranslate nohighlight">\(T\)</span>. This frequency represents the number of completed cycles per second. The units are Hertz (<span class="math notranslate nohighlight">\(Hz\)</span>). The frequency depends only on the mass and stiffness characteristics of the structure. This in effect means that the stiffer of two bodies with similar masses will posses a higher natural frequency and thus a shorter period. Conversely, the heavier of two bodies with the same stiffness will have a lower natural frequency. For linear systems these vibration properties are independent of the initial displacement and velocity.</p>
+</section>
+<section id="objective">
+<h2>Objective<a class="headerlink" href="#objective" title="Permalink to this heading"></a></h2>
+<p>After this exercise you will understand how the input frequency affects the type of wave travel obtained.</p>
+</section>
+<section id="things-to-do">
+<h2>Things to Do<a class="headerlink" href="#things-to-do" title="Permalink to this heading"></a></h2>
+<ol class="arabic">
+<li><p>Open the Dr. Layer program. By default we get twelve layers. The top six layers are hardwired into the system with a very fast velocity. The bottom six layers are hardwired with a very slow velocity.</p></li>
+<li><p>Starting with the set up above, move the cursor on the bottom left portion of the screen and push the time increment button to set up the wave motion.</p></li>
+<li><p>Obtain the input period (<span class="math notranslate nohighlight">\(T\)</span>) from the plot box as the time it takes to complete one cycle.</p></li>
+<li><p>Vary the frequency on the slider bar and obtain the new period.</p></li>
+<li><p>The fast fourier transform plot can be obtained by pushing the plot box button and clicking on the existing plot box. You should obtain a box as shown below.</p>
+<blockquote>
+<div><p>&lt;insert image&gt;</p>
+</div></blockquote>
+</li>
+<li><p>Change parameters to reflect the different wave speeds. What do you notice?</p></li>
+<li><p>Try as many different combinations as possible and note the differences obtained in each combination.</p></li>
+</ol>
+</section>
+<section id="observation">
+<h2>Observation<a class="headerlink" href="#observation" title="Permalink to this heading"></a></h2>
+<p>The type of wave motion obtained is different for each input frequency employed. The shape of the fast fourier transform plot is also a function of the input frequency and the wave speed of travel along the different media.</p>
+</section>
+<section id="on-your-own">
+<h2>On Your Own<a class="headerlink" href="#on-your-own" title="Permalink to this heading"></a></h2>
+<p>Try different loading conditions and obtain the frequency values.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="transfer_function.html" class="btn btn-neutral float-left" title="Transfer Function" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="time_stepping.html" class="btn btn-neutral float-right" title="Time Stepping" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, UW Computational Group.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

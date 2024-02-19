@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Basic Concepts &mdash; DrLayer 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Loading" href="loading.html" />
+    <link rel="prev" title="Exercises" href="exercises.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            DrLayer
+              <img src="_static/DrLLogo2.gif" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user_guide.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="theory.html">Theory and Examples</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="exercises.html">Exercises</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Basic Concepts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#background">Background</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#objective">Objective</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#wave-velocity-calculations">Wave Velocity Calculations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#wave-length-calculations">Wave Length Calculations</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#observations">Observations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#wave-speed">Wave Speed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#wave-length">Wave-Length</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#on-your-own">On Your Own</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="loading.html">Loading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="boundary_conditions.html">Boundary Conditions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="impedance_mismatch.html">Impedance Mismatch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="damping_effects.html">Damping Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="natural_modes_of_vibration.html">Natural Modes of Vibration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transfer_function.html">Transfer Function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="frequency_domain.html">Frequency Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="time_stepping.html">Time Stepping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="material_behavior.html">Material Behavior</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises.html#introduction">Introduction</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="how_to_build.html">How to Build</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">Copyright and license</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">DrLayer</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="exercises.html">Exercises</a></li>
+      <li class="breadcrumb-item active">Basic Concepts</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/basic_concepts.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="basic-concepts">
+<h1>Basic Concepts<a class="headerlink" href="#basic-concepts" title="Permalink to this heading"></a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading"></a></h2>
+<p>This first lesson includes an introduction to basic concepts of 1-D wave propagation in layer media. The ideas of wave speed and wave length are visually introduced and possible analytical formulations are analyzed.</p>
+</section>
+<section id="background">
+<h2>Background<a class="headerlink" href="#background" title="Permalink to this heading"></a></h2>
+<p>Mechanical waves originate in the forced motion of a portion of a deformable medium. As elements of the medium are deformed the disturbance, or wave, progresses through the medium. In this process the resistance offered to deformation by the consistency of the medium, as well as the resistance to motion offered by inertia, must be overcome.</p>
+<p>As it is natural to expect, the local excitation of a medium is not instantaneously detected at positions that are at a distance from the region of the excitation. It takes time for a disturbance to propagate from its source to other positions. This phenomenon of propagation of disturbances is well known from physical experience, and is usually referred as wave propagation.</p>
+</section>
+<section id="objective">
+<h2>Objective<a class="headerlink" href="#objective" title="Permalink to this heading"></a></h2>
+<p>In this first lesson we will introduce basic concepts of wave propagation and will present some simple illustrative examples. The propagation of 1-Dimensional shear waves in a half-space will be visualized in real time. Expressions for wave-speed, wave-length and wave-number will be established and its values calculated using Dr. Layer.</p>
+<section id="wave-velocity-calculations">
+<h3>Wave Velocity Calculations<a class="headerlink" href="#wave-velocity-calculations" title="Permalink to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Open the Dr. Layer program. By default we get twelve layers. The top six layers are hardwired into the system with a very high phase velocity. The bottom six layers are hardwired with a very low wave velocity (Figure 1a).</p></li>
+<li><p>Starting with this default configuration, select with the mouse the upper six layers. To carry out this step press the mouse on each sub-layer while keeping the shift key pressed and hold down. Each time you choose a sub-layer, it becomes bigger showing it has been selected. Finally, choose the “very slow” option from the “wave speed” menu. The color of the selected sub-layers will change to confirm the change in wave speed, (Figure 1b).</p></li>
+</ol>
+<p>&lt;insert image&gt;
+<strong>Figure 1</strong> - a) Initial configuration b) Homogeneous Soil Layer</p>
+<ol class="arabic">
+<li><p>In the upper left corner of the Dr. Layer tool we find a text window with four different loading conditions; i.e. pulse, sinusoidal, ramp, and earthquake. The first three represent displacement boundary conditions. The earthquake option represents accelerations. In DrLayer, all the boundary conditions are applied to the bottom layer. By default the sinusoidal option is selected. For this particular exercise choose the pulse load from the loading window.</p></li>
+<li><p>Starting with the set up described above, move the cursor to the upper left portion of the screen and press on the time increment button &lt;insert icon&gt; to set up the wave motion. You will immediately notice a pulse wave that travels from the bottom of the layer. To better visualize the pulse traveling through the layer you can scale the displacements by pressing the &lt;insert icon&gt; bottom.</p></li>
+<li><p>Determine the time it takes the pulse disturbance to reach the top of the soil layer and take note of the time. For your convenience the time is posted in seconds in the lower left corner of DrLayer. The velocity of propagation of the disturbance (or wave velocity) can be determined by dividing the total length of the layer by the time it takes the disturbance to travel it. This length can be determined using the bars that are provided in DrLayer to represent the axis. Each segment in each bar represents 10 feet. To better visualize the layer, and get a more accurate measurement of the layers’ length, use the pan &lt;insert icon&gt;, camera orbit &lt;insert icon&gt;, and zoom &lt;insert icon&gt; tools. Assuming the density of the medium to be xxx estimate the stiffness of the medium. The time it takes the wave to travel along the soil layer can also be detected using a displacement plot box at the top of the layer. To do this, select the &lt;insert icon&gt; bottom and clip on any point in the soil layer, Figure 2).</p>
+<blockquote>
+<div><p>&lt;insert image&gt;
+<strong>Figure 2</strong> - Pulse shear wave traveling along soil layer</p>
+</div></blockquote>
+</li>
+</ol>
+<p>When the disturbance reaches the upper part of the medium it reaches a free boundary. The free boundary condition induces a reflection of the disturbance (Figure 3b). Note the sign and amplitude of the reflected wave. The reflected wave will travel back through the medium and eventually will reach the lower portion of the layer, which is not free to move. This boundary condition represents a fixed boundary condition. Upon reaching this point the disturbance will be reflected again, (Figure 3c). Note the sign and amplitude of the reflected wave. Notice also that the reflections will continue infinitely as time goes on. Its like if the pulse were trapped in the medium. As we will see in further lessons this is an extreme condition  hardly found in real cases. Most real situations show some damping and/or radiation of energy.</p>
+<blockquote>
+<div><p>&lt;insert image&gt;
+<strong>Figure 3</strong> - Characteristics of reflected waves: a)Incident wave; b)Reflected wave at free top surface; c)Reflected wave at fixed bottom boundary.</p>
+</div></blockquote>
+</section>
+<section id="wave-length-calculations">
+<h3>Wave Length Calculations<a class="headerlink" href="#wave-length-calculations" title="Permalink to this heading"></a></h3>
+<ol class="arabic">
+<li><p>Reset the system to time zero by pushing the &lt;insert icon&gt; key. Select the sinusoidal loading option from the loading menu window.</p></li>
+<li><p>Push the go &lt;insert icon&gt; bottom to start the motion. A sinusoidal displacement wave will be generated at the bottom of the layer. This input oscillation (disturbance) can be visualized in the plot box that automatically appears at the bottom of the layer when DrLayer is opened. The characteristics of the harmonic disturbance can be obtained by clicking the right mouse bottom in any point inside the plot. The amplitude of the displacement and time at the selected point will appear in the lower portion of DrLayer. Using this capability try to get a good estimate of the maximun amplitude and time period, T (or frequency <span class="math notranslate nohighlight">\(f=1/T\)</span>), of the harmonic input displacement.</p></li>
+<li><p>In addition, notice that, as time goes on the disturbance propagates through the layer in the same manner as in previous example. The difference is that in this particular case the particle displacements follow a harmonic shape.</p></li>
+<li><p>Measure the wave length, l, as the distance to undergo a single oscillation along the soil layer. To this end use the bars that are provided in the DrLayer axis. Each segment corresponds to 10 feet. Notice that since a harmonic wave travels through the layer, the wave length, l, can be determined using a similar procedure as the one used to evaluate the input period. However, in contrast to the input period T, wave length has units of distance.</p>
+<blockquote>
+<div><p>&lt;insert image&gt;
+<strong>Figure 4</strong> - Harmonic Motion; Wave-length vs. Input Time Period</p>
+</div></blockquote>
+</li>
+<li><p>Repeat the test using the same harmonic motion but different soil stiffness. To carry out this step, use the “select all” option from the “Edit” menu, and choose the “Slow”, “Medium”, “Fast” or “Very Fast” option from the “Wave Speed” menu. In DrLayer each wave speed is associated with a different stiffness.</p></li>
+<li><p>Setback the motion to zero by pressing the &lt;insert icon&gt; key and restart the motion using the &lt;insert icon&gt; key. Determine the wave-length following the same procedure as described above. Notice the change in wave-length as the stiffness changes.</p></li>
+<li><p>Repeat the test for different input amplitudes and frequencies. To carry out this step use the scrolling bars for frequency and amplitude that are provided in the upper right portion of DrLayer. Note the change in wave-length as the amplitude and frequency of the harmonic input motion are varied.</p></li>
+<li><p>Another concept related to wave-length is that of wave-number, k, that accounts for the number of wave lengths over 2p. By definition k=…. Using your calculations from the previous step estimate the corresponding wave-number values. Notice that the wave number is inversely proportional to the wave-length. Then, an increasing wave-length implies a decreasing wave-number.</p></li>
+</ol>
+</section>
+</section>
+<section id="observations">
+<h2>Observations<a class="headerlink" href="#observations" title="Permalink to this heading"></a></h2>
+<section id="wave-speed">
+<h3>Wave Speed<a class="headerlink" href="#wave-speed" title="Permalink to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Upon reaching a <strong>free</strong> boundary, reflected waves show the same amplitude as incident waves but opposite sign. This is a characteristic of free boundary conditions and can be proved mathematically.</p></li>
+<li><p>Upon reaching a <strong>fixed</strong> boundary, reflected waves show the same amplitude and sign as incident waves. This is a characteristic of fixed boundary conditions and can be proved mathematically.</p></li>
+</ol>
+</section>
+<section id="wave-length">
+<h3>Wave-Length<a class="headerlink" href="#wave-length" title="Permalink to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Notice that for a selected harmonic input motion, the wave-length increases as the soil stiffness (or wave speed) increases.</p></li>
+<li><p>Notice that increasing the harmonic input motion amplitude the wave-length does not change. However, the wave-length is affected by changes in frequency. Increasing the harmonic motion frequency the wave-length decreases. These findings are in agreement with the theoretical definition of wave-length that says:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\lambda_ = v_s T = \frac{v_s}{f} = \frac{2\pi}{w} v_s = \frac{2\pi}{k}\]</div>
+<p>where <span class="math notranslate nohighlight">\(v_s\)</span> is the shear wave velocity, <span class="math notranslate nohighlight">\(T\)</span> is the motion period, <span class="math notranslate nohighlight">\(f\)</span> is the motion frequency, <span class="math notranslate nohighlight">\(w\)</span> is the circular frequency, and <span class="math notranslate nohighlight">\(k\)</span> the wave number.</p>
+</section>
+</section>
+<section id="on-your-own">
+<h2>On Your Own<a class="headerlink" href="#on-your-own" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Using a pulse displacement input motion, estimate values of wave speed for all possible DrLayer soil conditions. How does wave speed relate to soil stiffness?</p></li>
+<li><p>Release the base and observe the characteristics of the reflected pulse wave.</p></li>
+<li><p>Using the default values of amplitude and frequency determine the wave-length for all possible values of soil stiffness.</p></li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="exercises.html" class="btn btn-neutral float-left" title="Exercises" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="loading.html" class="btn btn-neutral float-right" title="Loading" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, UW Computational Group.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
