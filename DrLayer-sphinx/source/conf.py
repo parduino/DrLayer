@@ -12,6 +12,12 @@
 #
 # import os
 # import sys
+
+import warnings
+# To remove warnings due to exercise pages not being in an explict toctree
+warnings.filterwarnings("ignore",
+                        message=".*document isn't included in any toctree.*")
+
 # sys.path.insert(0, os.path.abspath('.'))
 
 
@@ -26,7 +32,7 @@ release = '1.0.0'
 
 rst_prolog = """
 .. |appName| replace:: *DrLayer*
-.. |full tool name| replace:: DrLayer 
+.. |full tool name| replace:: DrLayer
 .. |short tool name| replace:: DL
 .. |short tool id| replace:: DL
 .. |tool github link| replace:: `TFT Github page`_
@@ -68,6 +74,4 @@ html_static_path = ['_static']
 # html_logo = './_static/images/SimCenter_TFT_logo.png'
 html_logo = './_static/images/DrLLogo2.gif'
 
-html_css_files = [
-	'css/custom.css'
-]
+html_css_files = ['css/custom.css']

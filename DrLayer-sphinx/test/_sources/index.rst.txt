@@ -3,22 +3,23 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to the Transfer Function Tool (TFT) documentation!
+Welcome to Dr. Layer!
 ==========================================================
 
-What is the Transfer Function Tool (TFT)
-----------------------------------------
-The Sim Center Transfer Function Tool (TFT) is an educational tool that aims to help students and others in their understanding of the principle of transfer functions and its application to the propagation of waves in one-dimensional layered soils. This tool demonstrates how to calculate an output (surface) motion inducted by a given (bedrock) motion, by taking advantage of the simplicity in evaluating the transfer function for layered soils and other common FFT operations. This tool allows users to define layered soil profiles underlain by rigid/elastic rock and change the characteristics of each layer, including thickness, shear wave velocity, density, and damping ratio. The user can also choose from various predefined input (rock) motions or supply specific motions. By changing the soil profile and input motion, the user can examine how each frequency in the input motion is amplified, or de-amplified by the soil deposit. This allows users to develop a clear and better understanding of the effect of soil properties on wave propagation through layered media and its application to site response analysis.
+<insert description>
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Contents
    
-   quickstart
+   download
    user_guide
-   theory
    exercises
-   how_to_build
    license
+   theory
+   how_to_build
+   
 
-
+Acknowledgements
+----------------------------------------
+Dr. Layer and the supporting materials were developed by Pedro Arduino, Greg Miller, and Ayokunle Ogunrinde in the Department of `Civil and Environmental Engineering <https://www.ce.washington.edu/>`_ at the University of Washington under the auspices of the Pacific Earthquake Engineering Research (`PEER <https://peer.berkeley.edu/>`_) Center.

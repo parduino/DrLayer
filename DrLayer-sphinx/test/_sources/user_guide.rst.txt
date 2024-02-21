@@ -3,10 +3,7 @@
 User Guide
 ================================
 
-Introduction
-------------------------------------------------
-
-Welcome to Dr. Layer 1.0. This User's Guide is designed to provide a brief overview of what Dr. Layer can do, and to present the basic mechanisms for using the program. Virtually all the functionality of the program is also presented in the accompanying exercises, and since the exercises present the program features in the context of the underlying concepts and principles, they provide the recommended way to be introduced to the program. The material here is useful for quick reference and review, and presumes a reasonable knowledge of wave propagation modeling and analysis.
+Welcome to Dr. Layer. This User's Guide is designed to provide a brief overview of what Dr. Layer can do, and to present the basic mechanisms for using the program. Virtually all the functionality of the program is also presented in the accompanying exercises, and since the exercises present the program features in the context of the underlying concepts and principles, they provide the recommended way to be introduced to the program. The material here is useful for quick reference and review, and presumes a reasonable knowledge of wave propagation modeling and analysis.
 
 General Operation
 ------------------------------------------------
